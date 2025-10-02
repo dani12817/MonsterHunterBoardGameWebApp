@@ -1,0 +1,726 @@
+{
+    "app": {
+        "title": "Monster Hunter Board Game Companion"
+    },
+    "weapon": {
+        "greatsword": {
+            "name": "Greatsword",
+            "mineral": {
+                "rarity1": "Buster Sword",
+                "rarity2": "Buster Blade",
+                "rarity3": "Chrome Razor"
+            },
+            "bone": {
+                "rarity1": "Bone Blade",
+                "rarity2": "Bone Slasher",
+                "rarity3": "Giant Jawblade"
+            },
+            "greatJagras": {
+                "rarity3": "Jagras Blade",
+                "rarity4": "Jagras Hacker"
+            },
+            "barroth": {
+                "rarity3": "Carapace Buster",
+                "rarity4": "Barroth Shredder"
+            },
+            "pukeiPukei": {
+                "rarity3": "Blooming Blade",
+                "rarity4": "Datura Blaze"
+            },
+            "greatGirros": {
+                "rarity3": "Girros Blade",
+                "rarity4": "Malady's Kiss"
+            },
+            "radobaan": {
+                "rarity3": "Spiker Blade",
+                "rarity4": "Radobaan Slab"
+            },
+            "rathalos": {
+                "rarity3": "Flame Blade",
+                "rarity4": "Red Wing"
+            },
+            "kushalaDaora": {
+                "rarity4": "Icesteel Edge",
+                "rarity5": "Daora's Decimator"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Judicator",
+                "rarity5": "Purgation's Atrocity"
+            },
+            "kirin": {
+                "rarity4": "Kirin Thundersword",
+                "rarity5": "Kirin Thundersword+"
+            }
+        },
+        "swordShield": {
+            "name": "Swort & Shield",
+            "mineral": {
+                "rarity1": "Hunter's Knife",
+                "rarity2": "Steel Knife",
+                "rarity3": "Chrome Slicer"
+            },
+            "bone": {
+                "rarity1": "Bone Kukri",
+                "rarity2": "chief Kukri",
+                "rarity3": "Grand Barong"
+            },
+            "greatJagras": {
+                "rarity3": "Jagras Edge",
+                "rarity4": "Jagras Garotte"
+            },
+            "barroth": {
+                "rarity3": "Carapace Edge",
+                "rarity4": "Barroth Club"
+            },
+            "pukeiPukei": {
+                "rarity3": "Blooming Knife",
+                "rarity4": "Datura Blossom"
+            },
+            "greatGirros": {
+                "rarity3": "Girros Knife",
+                "rarity4": "Malady's Tabar"
+            },
+            "radobaan": {
+                "rarity3": "Spiker Edge",
+                "rarity4": "Baan Claw"
+            },
+            "rathalos": {
+                "rarity3": "Flame Knife",
+                "rarity4": "Heat Edge2"
+            },
+            "teostra": {
+                "rarity4": "Teostra's Spada",
+                "rarity5": "Teostra's Emblem"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Jack",
+                "rarity5": "Eradication Vanguard"
+            },
+            "kirin": {
+                "rarity4": "Thunderbolt Sword I",
+                "rarity5": "Thunderbolt Sword II"
+            }
+        },
+        "dualBlades": {
+            "name": "Dual Blades",
+            "mineral": {
+                "rarity1": "Matched Slicers",
+                "rarity2": "Dual Slicers",
+                "rarity3": "Chrome Slicers"
+            },
+            "bone": {
+                "rarity1": "Bone Hatchets",
+                "rarity2": "Wild Hatchets",
+                "rarity3": "String Hatchets"
+            },
+            "kuluYaKu": {
+                "rarity3": "Rending Beaks",
+                "rarity4": "Arcanaria"
+            },
+            "tobiKadachi": {
+                "rarity3": "Pulsar Hatchets",
+                "rarity4": "Kadachi Claws"
+            },
+            "tzitziYaKu": {
+                "rarity3": "Luminous Daggers",
+                "rarity4": "Dual Destroyers"
+            },
+            "anjanath": {
+                "rarity3": "Blazing Hatchets",
+                "rarity4": "Anja Cyclone"
+            },
+            "jyuratodus": {
+                "rarity3": "Madness Pangas",
+                "rarity4": "Jyura Hatchets"
+            },
+            "diablos": {
+                "rarity3": "Diablos Hatchets",
+                "rarity4": "Diablos Clubs"
+            },
+            "kushalaDaora": {
+                "rarity4": "Twin Nails",
+                "rarity5": "Fire and Ice"
+            },
+            "teostra": {
+                "rarity4": "Twin Nails",
+                "rarity5": "Fire and Ice"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Gouge",
+                "rarity5": "Decimation Claws"
+            },
+            "kirin": {
+                "rarity4": "Kirin Bolts",
+                "rarity5": "Monarch"
+            }
+        },
+        "longsword" : {
+            "name": "Longsword",
+            "mineral": {
+                "rarity1": "Iron Katana",
+                "rarity2": "Iron Grace",
+                "rarity3": "Iron Gospel"
+            },
+            "bone": {
+                "rarity1": "Bone Shotel",
+                "rarity2": "Hard Bone Shotel",
+                "rarity3": "Bone Reaper"
+            },
+            "kuluYaKu": {
+                "rarity3": "First Dance",
+                "rarity4": "Last Dance"
+            },
+            "tobiKadachi": {
+                "rarity3": "Pulsar Shotel",
+                "rarity4": "Kadachi Fang"
+            },
+            "tzitziYaKu": {
+                "rarity3": "Flickering Glow",
+                "rarity4": "Dazzling Flash"
+            },
+            "anjanath": {
+                "rarity3": "Blazing Shotel",
+                "rarity4": "Anja Scimitar"
+            },
+            "jyuratodus": {
+                "rarity3": "Jyura Shotel",
+                "rarity4": "Dipterus"
+            },
+            "rathalos": {
+                "rarity3": "Wyvern Blade \"Fall\"Helm",
+                "rarity4": "Wyvern Blade \"Blood\"Helm"
+            },
+            "teostra": {
+                "rarity4": "Imperial Saber",
+                "rarity5": "Imperial Shimmer"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Reaver",
+                "rarity5": "Extermination's Edge"
+            }
+        },
+        "hammer": {
+            "name": "Hammer",
+            "mineral": {
+                "rarity1": "Iron Hammer",
+                "rarity2": "Iron Demon",
+                "rarity3": "Iron Archdemon"
+            },
+            "bone": {
+                "rarity1": "Bone Bludgeon",
+                "rarity2": "Fossil Bludgeon",
+                "rarity3": "Grandrock"
+            },
+            "barroth": {
+                "rarity3": "Carapace Sledge",
+                "rarity4": "Barroth Breaker"
+            },
+            "kuluYaKu": {
+                "rarity3": "Kulu Beak",
+                "rarity4": "Crushing Beak"
+            },
+            "pukeiPukei": {
+                "rarity3": "Blooming Hammer",
+                "rarity4": "Buon Fiore"
+            },
+            "greatGirros": {
+                "rarity3": "Girros Hammer",
+                "rarity4": "Malady's Fist"
+            },
+            "anjanath": {
+                "rarity3": "Blazing Hammer",
+                "rarity4": "Anja Striker"
+            },
+            "radobaan": {
+                "rarity3": "Bone Spike",
+                "rarity4": "Baan Strike"
+            },
+            "diablos": {
+                "rarity3": "Diablos Sledge",
+                "rarity4": "Diablos Shatterer"
+            },
+            "kushalaDaora": {
+                "rarity4": "Icesteel Hammer",
+                "rarity5": "Daora's Colossus"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Crusher",
+                "rarity5": "Obliteration's Footfall"
+            }
+        },
+        "huntingHorn": {
+            "name": "hunting Horn",
+            "mineral": {
+                "rarity1": "Metal Bagpipe",
+                "rarity2": "Great Bagpipe",
+                "rarity3": "Fortissimo"
+            },
+            "bone": {
+                "rarity1": "Bone Horn",
+                "rarity2": "Hard Bone Horn",
+                "rarity3": "Heavy Bone Horn"
+            },
+            "kuluYaKu": {
+                "rarity3": "Kulu Duda",
+                "rarity4": "Dancing Duval"
+            },
+            "tobiKadachi": {
+                "rarity3": "Thunder Gaida",
+                "rarity4": "Lightning Grum"
+            },
+            "pukeiPukei": {
+                "rarity3": "Blooming Horn",
+                "rarity4": "Datura Horn"
+            },
+            "anjanath": {
+                "rarity3": "Blazing Horn",
+                "rarity4": "Anja Barone"
+            },
+            "jyuratodus": {
+                "rarity3": "Aqua Bagpipe",
+                "rarity4": "Water Tamtam"
+            },
+            "radobaan": {
+                "rarity3": "Spiked Horn",
+                "rarity4": "Baan Horn"
+            },
+            "teostra": {
+                "rarity4": "Teostra's Tiple",
+                "rarity5": "Teostra's Orphée"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Groove",
+                "rarity5": "Desolation's Overture"
+            },
+            "kirin": {
+                "rarity4": "Thundercry Horn",
+                "rarity5": "Thundercry Horn+"
+            }
+        },
+        "lance": {
+            "name": "Lance",
+            "mineral": {
+                "rarity1": "Iron Lance",
+                "rarity2": "Steel Lance",
+                "rarity3": "Chrome Lance"
+            },
+            "bone": {
+                "rarity1": "Bone Lance",
+                "rarity2": "Hard Bone Lance",
+                "rarity3": "Heavy Bone Lance"
+            },
+            "barroth": {
+                "rarity3": "Carapace Lance",
+                "rarity4": "Barroth Stinger"
+            },
+            "kuluYaKu": {
+                "rarity3": "Kulu Lance",
+                "rarity4": "Kulu Hasta"
+            },
+            "tobiKadachi": {
+                "rarity3": "Thunder Lance",
+                "rarity4": "Lightning Spire"
+            },
+            "jyuratodus": {
+                "rarity3": "Aqua Horn",
+                "rarity4": "Water Spike"
+            },
+            "rathalos": {
+                "rarity3": "Flame Lance",
+                "rarity4": "Red Tail"
+            },
+            "kushalaDaora": {
+                "rarity4": "Icesteel Spear",
+                "rarity5": "Daora's Fang"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Impaler",
+                "rarity5": "Perdition's Hand"
+            },
+            "kirin": {
+                "rarity4": "Thunderspear",
+                "rarity5": "Thunderopiercer"
+            }
+        },
+        "gunlance": {
+            "name": "Gunlance",
+            "mineral": {
+                "rarity1": "Iron Gunlance",
+                "rarity2": "Steel Gunlance",
+                "rarity3": "Chrome Gunlance"
+            },
+            "bone": {
+                "rarity1": "Bone Gunlance",
+                "rarity2": "Bone Cannon",
+                "rarity3": "Great Bone Gunlance"
+            },
+            "greatJagras": {
+                "rarity3": "Jagras Gunlance",
+                "rarity4": "Glutton Gunlance"
+            },
+            "barroth": {
+                "rarity3": "Carapace Cannon",
+                "rarity4": "Barroth Blaster"
+            },
+            "greatGirros": {
+                "rarity3": "Girros Gunlance",
+                "rarity4": "Deathfang Cannon"
+            },
+            "jyuratodus": {
+                "rarity3": "Madness Gunlance",
+                "rarity4": "Jyura Buster"
+            },
+            "rathalos": {
+                "rarity3": "Rath Gunlance",
+                "rarity4": "Red Rook"
+            },
+            "kushalaDaora": {
+                "rarity4": "Icesteel Gunlance",
+                "rarity5": "Daora's Brigia"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Ram",
+                "rarity5": "Eradication Flame"
+            }
+        },
+        "switchAxe": {
+            "name": "Switch Axe",
+            "mineral": {
+                "rarity1": "Proto Iron Axe",
+                "rarity2": "Improved Steel Axe",
+                "rarity3": "Perfected Alloy Axe"
+            },
+            "bone": {
+                "rarity1": "Bone Axe",
+                "rarity2": "Bone Smasher",
+                "rarity3": "Power Smasher"
+            },
+            "barroth": {
+                "rarity3": "Carapace Axe",
+                "rarity4": "Barroth Grinder"
+            },
+            "anjanath": {
+                "rarity3": "Flammenbeil",
+                "rarity4": "Gnashing Flammenbeil"
+            },
+            "rathalos": {
+                "rarity3": "Rathalos Axe",
+                "rarity4": "Rathbringer Axe"
+            },
+            "diablos": {
+                "rarity3": "Diablos Axe",
+                "rarity4": "Axe Semper Tyrannis"
+            },
+            "teostra": {
+                "rarity4": "Teostra's Arx",
+                "rarity5": "Teostra's Castle"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Gash",
+                "rarity5": "Dying Light"
+            },
+            "kirin": {
+                "rarity4": "Peal",
+                "rarity5": "Kirin Thunderpeal"
+            }
+        },
+        "chargeBlade": {
+            "name": "Charge Blade",
+            "mineral": {
+                "rarity1": "Proto Commision Axe",
+                "rarity2": "Elite Commision Axe",
+                "rarity3": "Chrome Guardian"
+            },
+            "bone": {
+                "rarity1": "Bone Strongarm",
+                "rarity2": "Hard Bone Strongarm",
+                "rarity3": "Mighty Strongarm"
+            },
+            "greatJagras": {
+                "rarity3": "Jagras Strongarm",
+                "rarity4": "Jagras Escudo"
+            },
+            "tobiKadachi": {
+                "rarity3": "Pulsar Strongarm",
+                "rarity4": "Kadachi Kaina"
+            },
+            "greatGirros": {
+                "rarity3": "Girros Strongarm",
+                "rarity4": "Girros Nadja"
+            },
+            "jyuratodus": {
+                "rarity3": "Mudslide Blade",
+                "rarity4": "Jyura Depth"
+            },
+            "diablos": {
+                "rarity3": "Diablos Wall",
+                "rarity4": "Diablos Tyrannis"
+            },
+            "kushalaDaora": {
+                "rarity4": "Daora's Casca",
+                "rarity5": "Daora's Thwartoise"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Lacerator",
+                "rarity5": "Devastation's Thorns"
+            }
+        },
+        "insectGlaive": {
+            "name": "Insect Glaive",
+            "mineral": {
+                "rarity1": "Iron Blade",
+                "rarity2": "Steel Blade",
+                "rarity3": "Chrome Blade"
+            },
+            "bone": {
+                "rarity1": "Bone Rod",
+                "rarity2": "Hard Bone Rod",
+                "rarity3": "Aerial Rod"
+            },
+            "kuluYaKu": {
+                "rarity3": "Kulu Blade",
+                "rarity4": "Ya-Ku Wrath"
+            },
+            "pukeiPukei": {
+                "rarity3": "Blooming Glaive",
+                "rarity4": "Datura Blade"
+            },
+            "tzitziYaKu": {
+                "rarity3": "Luminous Blade",
+                "rarity4": "Destroyer Bo"
+            },
+            "anjanath": {
+                "rarity3": "Flammenkaefer",
+                "rarity4": "Gnashing Flammenkaefer"
+            },
+            "rathalos": {
+                "rarity3": "Flame Glaive",
+                "rarity4": "Rathmaul"
+            },
+            "diablos": {
+                "rarity3": "Diablos Rod",
+                "rarity4": "Tyrannis Glaive"
+            },
+            "kushalaDaora": {
+                "rarity4": "Daora's Entom",
+                "rarity5": "Daora's Tethidine"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Reaper",
+                "rarity5": "Catastrophe's Light"
+            },
+            "kirin": {
+                "rarity4": "Azure Bolt",
+                "rarity5": "Verdant Levin"
+            }
+        },
+        "bow": {
+            "name": "Bow",
+            "mineral": {
+                "rarity1": "Iron Bow",
+                "rarity2": "Steel Bow",
+                "rarity3": "Alloy Bow"
+            },
+            "bone": {
+                "rarity1": "Hunter's Bow",
+                "rarity2": "Hunter's Stoutbow",
+                "rarity3": "Hunter's Proudbow"
+            },
+            "kuluYaKu": {
+                "rarity3": "Kulu Arrow",
+                "rarity4": "Archer's Dance"
+            },
+            "tobiKadachi": {
+                "rarity3": "Pulsar Bow",
+                "rarity4": "Flying Kadachi Strikebow"
+            },
+            "pukeiPukei": {
+                "rarity3": "Blooming Arch",
+                "rarity4": "Datura String"
+            },
+            "anjanath": {
+                "rarity3": "Blazing Bow",
+                "rarity4": "Anja Arch"
+            },
+            "rathalos": {
+                "rarity3": "Rathslinger I",
+                "rarity4": "Rathslinger II"
+            },
+            "diablos": {
+                "rarity3": "Diablos Bow",
+                "rarity4": "Diablos Coilbender"
+            },
+            "kushalaDaora": {
+                "rarity4": "Icesteel Bow",
+                "rarity5": "Daora's Sagittarii"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Whisper",
+                "rarity5": "Doom's Shaft"
+            }
+        },
+        "lightBowgun": {
+            "name": "Light Bowgun",
+            "mineral": {
+                "rarity1": "Chain Blitz",
+                "rarity2": "High Chain Blitz",
+                "rarity3": "Cross Blitz"
+            },
+            "bone": {
+                "rarity1": "Hunter's Rifle",
+                "rarity2": "Power Rifle",
+                "rarity3": "Sniper Shot"
+            },
+            "greatJagras": {
+                "rarity3": "Jagras Blitz",
+                "rarity4": "Jagras Fire"
+            },
+            "barroth": {
+                "rarity3": "Carapace Rifle",
+                "rarity4": "Barroth Shot"
+            },
+            "jyuratodus": {
+                "rarity3": "Madness Rifle",
+                "rarity4": "Jyura Bullet"
+            },
+            "rathalos": {
+                "rarity3": "Flame Blitz",
+                "rarity4": "Rathbuster"
+            },
+            "kushalaDaora": {
+                "rarity4": "Icesteel Wasp",
+                "rarity5": "Daora's Hornet"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Spitter",
+                "rarity5": "Cataclysm's Trigger"
+            },
+            "kirin": {
+                "rarity4": "Mysthical Horn",
+                "rarity5": "Mysthical Three-Horn"
+            }
+        },
+        "heavyBowgun": {
+            "name": "Heavy Bowgun",
+            "mineral": {
+                "rarity1": "Iron Assault",
+                "rarity2": "Steel Assault",
+                "rarity3": "Chrome Assault"
+            },
+            "bone": {
+                "rarity1": "Bone Shooter",
+                "rarity2": "Heavy Shooter",
+                "rarity3": "Power Shooter"
+            },
+            "greatJagras": {
+                "rarity3": "Jagras Assault",
+                "rarity4": "Jagras Cannon"
+            },
+            "tobiKadachi": {
+                "rarity3": "Pulsar Shooter",
+                "rarity4": "Kadachi Lion"
+            },
+            "pukeiPukei": {
+                "rarity3": "Blooming Shooter",
+                "rarity4": "Datura Blaster"
+            },
+            "tzitziYaKu": {
+                "rarity3": "Luminous Assault",
+                "rarity4": "Arma Destroyer"
+            },
+            "radobaan": {
+                "rarity3": "Spiker Shooter",
+                "rarity4": "Baan Roar"
+            },
+            "diablos": {
+                "rarity3": "Diablos Shooter",
+                "rarity4": "Dual Threat"
+            },
+            "teostra": {
+                "rarity4": "Teostra's Artillery",
+                "rarity5": "Teostra's Flames"
+            },
+            "nergigante": {
+                "rarity4": "Nergal Roar",
+                "rarity5": "Destruction's Fusillade"
+            },
+            "kirin": {
+                "rarity4": "Quickcaster",
+                "rarity5": "Quickquiver"
+            }
+        }
+    },
+    "armour": {
+        "helm": {
+            "leather": "Leather Headgear",
+            "chainmail": "Chainmail Headgear",
+            "mineral": "Alloy Helm",
+            "bone": "Bone Helm",
+            "greatJagras": "Jagras Helm",
+            "barroth": "Barroth Helm",
+            "kuluYaKu": "Kulu Headpiece",
+            "tobiKadachi": "Kadachi Helm",
+            "pukeiPukei": "Pukei Helm",
+            "tzitziYaKu": "Tzitzi Headgear",
+            "greatGirros": "Girros Mask",
+            "anjanath": "Anja Helm",
+            "jyuratodus": "Jyura Helm",
+            "radobaan": "Baan Helm",
+            "rathalos": "Rathalos Helm",
+            "rathalosAzure": "Rath Soul Helm",
+            "diablos": "Diablos Helm",
+            "diablosBlack": "Diablos Nero Helm",
+            "kushalaDaora": "Kushala Glare",
+            "teostra": "Kaiser Crown",
+            "nergigante": "Nergigante Helm",
+            "kirin": "Kirin Horn"
+        },
+        "chest": {
+            "leather": "Leather Mail",
+            "chainmail": "Chainmail Vest",
+            "bone": "Bone Mail",
+            "greatJagras": "Jagras Mail",
+            "barroth": "Barroth Mail",
+            "kuluYaKu": "Kulu Mail",
+            "tobiKadachi": "Kadachi Mail",
+            "pukeiPukei": "Pukei Mail",
+            "tzitziYaKu": "Tzitzi Mail",
+            "greatGirros": "Girros Mail",
+            "anjanath": "Anja Mail",
+            "jyuratodus": "Jyura Mail",
+            "radobaan": "Baan Mail",
+            "rathalos": "Rathalos Mail",
+            "rathalosAzure": "Rath Soul Mail",
+            "diablos": "Diablos Mail",
+            "diablosBlack": "Diablos Nero Mail",
+            "kushalaDaora": "Kushala Cista",
+            "teostra": "Kaiser Mail",
+            "nergigante": "Nergigante Mail",
+            "kirin": "Kirin Jacket"
+        },
+        "leg": {
+            "leather": "Leather Trousers",
+            "chainmail": "Chainmail Trousers",
+            "mineral": "Alloy Greaves",
+            "bone": "Bone Greaves",
+            "greatJagras": "Jagras Greaves",
+            "barroth": "Barroth Greaves",
+            "kuluYaKu": "Kulu Greaves",
+            "tobiKadachi": "Kadachi Greaves",
+            "pukeiPukei": "Pukei Greaves",
+            "tzitziYaKu": "Tzitzi Greaves",
+            "greatGirros": "Greaves",
+            "anjanath": "Anja Greaves",
+            "jyuratodus": "Jyura Greaves",
+            "radobaan": "Baan Greaves",
+            "rathalos": "Rathalos Greaves",
+            "rathalosAzure": "Rath Soul Greaves",
+            "diablos": "Diablos Greaves",
+            "diablosBlack": "Diablos Nero Greaves",
+            "kushalaDaora": "Kushala Crus",
+            "teostra": "Kaiser Greaves",
+            "nergigante": "Nergigante Greaves",
+            "kirin": "Kirin Leg Guards"
+        }
+    }
+}

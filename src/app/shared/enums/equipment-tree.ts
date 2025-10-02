@@ -1,0 +1,26 @@
+export const EquipmentTree = {
+    leather: "leather",
+    chainmail: "chainmail",
+    mineral: "mineral",
+    bone: "bone",
+    greatJagras: "greatJagras",
+    barroth: "barroth",
+    kuluYaKu: "kuluYaKu",
+    tobiKadachi: "tobiKadachi",
+    pukeiPukei: "pukeiPukei",
+    tzitziYaKu: "tzitziYaKu",
+    greatGirros: "greatGirros",
+    anjanath: "anjanath",
+    jyuratodus: "jyuratodus",
+    radobaan: "radobaan",
+    rathalos: "rathalos",
+    rathalosAzure: "rathalosAzure",
+    diablos: "diablos",
+    diablosBlack: "diablosBlack",
+    kushalaDaora: "kushalaDaora",
+    teostra: "teostra",
+    nergigante: "nergigante",
+    kirin: "kirin",
+} as const;
+
+export type EquipmentTree = typeof EquipmentTree[keyof typeof EquipmentTree];

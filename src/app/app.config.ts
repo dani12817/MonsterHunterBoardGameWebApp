@@ -6,6 +6,10 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
+import { HttpClient, provideHttpClient } from "@angular/common/http";
+import {provideTranslateService, TranslateService} from "@ngx-translate/core";
+import {provideTranslateHttpLoader, TranslateHttpLoader} from "@ngx-translate/http-loader";
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), 
@@ -20,5 +24,15 @@ export const appConfig: ApplicationConfig = {
       measurementId: "G-RWBKGD4R9K"
     })), 
     provideAuth(() => getAuth()), 
-    provideFirestore(() => getFirestore())]
+    provideFirestore(() => getFirestore()),
+    provideHttpClient(),
+    provideTranslateService({
+      lang: 'en',
+      fallbackLang: 'en',
+      loader: provideTranslateHttpLoader({
+        prefix: './i18n/',
+        suffix: '.json'
+      })
+    }),
+  ]
 };
