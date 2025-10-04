@@ -1,4 +1,4 @@
-import { BaseItem } from "./base";
+import { BaseDto, BaseItem } from "./base";
 
 import { MaterialCraft, MaterialCraftDto } from "./";
 
@@ -8,11 +8,8 @@ interface BaseArmour extends BaseItem {
 
 export interface Armour extends BaseArmour {
     materials?: MaterialCraft[];
-    //upgrade?: number;
 }
 
-export interface ArmourDto extends BaseArmour {
-    icon: string;
+export interface ArmourDto extends BaseArmour, BaseDto {
     materials?: MaterialCraftDto[];
-    //upgrade?: ArmourDto;
 }

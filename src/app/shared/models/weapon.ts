@@ -1,4 +1,4 @@
-import { BaseItem } from "./base";
+import { BaseDto, BaseItem } from "./base";
 
 import { MaterialCraft, MaterialCraftDto } from "./";
 
@@ -12,8 +12,7 @@ export interface Weapon extends BaseWeapon {
     upgrade?: number[];
 }
 
-export interface WeaponDto extends BaseWeapon {
-    icon: string;
+export interface WeaponDto extends BaseWeapon, BaseDto {
     materials?: MaterialCraftDto[];
     previous?: WeaponDto;
     upgrade?: WeaponDto[];

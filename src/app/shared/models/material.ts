@@ -1,4 +1,4 @@
-import { BaseItem } from "./base";
+import { BaseDto, BaseItem } from "./base";
 import { MaterialType } from "../enums";
 import { Monster } from "./";
 
@@ -14,8 +14,7 @@ export interface Material extends BaseMaterial {
   reward?: number[];
 }
 
-export interface MaterialDto extends BaseMaterial {
-  icon: string;
+export interface MaterialDto extends BaseMaterial, BaseDto {
   monsters?: Monster[];
   gathering?: Monster[];
   reward?: Monster[];

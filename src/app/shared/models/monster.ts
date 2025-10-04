@@ -1,4 +1,4 @@
-import { BaseEntity } from "./base";
+import { BaseDto, BaseEntity } from "./base";
 import { Armour, Material, Weapon } from "./";
 
 interface BaseMonster extends BaseEntity {
@@ -17,8 +17,7 @@ export interface GatheringPhase {
   entry: number;
 }
 
-export interface MonsterDto extends BaseMonster {
-  icon: string;
+export interface MonsterDto extends BaseMonster, BaseDto {
   materials: Material[];
   gathering: GatheringPhaseDto[];
   weapons: Weapon[];
