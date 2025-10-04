@@ -4,9 +4,8 @@ import { EquipmentTree } from "../app/shared/enums";
 export const MONSTER_TABLE: Monster[]  = [
   {
     id: 1,
-    name: "Great Jagras",
+    name: EquipmentTree.greatJagras,
     description: "Great Jagras is an opportunistic predator known for its insatiable appetite. Sporting a distinctive expandable gullet, Great Jagras swallows prey whole, making it a formidable yet relatively low-tier monster.",
-    image: EquipmentTree.greatJagras,
     materials: [15, 21, 22, 42, 43, 44, 45],
     gathering: [
         { materials: [16, 44], entry: 2 },
@@ -31,9 +30,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 2,
-    name: "Barroth",
+    name: EquipmentTree.barroth,
     description: "Barroth is a large, mud-covered monster that thrives in arid environments. It uses its tough, mud-encrusted hide to protect itself from attacks and can create mudslides to hinder hunters.",
-    image: EquipmentTree.barroth,
     materials: [15, 56, 57, 58, 59],
     gathering: [
         { materials: [16, 59], entry: 2 },
@@ -59,9 +57,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 3,
-    name: "Kulu-Ya-Ku",
+    name: EquipmentTree.kuluYaKu,
     description: "Kulu-Ya-Ku is a bird-like monster known for its unique ability to pick up and use objects as shields or weapons. It is often seen in the Ancient Forest, where it forages for eggs and other items.",
-    image: EquipmentTree.kuluYaKu,
     materials: [5, 13, 46, 47, 48, 49],
     gathering: [
         { materials: [1, 3, 15], entry: 1 },
@@ -92,9 +89,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 4,
-    name: "Tobi-Kadachi",
+    name: EquipmentTree.tobiKadachi,
     description: "Tobi-Kadachi is a nimble, squirrel-like monster that can generate electricity. It is known for its agility and ability to leap between trees, making it a challenging opponent in the forest.",
-    image: EquipmentTree.tobiKadachi,
     materials: [16, 18, 32, 33, 66, 67, 68, 69, 70],
     gathering: [
         { materials: [2, 7], entry: 1 },
@@ -125,9 +121,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 5,
-    name: "Pukei-Pukei",
+    name: EquipmentTree.pukeiPukei,
     description: "Pukei-Pukei is a bird-like monster that can spit poison and has a vibrant, colorful appearance. It is often found in lush environments and uses its long tongue to catch prey.",
-    image: EquipmentTree.pukeiPukei,
     materials: [16, 23, 24, 50, 51, 52, 53, 54, 55],
     gathering: [
         { materials: [2, 7], entry: 1 },
@@ -159,9 +154,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 6,
-    name: "Tzitzi-Ya-Ku",
+    name: EquipmentTree.tzitziYaKu,
     description: "Tzitzi-Ya-Ku is a bird-like monster known for its ability to emit a blinding flash of light. This unique defense mechanism allows it to disorient hunters and escape from danger.",
-    image: EquipmentTree.tzitziYaKu,
     materials: [76, 77, 78, 79],
     gathering: [
       { materials: [2], entry: 1 },
@@ -194,9 +188,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 7,
-    name: "Great Girros",
+    name: EquipmentTree.greatGirros,
     description: "Great Girros is a large, snake-like monster that can emit a powerful electric shock. It is often found in the Rotten Vale, where it uses its electric attacks to stun prey and defend itself.",
-    image: EquipmentTree.greatGirros,
     materials: [80, 81, 82, 83],
     gathering: [
       { materials: [15, 41], entry: 1 },
@@ -227,9 +220,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 8,
-    name: "Anjanath",
+    name: EquipmentTree.anjanath,
     description: "Anjanath is a large, dinosaur-like monster known for its fiery breath and aggressive nature. It is often found in the Ancient Forest, where it preys on smaller monsters and defends its territory fiercely.",
-    image: EquipmentTree.anjanath,
     materials: [17, 18, 71, 72, 73, 74, 75],
     gathering: [
         { materials: [19], entry: 1 },
@@ -251,9 +243,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 9,
-    name: "Jyuratodus",
+    name: EquipmentTree.jyuratodus,
     description: "Jyuratodus is a large, mud-covered monster that inhabits wetlands. It uses its mud-covered body to blend into its surroundings and can create mudslides to hinder hunters. Its attacks are often slow but powerful.",
-    image: EquipmentTree.jyuratodus,
     materials: [17, 30, 38, 61, 62, 63, 64, 65],
     gathering: [
         { materials: [19], entry: 1 },
@@ -275,9 +266,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 10,
-    name: "Radobaan",
+    name: EquipmentTree.radobaan,
     description: "Radobaan is a rolling, boulder-like monster that can use its body to crush prey. It is often found in rocky areas and can create shockwaves by rolling into the ground, making it a unique and challenging opponent.",
-    image: EquipmentTree.radobaan,
     materials: [26, 27, 84, 85, 86, 87],
     gathering: [
       { materials: [11, 19], entry: 1 },
@@ -311,9 +301,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 11,
-    name: "Rathalos",
+    name: EquipmentTree.rathalos,
     description: "Rathalos, the King of the Skies, is a fearsome wyvern known for its aerial prowess and deadly fire attacks. It is a symbol of power in the Monster Hunter world and is revered by hunters for its challenging battles.",
-    image: EquipmentTree.rathalos,
     materials: [17, 29, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97],
     gathering: [
         { materials: [12], entry: 1 },
@@ -341,9 +330,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 12,
-    name: "Azure Rathalos",
+    name: EquipmentTree.rathalosAzure,
     description: "Azure Rathalos is a variant of the classic Rathalos, known for its icy breath and blue scales. It is a formidable opponent that combines the aerial agility of Rathalos with the chilling effects of ice.",
-    image: EquipmentTree.rathalosAzure,
     materials: [17, 29, 98, 99, 100, 101, 102, 103, 104],
     gathering: [
         { materials: [12], entry: 1 },
@@ -371,9 +359,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 13,
-    name: "Diablos",
+    name: EquipmentTree.diablos,
     description: "Diablos is a massive, horned wyvern known for its burrowing abilities and aggressive nature. It is often found in desert regions, where it uses its horns to dig and ambush unsuspecting prey.",
-    image: EquipmentTree.diablos,
     materials: [105, 106, 107, 108, 109, 110, 111],
     gathering: [
         { materials: [12], entry: 1 },
@@ -402,9 +389,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 14,
-    name: "Black Diablos",
+    name: EquipmentTree.diablosBlack,
     description: "Black Diablos is a more aggressive and territorial variant of Diablos, known for its black scales and increased ferocity. It is a formidable opponent that poses a significant threat to hunters in its territory.",
-    image: EquipmentTree.diablosBlack,
     materials: [9, 35, 110, 111, 112, 113, 114],
     gathering: [
         { materials: [12], entry: 1 },
@@ -432,9 +418,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 15,
-    name: "Kushala Daora",
+    name: EquipmentTree.kushalaDaora,
     description: "Kushala Daora is an Elder Dragon known for its metallic scales and ability to control wind. It is a powerful and elusive monster that poses a significant challenge to hunters, often found in stormy regions.",
-    image: EquipmentTree.kushalaDaora,
     materials: [20, 36, 136, 137, 138, 139, 140, 141, 142],
     gathering: [
       { materials: [92], entry: 1 },
@@ -468,9 +453,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 16,
-    name: "Teostra",
+    name: EquipmentTree.teostra,
     description: "Teostra is a fiery Elder Dragon known for its explosive attacks and mastery of fire. It is a formidable opponent that can create devastating firestorms, making it one of the most dangerous monsters in the game.",
-    image: EquipmentTree.teostra,
     materials: [9, 10, 127, 128, 129, 130, 131, 132, 133, 134, 135],
     gathering: [
       { materials: [130], entry: 3 },
@@ -503,9 +487,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 17,
-    name: "Nergigante",
+    name: EquipmentTree.nergigante,
     description: "Nergigante is a terrifying Elder Dragon known for its regenerative abilities and aggressive behavior. It is a formidable opponent that poses a significant threat to both hunters and the ecosystem.",
-    image: EquipmentTree.nergigante,
     materials: [20, 36, 120, 121, 122, 123, 124, 125, 126],
     gathering: [
       { materials: [120, 126], entry: 4 },
@@ -535,9 +518,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 18,
-    name: "Kirin",
+    name: EquipmentTree.kirin,
     description: "Kirin is a mythical creature resembling a unicorn, known for its lightning-fast speed and electrical attacks. It is a rare sight in the Monster Hunter world, often appearing during thunderstorms.",
-    image: EquipmentTree.kirin,
     materials: [115, 116, 117, 118, 119],
     gathering: [
       { materials: [7], entry: 1 },
@@ -585,9 +567,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
   {
     id: 19,
-    name: "Barioth",
+    name: "barioth",
     description: "Barioth is a large, feline-like monster known for its icy breath and agility. It is often found in snowy regions, where it uses its speed and ice attacks to hunt prey and evade hunters.",
-    image: "barioth",
     materials: [],
     gathering: [],
     weapons: [],
@@ -595,9 +576,8 @@ export const MONSTER_TABLE: Monster[]  = [
   },
 {
     id: 20,
-    name: "Rajang",
+    name: "rajang",
     description: "Rajang is a powerful, ape-like monster known for its incredible strength and lightning attacks. It is a formidable opponent that can enter a berserk state, increasing its speed and damage output significantly.",
-    image: "rajang",
     materials: [],
     gathering: [],
     weapons: [],

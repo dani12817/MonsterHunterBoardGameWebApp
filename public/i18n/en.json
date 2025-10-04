@@ -722,5 +722,27 @@
             "nergigante": "Nergigante Greaves",
             "kirin": "Kirin Leg Guards"
         }
+    },
+    "monster": {
+        "greatJagras": "Great Jagras",
+        "barroth": "Barroth",
+        "kuluYaKu": "Kulu-Ya-Ku",
+        "tobiKadachi": "Tobi-Kadachi",
+        "pukeiPukei": "Pukei-Pukei",
+        "tzitziYaKu": "Tzitzi-Ya-Ku",
+        "greatGirros": "Great Girros",
+        "anjanath": "Anjanath",
+        "jyuratodus": "Jyuratodus",
+        "radobaan": "Radobaan",
+        "rathalos": "Rathalos",
+        "rathalosAzure": "Azure Rathalos",
+        "diablos": "Diablos",
+        "diablosBlack": "Black Diablos",
+        "kushalaDaora": "Kushala Daora",
+        "teostra": "Teostra",
+        "nergigante": "Nergigante",
+        "barioth": "Barioth",
+        "rajang": "Rajang",
+        "kirin": "Kirin"
     }
 }
