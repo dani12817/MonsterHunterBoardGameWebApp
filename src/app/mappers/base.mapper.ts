@@ -3,9 +3,6 @@ import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 
 import { BaseFirebase } from "../models";
 
-@Injectable({
-  providedIn: 'root'
-})
 export abstract class BaseMapper<E extends BaseFirebase, D extends BaseFirebase> {
 
     public abstract dtoToModel(dto: D) : E;

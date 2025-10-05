@@ -14,16 +14,10 @@ export class UserService extends BaseService<UserDetail, UserDetail> {
     private _provider = new GoogleAuthProvider();
     private _auth = getAuth();
 
-    private _userMapper = inject(UserMapper);
-
     userLogged: UserDetail | undefined;
 
-    protected override getCollectionName(): string {
-        return "user";
-    }
-
-    protected override _baseMapper() {
-        return this._userMapper;
+    constructor() {
+        super(inject(UserMapper), "user");
     }
 
     signInWithGoogle() {

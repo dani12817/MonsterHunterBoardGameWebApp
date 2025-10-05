@@ -5,27 +5,23 @@ import { BaseFirebase } from "../models";
 import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore";
 import { BaseMapper } from "../mappers/base.mapper";
 
-@Injectable({
-  providedIn: 'root'
-})
 export abstract class BaseService<E extends BaseFirebase, D extends BaseFirebase> {
-  private _firestore = inject(Firestore);
-  private _collectionReference: CollectionReference;
+  protected _firestore = inject(Firestore);
+  protected _collectionReference: CollectionReference;
+  protected _collectionName: string;
 
-  //private _baseMapper = inject(BaseMapper<E, D>);
+  protected _baseMapper: BaseMapper<E, D>;
 
-  protected abstract _baseMapper() : BaseMapper<E, D>;
-
-  constructor() {
-    this._collectionReference = collection(this._firestore, this.getCollectionName())
+  constructor(baseMapper: BaseMapper<E, D>, collectionName: string) {
+    this._baseMapper = baseMapper;
+    this._collectionName = collectionName;
+    this._collectionReference = collection(this._firestore, this._collectionName)
   }
 
-  protected abstract getCollectionName() : string;
-
-  async save(dto: D): Promise<E> {
-    let model: E = this._baseMapper().dtoToModel(dto);
+  protected async save(dto: D): Promise<E> {
+    let model: E = this._baseMapper.dtoToModel(dto);
     if (model.id != undefined) {
-        setDoc(doc(this._firestore, this.getCollectionName(), model.id), model);
+        setDoc(doc(this._firestore, this._collectionName, model.id), model);
         return model;
     }
     let newElement = await this._create(model);
@@ -35,16 +31,16 @@ export abstract class BaseService<E extends BaseFirebase, D extends BaseFirebase
     };
   }
 
-  private async _create(model: E) {
+  protected async _create(model: E) {
     return addDoc(this._collectionReference, model);
   }
-  
-  getById(id: string) {
+
+  protected getById(id: string) {
     return new Promise<E | undefined>(async (resolve, reject) => {
-      const userSnap = await getDoc(doc(this._firestore, this.getCollectionName(), id));
+      const userSnap = await getDoc(doc(this._firestore, this._collectionName, id));
 
       if(userSnap.exists()) {
-        resolve(this._baseMapper().documentDataToModel(userSnap));
+        resolve(this._baseMapper.documentDataToModel(userSnap));
       }
 
       resolve(undefined);
