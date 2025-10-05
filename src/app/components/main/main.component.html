@@ -1,0 +1,37 @@
+<mat-sidenav-container class="h-screen">
+    <mat-sidenav #sidenav mode="over" position="start" fxLayout="column" class="sidenav-menu">
+        <app-sidenav [sidenav]="sidenav"></app-sidenav>
+    </mat-sidenav>
+
+    <mat-sidenav-content id="wrapper">
+        <mat-toolbar color="primary" class="mat-elevation-z1 fixed z-5">
+            <mat-toolbar-row>
+                <button mat-icon-button class="menu-button"
+                    (click)="sidenav.open()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+
+                <span class="toolbar-separator flex-auto"></span>
+
+                <img src="/assets/img/logo.webp" class="app-logo h-3rem cursor-pointer" [routerLink]="['/']">
+
+                <span class="toolbar-separator flex-auto"></span>
+
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="logout()">
+                        <mat-icon>exit_to_app</mat-icon>
+                        <span>{{ 'app.logout' | translate }}</span>
+                    </button>
+                </mat-menu>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+        <div class="main-container p-2 sm:p-3">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

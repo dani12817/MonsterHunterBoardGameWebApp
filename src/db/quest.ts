@@ -1,5 +1,5 @@
 import { EquipmentTree } from "../app/shared/enums";
-import { Quest } from "../app/shared/models";
+import { Quest } from "../app/models";
 
 export const QUEST_TABLE: Quest[] = [
     {

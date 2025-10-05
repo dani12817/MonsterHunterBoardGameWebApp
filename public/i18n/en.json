@@ -1,6 +1,15 @@
 {
     "app": {
-        "title": "Monster Hunter Board Game Companion"
+        "title": "Monster Hunter Board Game Companion",
+        "menu": {
+            "campaigns": "Campaigns",
+            "monsters": "Monsters",
+            "materials": "Materials",
+            "weapons": "Weapons",
+            "armours": "Armours",
+            "specialRules": "Special Rules"
+        },
+        "logout": "Log out"
     },
     "weapon": {
         "greatsword": {

@@ -1,6 +1,6 @@
-import { BaseEntity } from "./base";
+import { BaseModel } from "./base";
 
-export interface Quest extends BaseEntity {
+export interface Quest extends BaseModel {
     quests?: QuestMission[];
 }
 

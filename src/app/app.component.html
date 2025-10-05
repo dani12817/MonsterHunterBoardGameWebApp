@@ -1,12 +1,1 @@
-<div class="main">
-  <h1>{{ 'app.title' | translate }}</h1>
-  <mat-list>
-    @for (materialItem of material; track materialItem) {
-      <mat-list-item>
-        <img [src]="'assets/img/materials/'+materialItem.type+'/icon/'+materialItem.image" matListItemIcon />
-        <div matListItemTitle>{{materialItem.name}}</div>
-        <div matListItemLine>{{materialItem.description}}</div>
-      </mat-list-item>
-    }
-  </mat-list>
-</div>
+<router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Armour } from "../app/shared/models";
+import { Armour } from "../app/models";
 import { ArmourType, EquipmentTree, WeaponType } from "../app/shared/enums";
 
 export const ARMOUR_TABLE: Map<ArmourType, Armour[]> = new Map([

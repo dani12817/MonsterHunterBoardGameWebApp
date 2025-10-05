@@ -1,4 +1,4 @@
-import { Weapon } from "../app/shared/models";
+import { Weapon } from "../app/models";
 import { WeaponType, EquipmentTree } from "../app/shared/enums";
 
 

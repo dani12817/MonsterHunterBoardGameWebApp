@@ -11,7 +11,7 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
   selector: 'app-root',
   imports: [
     RouterOutlet, MatListModule,
-    TranslatePipe, TranslateDirective
+    //TranslatePipe, TranslateDirective
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

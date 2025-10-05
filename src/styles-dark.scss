@@ -1,0 +1,129 @@
+/*@use '@angular/material' as mat;*/
+
+html:has(> body.dark) {
+    /*BACKGROUND*/
+    --mat-sidenav-container-text-color: #f1f1f1;
+
+    /*TOOLBAR*/
+    --mat-toolbar-container-background-color: #323f8a;
+
+    /*SIDENAV*/
+    --mat-sidenav-content-background-color: #3e3d3d;
+    --mat-sidenav-container-background-color: #3e3d3d;
+    --mdc-list-list-item-hover-label-text-color: #f1f1f1;
+    --mat-sidenav-content-text-color: #f1f1f1;
+    
+    .mat-mdc-list-item:not(.mdc-list-item--disabled):hover {
+      cursor: pointer;
+      background-color: rgba(255,255,255,0.1) !important;
+      
+      .mat-icon, .mat-mdc-list-item-title {
+        color: #f1f1f1 !important;
+      }
+    }
+    
+    /*RADIO*/
+    --mat-radio-label-text-color: #f1f1f1 !important;
+    .mat-mdc-radio-button .mdc-radio__native-control:enabled:not(:checked) + .mdc-radio__background > .mdc-radio__outer-circle {
+      border-color: #f1f1f1 !important;
+    }
+
+    .mat-mdc-radio-button .mdc-radio__background::before {
+      background-color: #f1f1f1 !important;
+    }
+    
+    .mat-mdc-slide-toggle .mat-internal-form-field {
+      color: #f1f1f1 !important;
+    }
+
+    /*BUTONS*/
+    --mdc-protected-button-disabled-container-color: #a3a3a3;
+    --mdc-text-button-label-text-color: #f1f1f1;
+    
+    /*FIELD OUTLINE*/
+    --mdc-text-field--outlined: #f1f1f1;
+    --mdc-outlined-text-field-input-text-color: #f1f1f1;
+    --mdc-outlined-text-field-hover-label-text-color: #f1f1f1;
+    --mdc-outlined-text-field-input-text-color: #f1f1f1;
+    --mdc-outlined-text-field-label-text-color: #f1f1f1;
+    --mdc-outlined-text-field-hover-label-text-color: #f1f1f1;
+
+    --mdc-outlined-text-field-hover-outline-color: #f1f1f1;
+    --mdc-outlined-text-field-outline-color: #f1f1f1;
+
+    --mdc-outlined-text-field-caret-color: #5b73ff;
+    --mdc-outlined-text-field-focus-outline-color: #5b73ff;
+    --mdc-outlined-text-field-focus-label-text-color: #5b73ff;
+
+    --mdc-outlined-text-field-disabled-label-text-color: #666666;
+    --mdc-outlined-text-field-disabled-outline-color: #666666;
+    --mdc-icon-button-disabled-icon-color: #666666;
+
+    .mat-mdc-form-field-icon-suffix {
+      color: #f1f1f1 !important;
+    }
+
+    /*AUTOCOMPLETE*/
+    --mat-autocomplete-background-color: #535353;
+    --mat-option-hover-state-layer-color: #7e7d7d;
+    --mat-option-label-text-color: #f1f1f1;
+    --mdc-list-list-item-label-text-color: #f1f1f1;
+
+    /*SELECT*/
+    --mat-select-panel-background-color: #535353;
+    --mat-option-focus-state-layer-color: #7e7d7d;
+    --mat-option-selected-state-layer-color: #7e7d7d;
+    --mdc-list-list-item-label-text-color: #f1f1f1;
+    --mat-select-enabled-arrow-color: #f1f1f1;
+    --mat-select-enabled-trigger-text-color: #f1f1f1;
+
+    .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) .mdc-list-item__primary-text,
+    .mat-mdc-option .mat-pseudo-checkbox,
+    .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after {
+      color: #7fabfd !important;
+    }
+
+    --mdc-dialog-container-color: #3e3d3d;
+
+    .artist-social-item, .doujinshi-number-item {
+      background-color: #f1f1f1;
+      box-shadow: 0px 3px 5px rgba(209, 209, 209, 0.25), 0px 0px 2px rgba(212, 212, 212, 0.05), 0px 1px 4px rgba(206, 206, 206, 0.08) !important;
+    }
+
+    .mat-mdc-radio-button .mat-internal-form-field {
+      color: #f1f1f1;
+    }
+
+    /* DATEPICKER */
+    .mat-datepicker-toggle .mdc-icon-button {
+      color: #f1f1f1;
+    }
+
+    /* BUTTON TOGGLE */
+    .mat-button-toggle-appearance-standard {
+      background-color: #3e3d3d;
+    }
+
+    .mat-button-toggle-appearance-standard.mat-button-toggle-checked {
+      background-color: #808080;
+    }
+
+    .mat-button-toggle-appearance-standard {
+      color: #f1f1f1;
+    }
+
+    --mdc-dialog-supporting-text-color:  #f1f1f1 !important;
+
+    /* MENU */
+    .mat-mdc-menu-panel {
+      background-color: #3e3d3d !important;
+    }
+
+    .mat-mdc-menu-item:not([disabled]):hover {
+      background-color: rgba(255,255,255,0.1) !important;
+    }
+
+    .mat-mdc-menu-item, .mat-mdc-menu-item .mat-icon-no-color {
+      color: #f1f1f1 !important;
+    }
+}

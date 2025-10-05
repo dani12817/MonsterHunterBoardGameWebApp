@@ -1,4 +1,4 @@
-import { Monster } from "../app/shared/models";
+import { Monster } from "../app/models";
 import { EquipmentTree } from "../app/shared/enums";
 
 export const MONSTER_TABLE: Monster[]  = [

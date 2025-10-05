@@ -1,0 +1,48 @@
+.header-user {
+    //height: 180px;
+    background: #3f51b5;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+  
+    h2, span {
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+  
+    span {
+      margin-bottom: 24px;
+    }
+}
+
+.sidenav-menu {
+  .mat-mdc-list-item {
+    .mat-icon, a, div {
+      color: var(--mdc-list-list-item-hover-label-text-color, var(--mat-sys-on-surface)) !important;
+    }
+  }
+  
+  .mat-mdc-list-item:not(.mdc-list-item--disabled):hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .mdc-list-item:focus::before {
+    background-color: transparent !important;
+  }
+
+  ::ng-deep {
+    .mat-mdc-slide-toggle {
+      .mdc-switch {
+        margin-right: 1rem !important;
+      }
+
+      .mdc-label {
+        font-weight: 500;
+      }
+    }
+  }
+}

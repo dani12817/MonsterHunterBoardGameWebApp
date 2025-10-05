@@ -1,5 +1,5 @@
 import { MaterialType } from "../app/shared/enums";
-import { Material } from "../app/shared/models";
+import { Material } from "../app/models";
 
 export const material: Material[] = [
   {
