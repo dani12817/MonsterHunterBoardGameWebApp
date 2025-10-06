@@ -1,6 +1,6 @@
 <header class="header-user flex flex-column justify-content-end px-3" *ngIf="authUser">
-    <!--<img class="mb-2 avatar" [alt]="authUser.name"
-        [src]="authUser.avatar" [srcset]="authUser.avatar">-->
+    <img class="mb-2 avatar" [alt]="authUser.name"
+        src="/assets/img/no_avatar.webp" srcset="/assets/img/no_avatar.webp">
 
     <h2>{{ authUser.name }}</h2>
 
@@ -13,7 +13,7 @@
             <a mat-list-item [disabled]="link.disabled" 
                 [routerLink]="link.disabled ? '' : link.route"
                 (click)="closeSideNav()">
-                <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
+                <mat-icon matListItemIcon fontSet="material-symbols-outlined">{{ link.icon }}</mat-icon>
                 <div matListItemTitle>{{ link.title | translate }}</div>
             </a>
         }

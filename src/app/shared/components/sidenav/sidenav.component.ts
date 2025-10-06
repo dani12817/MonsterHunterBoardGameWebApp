@@ -31,12 +31,12 @@ export class SidenavComponent implements OnInit {
   authUser: UserDetail | undefined;
 
   sidenavLinks: MenuItem[] = [
-    {icon: 'home', route: ['/'], title: 'app.menu.campaigns', disabled: false},
-    {icon: 'groups', route: ['/'], title: 'app.menu.monsters', disabled: false},
-    {icon: 'supervised_user_circle', route: ['/'], title: 'app.menu.materials', disabled: false},
-    {icon: 'person', route: ['/'], title: 'app.menu.weapons', disabled: false},
-    {icon: 'book_6', route: ['/'], title: 'app.menu.armours', disabled: false},
-    {icon: 'sell', route: ['/'], title: 'app.menu.specialRules', disabled: true},
+    {icon: 'diversity_3', route: ['/'], title: 'app.menu.campaigns', disabled: false},
+    {icon: 'pets', route: ['/'], title: 'app.menu.monsters', disabled: false},
+    {icon: 'pet_supplies', route: ['/'], title: 'app.menu.materials', disabled: false},
+    {icon: 'swords', route: ['/'], title: 'app.menu.weapons', disabled: false},
+    {icon: 'apparel', route: ['/'], title: 'app.menu.armours', disabled: false},
+    {icon: 'book_4', route: ['/'], title: 'app.menu.specialRules', disabled: true},
   ];
 
   ngOnInit(): void {
