@@ -1,6 +1,6 @@
-import { BaseDto, BaseItem } from "./base";
+import { BaseDto, BaseItem, Monster } from "./";
+
 import { MaterialType } from "../shared/enums";
-import { Monster } from ".";
 
 interface BaseMaterial extends BaseItem {
   description: string;

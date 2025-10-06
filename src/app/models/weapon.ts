@@ -1,6 +1,4 @@
-import { BaseDto, BaseItem } from "./base";
-
-import { MaterialCraft, MaterialCraftDto } from ".";
+import { BaseDto, BaseItem, MaterialCraft, MaterialCraftDto } from "./";
 
 interface BaseWeapon extends BaseItem {
     base?: boolean;

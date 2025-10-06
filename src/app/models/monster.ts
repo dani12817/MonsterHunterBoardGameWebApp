@@ -1,7 +1,6 @@
-import { BaseDto, BaseModel } from "./base";
-import { Armour, Material, Weapon } from ".";
+import { BaseDto, BaseLocal, Armour, Material, Weapon } from "./";
 
-interface BaseMonster extends BaseModel {
+interface BaseMonster extends BaseLocal {
   description: string;
 }
 

@@ -1,4 +1,4 @@
-import { BaseFirebase } from "./base";
+import { BaseFirebase } from "./";
 
 export interface UserDetail extends BaseFirebase {
     username?: string;

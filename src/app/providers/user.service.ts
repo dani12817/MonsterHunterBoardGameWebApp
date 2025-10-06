@@ -1,16 +1,14 @@
 import { inject, Injectable } from "@angular/core";
 import { getAuth, GoogleAuthProvider, signInWithPopup, UserCredential } from "firebase/auth";
 
-import { BaseService } from "./base.service";
-
-import { UserMapper } from "../mappers/user.mapper";
-
+import { BaseServiceFirebase } from "./";
+import { UserMapper } from "../mappers";
 import { UserDetail } from "../models";
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService extends BaseService<UserDetail, UserDetail> {
+export class UserService extends BaseServiceFirebase<UserDetail, UserCredential> {
     private _provider = new GoogleAuthProvider();
     private _auth = getAuth();
 
@@ -29,7 +27,7 @@ export class UserService extends BaseService<UserDetail, UserDetail> {
             
                     if (userLogged === undefined) {
                     //console.log("create");
-                    this.userLogged = await this.save(this.convertUser(result));
+                    this.userLogged = await this.save(result);
                     //this._localStorageService.setItem('userLogged', this.userLogged);
                     } else { this.userLogged = userLogged; }
             
@@ -64,17 +62,6 @@ export class UserService extends BaseService<UserDetail, UserDetail> {
         this.userLogged = undefined;
         //this._localStorageService.removeItem('userLogged');
         return this._auth.signOut();
-    }
-    
-
-    private convertUser(userData: UserCredential): UserDetail {
-        return {
-            id: userData.user.uid,
-            name: userData.user.displayName!,
-            username: userData.user.email?.split('@', 1)[0],
-            email: userData.user.email!,
-            //avatar: "/assets/img/no_avatar.webp",
-        };
     }
 
 }

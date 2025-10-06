@@ -1,6 +1,6 @@
-import { BaseModel } from "./base";
+import { BaseLocal } from "./";
 
-export interface Quest extends BaseModel {
+export interface Quest extends BaseLocal {
     quests?: QuestMission[];
 }
 

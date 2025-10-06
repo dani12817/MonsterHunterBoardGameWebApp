@@ -1,4 +1,4 @@
-import { Material } from ".";
+import { Material } from "./";
 
 export interface MaterialCraft {
     material?: number;

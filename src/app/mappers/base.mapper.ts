@@ -1,9 +1,6 @@
-import { Injectable } from "@angular/core";
-import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
+import { BaseModel } from "../models";
 
-import { BaseFirebase } from "../models";
-
-export abstract class BaseMapper<E extends BaseFirebase, D extends BaseFirebase> {
+export abstract class BaseMapper<E extends BaseModel, D> {
 
     public abstract dtoToModel(dto: D) : E;
 
@@ -24,7 +21,5 @@ export abstract class BaseMapper<E extends BaseFirebase, D extends BaseFirebase>
         }
         return dtoList;
     }
-
-    public abstract documentDataToModel(documentData: QueryDocumentSnapshot<DocumentData, DocumentData>) : E;
 
 }
