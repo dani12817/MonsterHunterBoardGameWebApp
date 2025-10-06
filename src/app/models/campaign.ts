@@ -1,8 +1,19 @@
-import { BaseFirebase } from "./base";
+import { DocumentReference } from "firebase/firestore";
 
-export interface Campaign extends BaseFirebase {
-    user?: number;
+import { BaseFirebase, UserDetail } from "./";
+
+interface BaseCampaign extends BaseFirebase {
     days?: number;
     quests?: number[];
     materials?: number[];
+    sharedStorage?: boolean;
+    createdOn?: any;
+}
+
+export interface Campaign extends BaseCampaign {
+    admin?: DocumentReference<UserDetail, UserDetail>;
+}
+
+export interface CampaignDto extends BaseCampaign {
+    admin?: string;
 }

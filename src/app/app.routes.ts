@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { LoginComponent, MainComponent } from './components';
+import { CampaignListComponent, LoginComponent, MainComponent } from './components';
 
 import { AuthGuard, NoAuthGuard } from './guards';
 
@@ -19,5 +19,12 @@ export const routes: Routes = [
         resolve: {
             authResolver: AuthUserResolverService
         },
+        
+        children: [
+            {
+                path: '',
+                component: CampaignListComponent,
+            },
+        ]
     }
 ];
