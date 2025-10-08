@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="mat-elevation-z1">
+    <mat-toolbar-row>
+        <span class="toolbar-separator flex-auto ml-5"></span>
+
+        <div class="dialog-toolbar-title">{{ 'campaign.title.new' | translate }}</div>
+
+        <span class="toolbar-separator flex-auto"></span>
+
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div mat-dialog-content class="campaign-edit-dialog-content pb-0 pt-3">
+    <form class="grid align-items-start flex-grow-1"
+        [formGroup]="campaignForm.formGroup">
+        <app-form-field-input
+            class="col-12"
+            [label]="labelTemplate"
+            fieldName="name"
+            [formClass]="campaignForm" />
+
+        <app-form-field-input
+            class="col-12"
+            [label]="labelTemplate"
+            type="number"
+            fieldName="days"
+            [formClass]="campaignForm" />
+    </form>
+</div>
+
+<div mat-dialog-actions class="p-4 pt-3">
+    <button class="w-full"
+        mat-raised-button color="primary"
+        [disabled]="campaignForm.formIsInvalid()"
+        (click)="submit()">
+        Guardar
+    </button>
+</div>

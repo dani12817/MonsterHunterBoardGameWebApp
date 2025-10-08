@@ -25,6 +25,17 @@ export const routes: Routes = [
                 path: '',
                 component: CampaignListComponent,
             },
+            {
+                path: 'campaign/:uid',
+                component: CampaignListComponent,
+                canActivate: [AuthGuard],
+                resolve: {
+                    //doujinshiData: DoujinshiResolverService,
+                    //artistListData: ArtistListResolverService,
+                    //tagListData: TagListResolverService,
+                    //parodyListData: ParodyListResolverService
+                }
+            },
         ]
     }
 ];

@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 import { MatListModule } from '@angular/material/list';
 
-import { material } from '../db/material';
+import { MATERIAL_TABLE } from '../db/material';
 import { MONSTER_TABLE } from '../db/monster';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
@@ -19,12 +19,12 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 export class AppComponent {
   title = 'MonsterHunterBoardGameWebApp';
 
-  material = material;
+  material = MATERIAL_TABLE;
   monster = MONSTER_TABLE;
 
   constructor() {
-    for (let index = 0; index < material.length; index++) {
-      material[index].id = index+1;
+    for (let index = 0; index < this.material.length; index++) {
+      this.material[index].id = index+1;
     }
 
 

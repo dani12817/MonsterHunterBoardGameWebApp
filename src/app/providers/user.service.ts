@@ -5,6 +5,8 @@ import { BaseServiceFirebase } from "./";
 import { UserMapper } from "../mappers";
 import { UserDetail } from "../models";
 
+import { USER_FIREBASE } from "../shared/constants";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +17,7 @@ export class UserService extends BaseServiceFirebase<UserDetail, UserCredential>
     userLogged: UserDetail | undefined;
 
     constructor() {
-        super(inject(UserMapper), "user");
+        super(inject(UserMapper), USER_FIREBASE);
     }
 
     signInWithGoogle() {

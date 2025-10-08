@@ -1,0 +1,24 @@
+<div class="card shadow-1 p-3 border-round-2xl">
+    <h2 class="mb-2">{{ campaign.name }}</h2>
+
+    <div class="mb-4">
+        {{ 'campaign.fields.days' | translate }}: {{ campaign.days }}
+    </div>
+
+    <div class="text-right">
+        {{ campaign.createdOn | date:"dd/MM/yyyy" }}
+    </div>
+
+    <div class="campaign-actions flex mt-3">
+        <button mat-raised-button color="accent"
+            class="flex-grow-1 mr-3">
+            {{ 'actions.edit' | translate }}
+        </button>
+
+        <a mat-raised-button color="primary"
+            class="flex-grow-1"
+            [routerLink]="['/campaign/', campaign.id]">
+            {{ 'actions.show' | translate }}
+        </a>
+    </div>
+</div>

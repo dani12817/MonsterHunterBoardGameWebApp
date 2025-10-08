@@ -37,8 +37,9 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     return this._baseMapper.modelToDtoList(modelList);
   }
 
-  protected async save(dto: D): Promise<E> {
+  async save(dto: D): Promise<E> {
     let model: E = this._baseMapper.dtoToModel(dto);
+    console.log("save", model);
     if (model.id != undefined) {
       setDoc(doc(this._firestore, this._collectionName, model.id), model);
       return model;
@@ -54,7 +55,7 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     return addDoc(this._collectionReference, model);
   }
 
-  protected getById(id: string) {
+  getById(id: string) {
     return new Promise<E | undefined>(async (resolve, reject) => {
       const userSnap = await getDoc(doc(this._firestore, this._collectionName, id));
 

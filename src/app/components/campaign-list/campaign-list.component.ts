@@ -1,19 +1,25 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { NgFor } from '@angular/common';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+import { CampaignCardComponent } from '../../shared/components/campaign-card/campaign-card.component';
+
 import { CampaignService, UserService } from '../../providers';
 import { CampaignDto, UserDetail } from '../../models';
 
+import { CampaignEditDialogComponent } from '../../shared/dialogs';
+import { CommonMethods } from '../../shared/common-methods';
 
 @Component({
   selector: 'app-home',
   imports: [
-    RouterModule,
+    RouterModule, NgFor,
     MatButtonModule, MatIconModule,
+    CampaignCardComponent
   ],
   templateUrl: './campaign-list.component.html',
   styleUrl: './campaign-list.component.scss'
@@ -27,8 +33,6 @@ export class CampaignListComponent {
   campaignList: CampaignDto[] = [];
   userLogged!: UserDetail;
 
-  private filters: any;
-
   constructor() {
     this._userService.getLoggedInUser().then(async response => {
       this.userLogged = response!;
@@ -41,6 +45,17 @@ export class CampaignListComponent {
       console.log("getAllDto", data);
       this.campaignList = data;
       //data[0].artist.get().then((result: Artist) => console.log("artist", result))
+    });
+  }
+
+  openNewCampaign() {
+    const dialogRef = this._dialog.open(CampaignEditDialogComponent, 
+      CommonMethods.dialogConfig('420px', 'campaign-edit-dialog'));
+
+    dialogRef.afterClosed().subscribe(response => {
+      if (response) {
+        this.searchDoujinshi();
+      }
     });
   }
 

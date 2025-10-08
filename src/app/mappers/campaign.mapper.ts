@@ -2,8 +2,9 @@ import { Injectable } from "@angular/core";
 import { doc, DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 
 import { BaseFirebaseMapper } from ".";
-
 import { Campaign, CampaignDto } from "../models";
+
+import { CAMPAIGN_FIREBASE } from "../shared/constants";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ import { Campaign, CampaignDto } from "../models";
 export class CampaignMapper extends BaseFirebaseMapper<Campaign, CampaignDto> {
 
     constructor() {
-        super("campaign");
+        super(CAMPAIGN_FIREBASE);
     }
 
     public dtoToModel( dto: CampaignDto ) : Campaign {
@@ -32,6 +33,7 @@ export class CampaignMapper extends BaseFirebaseMapper<Campaign, CampaignDto> {
         return {
           ...documentData.data(),
           id: documentData.id,
+          createdOn: documentData.data()["createdOn"].toDate()
         };
     }
 

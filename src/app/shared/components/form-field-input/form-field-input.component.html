@@ -1,0 +1,11 @@
+<mat-form-field class="w-full"
+    appearance="outline"
+    [formGroup]="formClass.formGroup">
+    <mat-label for="@next">{{ labelName | translate }}</mat-label>
+
+    <input matInput [type]="type" [formControlName]="fieldName" [name]="fieldName">
+    
+    @if (formClass.fieldIsInvalid(fieldName)) {
+        <mat-error>{{ formClass.hasError(fieldName) }}</mat-error>
+    }
+</mat-form-field>

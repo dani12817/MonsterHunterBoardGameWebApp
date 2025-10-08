@@ -1,12 +1,12 @@
 import { BaseLocal } from "./";
 
 export interface Quest extends BaseLocal {
-    quests?: QuestMission[];
+    quests: QuestMission[];
 }
 
 export interface QuestMission {
-    difficulty?: number;
-    remaining?: number;
+    stars: number;
+    //remaining?: number;
 }
 
 export interface QuestDto extends Quest {
