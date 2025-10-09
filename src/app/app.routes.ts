@@ -1,10 +1,16 @@
 import { Routes } from '@angular/router';
 
-import { CampaignListComponent, LoginComponent, MainComponent } from './components';
+import {
+    LoginComponent, MainComponent,
+    CampaignListComponent, CampaignDetailComponent
+ } from './components';
 
 import { AuthGuard, NoAuthGuard } from './guards';
 
-import { AuthUserResolverService } from './resolvers';
+import { 
+    AuthUserResolverService, 
+    CampaignMaterialsResolverService, CampaignQuestsResolverService, CampaignResolverService 
+} from './resolvers';
 
 export const routes: Routes = [
     {
@@ -27,13 +33,12 @@ export const routes: Routes = [
             },
             {
                 path: 'campaign/:uid',
-                component: CampaignListComponent,
+                component: CampaignDetailComponent,
                 canActivate: [AuthGuard],
                 resolve: {
-                    //doujinshiData: DoujinshiResolverService,
-                    //artistListData: ArtistListResolverService,
-                    //tagListData: TagListResolverService,
-                    //parodyListData: ParodyListResolverService
+                    campaignData: CampaignResolverService,
+                    campaignMaterialsData: CampaignMaterialsResolverService,
+                    campaignQuestsData: CampaignQuestsResolverService
                 }
             },
         ]

@@ -1,4 +1,4 @@
-import { BaseDto, BaseLocal, Armour, Material, Weapon } from "./";
+import { BaseDto, BaseLocal, Armour, MaterialLocal, Weapon } from "./";
 
 interface BaseMonster extends BaseLocal {
   description: string;
@@ -17,13 +17,13 @@ export interface GatheringPhase {
 }
 
 export interface MonsterDto extends BaseMonster, BaseDto {
-  materials: Material[];
+  materials: MaterialLocal[];
   gathering: GatheringPhaseDto[];
   weapons: Weapon[];
   armour: Armour[];
 }
 
 export interface GatheringPhaseDto {
-  materials: Material[];
+  materials: MaterialLocal[];
   entry: number;
 }

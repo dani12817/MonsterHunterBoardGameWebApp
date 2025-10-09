@@ -8,13 +8,13 @@ interface BaseMaterial extends BaseItem {
   image: string;
 }
 
-export interface Material extends BaseMaterial {
+export interface MaterialLocal extends BaseMaterial {
   monsters?: number[];
   gathering?: number[];
   reward?: number[];
 }
 
-export interface MaterialDto extends BaseMaterial, BaseDto {
+export interface MaterialLocalDto extends BaseMaterial, BaseDto {
   monsters?: Monster[];
   gathering?: Monster[];
   reward?: Monster[];

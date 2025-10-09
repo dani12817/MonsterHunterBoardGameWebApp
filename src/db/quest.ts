@@ -1,7 +1,7 @@
 import { EquipmentTree } from "../app/shared/enums";
-import { Quest } from "../app/models";
+import { QuestLocal } from "../app/models";
 
-export const QUEST_TABLE: Quest[] = [
+export const QUEST_TABLE: QuestLocal[] = [
     {
         id: 1,
         name: EquipmentTree.greatJagras,

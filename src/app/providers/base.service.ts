@@ -31,7 +31,7 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
       resolve(modelList);
     });
   }
-    
+
   async getAllDto() {
     let modelList: E[] = await this.getAll();
     return this._baseMapper.modelToDtoList(modelList);
@@ -56,15 +56,20 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
   }
 
   getById(id: string) {
-    return new Promise<E | undefined>(async (resolve, reject) => {
+    return new Promise<E>(async (resolve, reject) => {
       const userSnap = await getDoc(doc(this._firestore, this._collectionName, id));
 
       if(userSnap.exists()) {
         resolve(this._baseMapper.documentDataToModel(userSnap));
       }
 
-      resolve(undefined);
+      reject(undefined);
     });
+  }
+
+  async getDtoById(id: string) {
+    let model: E = await this.getById(id);
+    return this._baseMapper.modelToDto(model);
   }
 
 }

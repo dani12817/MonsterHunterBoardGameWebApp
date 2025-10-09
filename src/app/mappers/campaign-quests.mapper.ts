@@ -1,24 +1,28 @@
-import { Injectable } from "@angular/core";
-import { doc, DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
+import { inject, Injectable } from "@angular/core";
+import { collection, CollectionReference, doc, DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
+import { Firestore } from "@angular/fire/firestore";
 
 import { BaseFirebaseMapper } from ".";
 import { CampaignQuests, CampaignQuestsDto } from "../models";
 
-import { CAMPAIGN_QUESTS_FIREBASE } from "../shared/constants";
+import { CAMPAIGN_FIREBASE } from "../shared/constants";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CampaignQuestsMapper extends BaseFirebaseMapper<CampaignQuests, CampaignQuestsDto> {
 
+    protected _campaignReference: CollectionReference;
+
     constructor() {
-        super(CAMPAIGN_QUESTS_FIREBASE);
+        super();
+        this._campaignReference = collection(inject(Firestore), CAMPAIGN_FIREBASE)
     }
 
     public dtoToModel( dto: CampaignQuestsDto ) : CampaignQuests {
         return {
             ...dto,
-            campaign: doc(this._collectionReference, dto.campaign)
+            campaign: doc(this._campaignReference, dto.campaign)
         };
     }
 

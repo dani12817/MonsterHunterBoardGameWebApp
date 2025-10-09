@@ -3,7 +3,7 @@ import { DocumentReference } from "firebase/firestore";
 import { BaseFirebase, Campaign } from ".";
 
 interface BaseCampaignMaterials extends BaseFirebase {
-    materials?: number[];
+    materials: number[];
 }
 
 export interface CampaignMaterials extends BaseCampaignMaterials {

@@ -1,0 +1,30 @@
+<div class="quest-item-container shadow-1 p-3 border-round-2xl">
+    <div class="quest-name-container flex align-items-center mb-2">
+        <img class="w-2rem" [src]="questLocal.icon">
+        <div class="ml-3 font-medium">{{ questLocal.name | translate }}</div>
+    </div>
+
+    <div class="quest-missions-container flex flex-wrap">
+        @for (questMissions of questLocal.quests; track $index) {
+            <div class="quest-star-container flex w-12 py-2 align-items-center">
+                <img class="w-1-5rem mr-2" [src]="questMissions.icon">
+
+                <button class="small-icon-button white-border"
+                    mat-icon-button color="warn"
+                    (click)="changeQuest(questMissions.name, -1)">
+                    <mat-icon>remove</mat-icon>
+                </button>
+
+                <input class="w-full text-center" matInput 
+                    [(value)]="campaignQuest[questMissions.name]"
+                    disabled>
+
+                <button class="small-icon-button white-border"
+                    mat-icon-button color="primary"
+                    (click)="changeQuest(questMissions.name, 1)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        }
+    </div>
+</div>

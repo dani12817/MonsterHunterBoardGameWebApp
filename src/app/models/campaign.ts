@@ -2,7 +2,7 @@ import { DocumentReference } from "firebase/firestore";
 
 import { BaseFirebase, UserDetail } from "./";
 
-interface BaseCampaign extends BaseFirebase {
+export interface BaseCampaign extends BaseFirebase {
     days?: number;
     quests?: any[];
     materials?: number[];

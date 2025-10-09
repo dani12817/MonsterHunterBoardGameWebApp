@@ -3,4 +3,6 @@ export * from './base.mapper';
 export * from './campaign.mapper';
 export * from './campaign-quests.mapper';
 export * from './campaign-materials.mapper';
+export * from './material-local.mapper';
+export * from './quest-local.mapper';
 export * from './user.mapper';

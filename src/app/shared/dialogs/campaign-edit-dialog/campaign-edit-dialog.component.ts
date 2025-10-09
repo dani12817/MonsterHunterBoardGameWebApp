@@ -14,15 +14,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { FormFieldInputComponent } from '../../components/form-field-input/form-field-input.component';
 
-import { CampaignService, UserService } from '../../../providers';
-import { Campaign, CampaignDto, CampaignMaterialsDto, CampaignQuestsDto, UserDetail } from '../../../models';
-
-import { FormClass } from '../../form-class';
-import { DEFAULT_DAYS, MAX_QUEST_MISSIONS } from '../../constants';
-
-import { MATERIAL_TABLE, QUEST_TABLE } from '../../../../db';
 import { CampaignQuestsService } from '../../../providers/campaign-quests.service';
 import { CampaignMaterialsService } from '../../../providers/campaign-materials.service';
+
+import { CampaignService, UserService } from '../../../providers';
+import { Campaign, CampaignDto, UserDetail } from '../../../models';
+
+import { FormClass } from '../../form-class';
+import { DEFAULT_DAYS } from '../../constants';
+import { CommonMethods } from '../../common-methods';
 
 @Component({
   selector: 'app-campaign-edit-dialog',
@@ -84,32 +84,8 @@ export class CampaignEditDialogComponent {
   }
 
   private async createCampaignDefaultData(campaign: Campaign) {
-    await this._campaignQuestsService.save(this.loadCampaignQuestsDefaultData(campaign));
-    await this._campaignMaterialsService.save(this.loadCampaignMaterialsDefaultData(campaign));
-  }
-
-  private loadCampaignQuestsDefaultData(campaign: Campaign) {
-    let campaignQuestsDetail: CampaignQuestsDto = {
-      campaign: campaign.id!,
-      quests: []
-    };
-
-    for (const quest of QUEST_TABLE) {
-      let questMission: any = {};
-      for (const mission of quest.quests) {
-        questMission['stars'+mission.stars] = MAX_QUEST_MISSIONS;
-      }
-      campaignQuestsDetail.quests?.push(questMission);
-    }
-  
-    return campaignQuestsDetail;
-  }
-
-  private loadCampaignMaterialsDefaultData(campaign: Campaign) {
-    return {
-      campaign: campaign.id!,
-      materials: Array<number>(MATERIAL_TABLE.length).fill(0)
-    };
+    await this._campaignQuestsService.save(CommonMethods.loadCampaignQuestsDefaultData(campaign));
+    await this._campaignMaterialsService.save(CommonMethods.loadCampaignMaterialsDefaultData(campaign));
   }
 
   get labelTemplate() {

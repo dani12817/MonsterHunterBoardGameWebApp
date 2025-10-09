@@ -1,0 +1,24 @@
+<div class="material-item-container shadow-1 p-2 border-round-2xl">
+    <div class="material-name-container flex align-items-center mb-2">
+        <img class="w-1-5rem" [src]="materialLocal.icon">
+        <div class="ml-3 font-medium">{{ materialLocal.name }}</div>
+    </div>
+
+    <div class="material-star-container flex w-12 align-items-center">
+        <button class="small-icon-button white-border"
+            mat-icon-button color="warn"
+            (click)="changeMaterial(-1)">
+            <mat-icon>remove</mat-icon>
+        </button>
+
+        <input class="w-full text-center" matInput 
+            [(value)]="campaignMaterial.materials[index]"
+            disabled>
+
+        <button class="small-icon-button white-border"
+            mat-icon-button color="primary"
+            (click)="changeMaterial(1)">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>

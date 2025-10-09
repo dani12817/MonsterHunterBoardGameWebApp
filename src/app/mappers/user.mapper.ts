@@ -5,16 +5,10 @@ import { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 import { BaseFirebaseMapper } from "./";
 import { UserDetail } from "../models";
 
-import { USER_FIREBASE } from "../shared/constants";
-
 @Injectable({
   providedIn: 'root'
 })
 export class UserMapper extends BaseFirebaseMapper<UserDetail, UserCredential> {
-
-    constructor() {
-        super(USER_FIREBASE);
-    }
 
     public dtoToModel( dto: UserCredential ) : UserDetail {
         return {

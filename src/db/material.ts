@@ -1,7 +1,7 @@
 import { MaterialType } from "../app/shared/enums";
-import { Material } from "../app/models";
+import { MaterialLocal } from "../app/models";
 
-export const MATERIAL_TABLE: Material[] = [
+export const MATERIAL_TABLE: MaterialLocal[] = [
   {
     id: 1,
     name: "Machalite Ore",
