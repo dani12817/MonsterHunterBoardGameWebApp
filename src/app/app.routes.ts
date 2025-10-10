@@ -9,7 +9,8 @@ import { AuthGuard, NoAuthGuard } from './guards';
 
 import { 
     AuthUserResolverService, 
-    CampaignMaterialsResolverService, CampaignQuestsResolverService, CampaignResolverService 
+    CampaignResolverService, 
+    CampaignMaterialsResolverService, CampaignQuestsResolverService, CampaignHunterResolverService 
 } from './resolvers';
 
 export const routes: Routes = [
@@ -38,7 +39,8 @@ export const routes: Routes = [
                 resolve: {
                     campaignData: CampaignResolverService,
                     campaignMaterialsData: CampaignMaterialsResolverService,
-                    campaignQuestsData: CampaignQuestsResolverService
+                    campaignQuestsData: CampaignQuestsResolverService,
+                    campaignHuntersData: CampaignHunterResolverService
                 }
             },
         ]

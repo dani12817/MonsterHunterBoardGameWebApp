@@ -18,7 +18,7 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     this._collectionReference = collection(this._firestore, this._collectionName)
   }
     
-  getAll() {
+  getAll(): Promise<E[]> {
     return new Promise<E[]>(async (resolve, reject) => {
       const docSnapList = await getDocs(query(this._collectionReference));
 
@@ -32,7 +32,7 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     });
   }
 
-  async getAllDto() {
+  async getAllDto(): Promise<D[]> {
     let modelList: E[] = await this.getAll();
     return this._baseMapper.modelToDtoList(modelList);
   }
@@ -51,11 +51,15 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     };
   }
 
+  async saveDto(dto: D): Promise<D> {
+    return this._baseMapper.modelToDto(await this.save(dto));
+  }
+
   protected async _create(model: E) {
     return addDoc(this._collectionReference, model);
   }
 
-  getById(id: string) {
+  getById(id: string): Promise<E> {
     return new Promise<E>(async (resolve, reject) => {
       const userSnap = await getDoc(doc(this._firestore, this._collectionName, id));
 
@@ -67,7 +71,7 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     });
   }
 
-  async getDtoById(id: string) {
+  async getDtoById(id: string): Promise<D> {
     let model: E = await this.getById(id);
     return this._baseMapper.modelToDto(model);
   }

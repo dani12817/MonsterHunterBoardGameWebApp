@@ -33,7 +33,7 @@ export class CampaignMapper extends BaseFirebaseMapper<Campaign, CampaignDto> {
         };
     }
 
-    public documentDataToModel(documentData: QueryDocumentSnapshot<DocumentData, DocumentData>) : Campaign {
+    public documentDataToModel(documentData: QueryDocumentSnapshot<Campaign, Campaign>) : Campaign {
         return {
           ...documentData.data(),
           id: documentData.id,

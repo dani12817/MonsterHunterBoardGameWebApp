@@ -6,7 +6,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/monster-hunter-board-game-web-app",
+    "public": "dist/monster-hunter-board-game-web-app/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

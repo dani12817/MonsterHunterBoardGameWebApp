@@ -1,6 +1,7 @@
 export const CAMPAIGN_FIREBASE = "campaign";
 export const CAMPAIGN_QUESTS_FIREBASE = "campaignQuests";
 export const CAMPAIGN_MATERIALS_FIREBASE = "campaignMaterials";
+export const CAMPAIGN_HUNTERS_FIREBASE = "campaignHunters";
 export const USER_FIREBASE = 'user';
 
 export const DEFAULT_DAYS = 30;

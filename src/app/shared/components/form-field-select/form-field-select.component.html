@@ -1,0 +1,17 @@
+<mat-form-field class="w-full"
+    appearance="outline" 
+    [formGroup]="formClass.formGroup">
+    <mat-label for="@next">{{ labelName | translate }}</mat-label>
+
+    <mat-select [formControlName]="fieldName">
+        <mat-option *ngIf="emptyOption" [value]="null"></mat-option>
+
+        <mat-option *ngFor="let item of itemList" [value]="item" class="shadow-option">
+            {{ itemLabelBase + '.' + item | translate }}
+        </mat-option>
+    </mat-select>
+
+    @if (formClass.fieldIsInvalid(fieldName)) {
+        <mat-error>{{ formClass.hasError(fieldName) }}</mat-error>
+    }
+</mat-form-field>

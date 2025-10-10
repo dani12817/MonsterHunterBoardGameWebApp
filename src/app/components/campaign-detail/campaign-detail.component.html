@@ -1,30 +1,64 @@
 <div class="campaign-container flex flex-column align-items-center">
-    <div class="campaign-title-container flex align-items-center mb-3">
-        <h1 class="font-bold mb-0 mr-3">{{ campaignDetail.name }}</h1>
+    <h1 class="font-bold">{{ campaignDetail.name }}</h1>
 
-        <button class="white-border"
-            mat-icon-button color="primary"
+    <mat-tab-group class="w-12" animationDuration="0ms">
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="mr-2" fontSet="material-symbols-outlined">pet_supplies</mat-icon>
+                <span class="hidden sm:inline">{{ 'app.menu.materials' | translate }}</span>
+            </ng-template>
+
+            <div class="materials-container grid w-12 pt-2 m-0 align-content-start">
+                @for (materialLocal of materialsLocalList; track $index) {
+                    <campaign-material-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                        [materialLocal]="materialLocal"
+                        [campaignMaterial]="campaignMaterialsDetail"
+                        [index]="$index" />
+                }
+            </div>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="mr-2" fontSet="material-symbols-outlined">pets</mat-icon>
+                <span class="hidden sm:inline">{{ 'app.menu.quests' | translate }}</span>
+            </ng-template>
+
+            <div class="quests-container grid w-12 pt-2 m-0 align-content-start">
+                @for (questLocal of questsLocalList; track $index) {
+                    <campaign-quest-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                        [questLocal]="questLocal"
+                        [campaignQuest]="campaignQuestsDetail.quests![$index]" />
+                }
+            </div>
+        </mat-tab>
+
+        @for (campaignHunter of campaignHunterList; track $index) {
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img class="w-1-5 mr-2"
+                        [src]="commonMethods.generateWeaponIcon(campaignHunter.weaponType)" />
+                    <span class="hidden sm:inline">{{ campaignHunter.name }}</span>
+                </ng-template>
+
+            </mat-tab>
+        }
+    </mat-tab-group>
+
+    <div class="rigth-actions-button flex flex-column align-items-center z-2">
+        @if (campaignHunterList.length < 4) {
+            <button mat-mini-fab
+                class="medium-button"
+                (click)="openNewCampaignHunter()">
+                <mat-icon>person_add</mat-icon>
+            </button>
+        }
+
+        <button mat-mini-fab
+            color="primary"
+            class="big-button mt-3"
             (click)="saveCampaignData()">
             <mat-icon>save</mat-icon>
         </button>
-    </div>
-
-    <div class="campaign-content-container grid flex-column lg:flex-row col-12">
-        <div class="materials-container grid w-12 lg:w-6 p-2 align-content-start">
-            @for (materialLocal of materialsLocalList; track $index) {
-                <campaign-material-card class="col-6 md:col-4 lg:col-6 xl:col-4 xxl:col-2"
-                    [materialLocal]="materialLocal"
-                    [campaignMaterial]="campaignMaterialsDetail"
-                    [index]="$index" />
-            }
-        </div>
-
-        <div class="quests-container grid w-12 lg:w-6 p-2 align-content-start">
-            @for (questLocal of questsLocalList; track $index) {
-                <campaign-quest-card class="col-6 md:col-4 lg:col-6 xl:col-4 xxl:col-3"
-                    [questLocal]="questLocal"
-                    [campaignQuest]="campaignQuestsDetail.quests![$index]" />
-            }
-        </div>
     </div>
 </div>

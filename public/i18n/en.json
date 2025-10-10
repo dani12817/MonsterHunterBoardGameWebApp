@@ -3,6 +3,7 @@
         "title": "Monster Hunter Board Game Companion",
         "menu": {
             "campaigns": "Campaigns",
+            "quests": "Quests",
             "monsters": "Monsters",
             "materials": "Materials",
             "weapons": "Weapons",
@@ -19,6 +20,16 @@
         "fields": {
             "name": "Campaign name",
             "days": "Nº of days"
+        }
+    },
+    "campaignHunter": {
+        "title": {
+            "new": "New hunter",
+            "edit": "Edit hunter"
+        },
+        "fields": {
+            "name": "Hunter name",
+            "weaponType": "Weapon Type"
         }
     },
     "messages": {
@@ -40,9 +51,24 @@
         "show": "Show",
         "close": "Close"
     },
+    "weaponNames": {
+        "greatsword": "Greatsword",
+        "swordShield": "Sword & Shield",
+        "dualBlades": "Dual Blades",
+        "longsword": "Longsword",
+        "hammer": "Hammer",
+        "huntingHorn": "Hunting Horn",
+        "lance": "Lance",
+        "gunlance": "Gunlance",
+        "switchAxe": "Switch Axe",
+        "chargeBlade": "Charge Blade",
+        "insectGlaive": "Insect Glaive",
+        "bow": "Bow",
+        "lightBowgun": "Light Bowgun",
+        "heavyBowgun": "Heavy Bowgun"
+    },
     "weapon": {
         "greatsword": {
-            "name": "Greatsword",
             "mineral": {
                 "rarity1": "Buster Sword",
                 "rarity2": "Buster Blade",
@@ -91,7 +117,6 @@
             }
         },
         "swordShield": {
-            "name": "Swort & Shield",
             "mineral": {
                 "rarity1": "Hunter's Knife",
                 "rarity2": "Steel Knife",
@@ -140,7 +165,6 @@
             }
         },
         "dualBlades": {
-            "name": "Dual Blades",
             "mineral": {
                 "rarity1": "Matched Slicers",
                 "rarity2": "Dual Slicers",
@@ -193,7 +217,6 @@
             }
         },
         "longsword" : {
-            "name": "Longsword",
             "mineral": {
                 "rarity1": "Iron Katana",
                 "rarity2": "Iron Grace",
@@ -238,7 +261,6 @@
             }
         },
         "hammer": {
-            "name": "Hammer",
             "mineral": {
                 "rarity1": "Iron Hammer",
                 "rarity2": "Iron Demon",
@@ -287,7 +309,6 @@
             }
         },
         "huntingHorn": {
-            "name": "hunting Horn",
             "mineral": {
                 "rarity1": "Metal Bagpipe",
                 "rarity2": "Great Bagpipe",
@@ -336,7 +357,6 @@
             }
         },
         "lance": {
-            "name": "Lance",
             "mineral": {
                 "rarity1": "Iron Lance",
                 "rarity2": "Steel Lance",
@@ -381,7 +401,6 @@
             }
         },
         "gunlance": {
-            "name": "Gunlance",
             "mineral": {
                 "rarity1": "Iron Gunlance",
                 "rarity2": "Steel Gunlance",
@@ -422,7 +441,6 @@
             }
         },
         "switchAxe": {
-            "name": "Switch Axe",
             "mineral": {
                 "rarity1": "Proto Iron Axe",
                 "rarity2": "Improved Steel Axe",
@@ -463,7 +481,6 @@
             }
         },
         "chargeBlade": {
-            "name": "Charge Blade",
             "mineral": {
                 "rarity1": "Proto Commision Axe",
                 "rarity2": "Elite Commision Axe",
@@ -504,7 +521,6 @@
             }
         },
         "insectGlaive": {
-            "name": "Insect Glaive",
             "mineral": {
                 "rarity1": "Iron Blade",
                 "rarity2": "Steel Blade",
@@ -553,7 +569,6 @@
             }
         },
         "bow": {
-            "name": "Bow",
             "mineral": {
                 "rarity1": "Iron Bow",
                 "rarity2": "Steel Bow",
@@ -598,7 +613,6 @@
             }
         },
         "lightBowgun": {
-            "name": "Light Bowgun",
             "mineral": {
                 "rarity1": "Chain Blitz",
                 "rarity2": "High Chain Blitz",
@@ -639,7 +653,6 @@
             }
         },
         "heavyBowgun": {
-            "name": "Heavy Bowgun",
             "mineral": {
                 "rarity1": "Iron Assault",
                 "rarity2": "Steel Assault",

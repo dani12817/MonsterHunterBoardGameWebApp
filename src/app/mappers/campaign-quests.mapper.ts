@@ -33,7 +33,7 @@ export class CampaignQuestsMapper extends BaseFirebaseMapper<CampaignQuests, Cam
         };
     }
 
-    public documentDataToModel(documentData: QueryDocumentSnapshot<DocumentData, DocumentData>) : CampaignQuests {
+    public documentDataToModel(documentData: QueryDocumentSnapshot<CampaignQuests, CampaignQuests>) : CampaignQuests {
         return {
             ...documentData.data(),
             id: documentData.id,

@@ -3,14 +3,14 @@ import { collection, CollectionReference, doc, DocumentData, QueryDocumentSnapsh
 import { Firestore } from "@angular/fire/firestore";
 
 import { BaseFirebaseMapper } from ".";
-import { CampaignMaterials, CampaignMaterialsDto } from "../models";
+import { CampaignHunter, CampaignHunterDto } from "../models";
 
 import { CAMPAIGN_FIREBASE } from "../shared/constants";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CampaignMaterialsMapper extends BaseFirebaseMapper<CampaignMaterials, CampaignMaterialsDto> {
+export class CampaignHunterMapper extends BaseFirebaseMapper<CampaignHunter, CampaignHunterDto> {
 
     protected _campaignReference: CollectionReference;
 
@@ -19,24 +19,23 @@ export class CampaignMaterialsMapper extends BaseFirebaseMapper<CampaignMaterial
         this._campaignReference = collection(inject(Firestore), CAMPAIGN_FIREBASE)
     }
 
-    public dtoToModel( dto: CampaignMaterialsDto ) : CampaignMaterials {
+    public dtoToModel( dto: CampaignHunterDto ) : CampaignHunter {
         return {
             ...dto,
             campaign: doc(this._campaignReference, dto.campaign)
         };
     }
 
-    public modelToDto( model: CampaignMaterials ) : CampaignMaterialsDto {
+    public modelToDto( model: CampaignHunter ) : CampaignHunterDto {
         return {
             ...model,
             campaign: model.campaign?.id
         };
     }
 
-    public documentDataToModel(documentData: QueryDocumentSnapshot<CampaignMaterials, CampaignMaterials>) : CampaignMaterials {
+    public documentDataToModel(documentData: QueryDocumentSnapshot<CampaignHunter, CampaignHunter>) : CampaignHunter {
         return {
             ...documentData.data(),
-            materials: documentData.data()["materials"] ?? [],
             id: documentData.id,
         };
     }

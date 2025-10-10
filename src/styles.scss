@@ -11,6 +11,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin: auto;
 }
 
+.medium-button {
+  width: 46px !important;
+  height: 46px !important;
+}
+
+.big-button {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.rigth-actions-button {
+  position: fixed !important;
+  right: 18px;
+  bottom: 18px;
+}
+
 .small-icon-button {
   width: 24px !important;
   height: 24px !important;
@@ -40,8 +56,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: #e6e6e6;
 }
 
-.w-1-5rem {
+.w-1-5 {
   width: 1.5rem !important;
+}
+
+@media screen and (min-width: 576px) {
+  .rigth-actions-button {
+    position: fixed !important;
+    right: 36px;
+    bottom: 36px;
+  }
 }
 
 @media screen and (min-width: 1921px) {

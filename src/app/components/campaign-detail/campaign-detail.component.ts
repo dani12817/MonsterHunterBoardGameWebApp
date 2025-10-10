@@ -10,12 +10,14 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { CampaignQuestCardComponent, CampaignMaterialCardComponent } from '../../shared/components';
+import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 
 import { CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService, QuestsLocalService } from '../../providers';
 
-import { CampaignDto, CampaignMaterialsDto, CampaignQuestsDto, MaterialLocalDto, QuestLocalDto } from '../../models';
+import { CampaignDto, CampaignHunterDto, CampaignMaterialsDto, CampaignQuestsDto, MaterialLocalDto, QuestLocalDto } from '../../models';
 
 import { CommonMethods } from '../../shared/common-methods';
 
@@ -23,9 +25,9 @@ import { CommonMethods } from '../../shared/common-methods';
   selector: 'app-campaign-detail',
   imports: [
     /*NgIf, NgFor,*/ FormsModule, ReactiveFormsModule, /*KeyValuePipe,*/ RouterModule,
-    MatChipsModule, MatButtonModule, MatIconModule, MatSnackBarModule, MatDialogModule, MatFormFieldModule, MatToolbarModule,
+    MatChipsModule, MatButtonModule, MatIconModule, MatSnackBarModule, MatDialogModule, MatFormFieldModule, MatToolbarModule, MatTabsModule,
     CampaignQuestCardComponent, CampaignMaterialCardComponent,
-    //TranslatePipe
+    TranslatePipe
   ],
   templateUrl: './campaign-detail.component.html',
   styleUrl: './campaign-detail.component.scss'
@@ -45,9 +47,12 @@ export class CampaignDetailComponent implements OnInit {
   campaignDetail!: CampaignDto;
   campaignQuestsDetail!: CampaignQuestsDto;
   campaignMaterialsDetail!: CampaignMaterialsDto;
+  campaignHunterList!: CampaignHunterDto[];
   
   questsLocalList: QuestLocalDto[];
   materialsLocalList: MaterialLocalDto[];
+
+  commonMethods = CommonMethods;
 
   constructor() {
     this.questsLocalList = this._questsLocalService.getAllDto();
@@ -66,6 +71,17 @@ export class CampaignDetailComponent implements OnInit {
 
       this.campaignMaterialsDetail = routeData.campaignMaterialsData 
         ?? CommonMethods.loadCampaignMaterialsDefaultData(this.campaignDetail);
+
+      this.campaignHunterList = routeData.campaignHuntersData ?? [];
+    });
+  }
+
+  openNewCampaignHunter() {
+    const dialogRef = this._dialog.open(CampaignHunterEditDialogComponent, 
+      CommonMethods.dialogConfig('420px', 'campaign-hunter-edit-dialog', {campaignId: this.campaignDetail.id}));
+
+    dialogRef.afterClosed().subscribe(response => {
+      this.campaignHunterList.push(response);
     });
   }
 

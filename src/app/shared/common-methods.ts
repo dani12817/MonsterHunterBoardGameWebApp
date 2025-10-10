@@ -4,10 +4,10 @@ import { MatDialogConfig } from '@angular/material/dialog';
 
 import { BaseCampaign, CampaignQuestsDto } from '../models';
 
-import { MaterialType } from './enums';
+import { ArmourType, MaterialType, WeaponType } from './enums';
 import { ASSETS_FOLDER, MAX_QUEST_MISSIONS } from './constants';
 
-import { MATERIAL_TABLE, QUEST_TABLE } from '../../db';
+import { ARMOUR_TABLE, MATERIAL_TABLE, QUEST_TABLE, WEAPON_TABLE } from '../../db';
 
 @Injectable()
 export class CommonMethods {
@@ -38,6 +38,19 @@ export class CommonMethods {
             materials: Array<number>(MATERIAL_TABLE.length).fill(0)
         };
     }
+    
+
+    public static loadCampaignWeaponsDefaultData() {
+        return this._fillWithZerosButFirst(WEAPON_TABLE.get(WeaponType.greatsword)!);
+    }
+
+    public static loadCampaignArmoursDefaultData() {
+        return this._fillWithZerosButFirst(ARMOUR_TABLE.get(ArmourType.chest)!);
+    }
+
+    private static _fillWithZerosButFirst(list: any[]) {
+        return [1].concat(Array<number>(list.length - 1).fill(0));
+    }
 
     public static generateMonsterName(monster: string): string {
         return `monster.${monster}`;
@@ -65,6 +78,10 @@ export class CommonMethods {
 
     public static generateMaterialImage(material: string, type: MaterialType): string {
         return `${ASSETS_FOLDER}/material/${type}/${material}.webp`;
+    }
+
+    public static generateWeaponIcon(weapon: string): string {
+        return `/assets/img/weapon/${weapon}/icon/rarity1.webp`;
     }
 
 }
