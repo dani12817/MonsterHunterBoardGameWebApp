@@ -4,14 +4,15 @@ interface BaseWeapon extends BaseItem {
     base?: boolean;
 }
 
-export interface Weapon extends BaseWeapon {
+export interface WeaponLocal extends BaseWeapon {
     materials?: MaterialCraft[];
     previous?: number;
     upgrade?: number[];
 }
 
-export interface WeaponDto extends BaseWeapon, BaseDto {
+export interface WeaponLocalDto extends BaseWeapon, BaseDto {
     materials?: MaterialCraftDto[];
-    previous?: WeaponDto;
-    upgrade?: WeaponDto[];
+    previous?: number;
+    //previous?: WeaponLocalDto;
+    //upgrade?: WeaponLocalDto[];
 }

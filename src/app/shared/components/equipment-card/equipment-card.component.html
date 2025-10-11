@@ -1,0 +1,36 @@
+<div class="weapon-item-container shadow-1 p-3 border-round-2xl relative">
+    <div class="weapon-name-container flex align-items-center relative">
+        <img class="w-2rem" [src]="equipment.icon">
+        <div class="ml-3 font-medium">{{ equipment.name | translate }}</div>
+
+        <mat-icon *ngIf="isEquipped()"
+            color="accent"
+            class="absolute border-black top-0 left-0 ml-3 -mt-2">
+            e_mobiledata
+        </mat-icon>
+    </div>
+
+    <div class="weapon-actions-container flex -m-2 mt-2">
+        <button mat-raised-button
+            *ngIf="isForged()"
+            color="accent"
+            class="flex-grow-1 m-2"
+            [disabled]="isEquipped()">
+            {{ 'actions.equip' | translate }}
+        </button>
+
+        <button mat-raised-button
+            *ngIf="!equipment.base"
+            color="primary"
+            class="flex-grow-1 m-2"
+            [disabled]="!canBeForged()">
+            {{ 'actions.forge' | translate }}
+        </button>
+    </div>
+
+    <mat-icon *ngIf="isForged()"
+        color="primary"
+        class="absolute top-0 right-0 p-2">
+        construction
+    </mat-icon>
+</div>

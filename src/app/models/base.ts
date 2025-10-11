@@ -9,7 +9,12 @@ export interface BaseLocal extends BaseModel {
 }
 
 export interface BaseItem extends BaseLocal {
-    rarity?: number;
+    rarity: number;
+}
+
+export interface BaseEquipment extends BaseLocal {
+    base?: boolean;
+    previous?: number;
 }
 
 export interface BaseDto {

@@ -49,7 +49,9 @@
     "actions": {
         "edit": "Edit",
         "show": "Show",
-        "close": "Close"
+        "close": "Close",
+        "equip": "Equip",
+        "forge": "Forge"
     },
     "weaponNames": {
         "greatsword": "Greatsword",

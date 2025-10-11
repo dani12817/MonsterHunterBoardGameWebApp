@@ -1,10 +1,9 @@
-import { Weapon } from "../app/models";
+import { WeaponLocal } from "../app/models";
 import { WeaponType, EquipmentTree } from "../app/shared/enums";
 
-
-export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
+export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Map([
     [
-        WeaponType.greatsword, 
+        WeaponType.greatsword,
         [
             // Mineral
             {
@@ -129,9 +128,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Tobi-Kadachi
-            {}, {},
+            undefined, undefined,
             // Pukei-Pukei
             {
                 id: 15,
@@ -160,7 +159,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
             {
                 id: 19,
@@ -188,9 +187,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Anjanath
-            {}, {},
+            undefined, undefined,
             // Jyuratodus
-            {}, {},
+            undefined, undefined,
             // Radobaan
             {
                 id: 25,
@@ -245,11 +244,11 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Rathalos Azure
-            {}, {},
+            undefined, undefined,
             // Diablos
-            {}, {},
+            undefined, undefined,
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -278,7 +277,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -462,9 +461,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Tobi-Kadachi
-            {}, {},
+            undefined, undefined,
             // Pukei-Pukei
             {
                 id: 15,
@@ -493,7 +492,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
             {
                 id: 19,
@@ -521,9 +520,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Anjanath
-            {}, {},
+            undefined, undefined,
             // Jyuratodus
-            {}, {},
+            undefined, undefined,
             // Radobaan
             {
                 id: 25,
@@ -577,13 +576,13 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Rathalos Azure
-            {}, {},
+            undefined, undefined,
             // Diablos
-            {}, {},
+            undefined, undefined,
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
-            {}, {},
+            undefined, undefined,
             // Teostra
             {
                 id: 37,
@@ -742,9 +741,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
             {
                 id: 11,
@@ -799,7 +798,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Pukei-Pukei
-            {}, {},
+            undefined, undefined,
             // Tzitzi-Ya-Ku
             {
                 id: 17,
@@ -827,7 +826,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
             {
                 id: 21,
@@ -882,11 +881,11 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
-            {}, {},
+            undefined, undefined,
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
             {
                 id: 31,
@@ -915,7 +914,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -1101,9 +1100,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
             {
                 id: 11,
@@ -1158,7 +1157,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Pukei-Pukei
-            {}, {},
+            undefined, undefined,
             // Tzitzi-Ya-Ku
             {
                 id: 17,
@@ -1186,7 +1185,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
             {
                 id: 21,
@@ -1241,7 +1240,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
             {
                 id: 27,
@@ -1270,13 +1269,13 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
-            {}, {},
+            undefined, undefined,
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
-            {}, {},
+            undefined, undefined,
             // Teostra
             {
                 id: 37,
@@ -1332,7 +1331,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kirin
-            {}, {}
+            undefined, undefined
         ]
     ],
     [
@@ -1409,7 +1408,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
             {
                 id: 9,
@@ -1463,7 +1462,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Tobi-Kadachi
-            {}, {},
+            undefined, undefined,
             // Pukei-Pukei
             {
                 id: 15,
@@ -1491,7 +1490,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
             {
                 id: 19,
@@ -1544,7 +1543,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Jyuratodus
-            {}, {},
+            undefined, undefined,
             // Radobaan
             {
                 id: 25,
@@ -1572,9 +1571,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Rathalos
-            {}, {},
+            undefined, undefined,
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
             {
                 id: 31,
@@ -1603,7 +1602,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -1632,7 +1631,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -1661,7 +1660,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kirin
-            {}, {}
+            undefined, undefined
         ]
     ],
     [
@@ -1738,9 +1737,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
             {
                 id: 11,
@@ -1824,9 +1823,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
             {
                 id: 21,
@@ -1907,15 +1906,15 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Rathalos
-            {}, {},
+            undefined, undefined,
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
-            {}, {},
+            undefined, undefined,
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
-            {}, {},
+            undefined, undefined,
             // Teostra
             {
                 id: 37,
@@ -2074,7 +2073,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
             {
                 id: 9,
@@ -2156,13 +2155,13 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Pukei-Pukei
-            {}, {},
+            undefined, undefined,
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
-            {}, {},
+            undefined, undefined,
             // Jyuratodus
             {
                 id: 23,
@@ -2193,15 +2192,15 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
-            {}, {},
+            undefined, undefined,
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
-            {}, {},
+            undefined, undefined,
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -2230,7 +2229,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -2415,13 +2414,13 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Tobi-Kadachi
-            {}, {},
+            undefined, undefined,
             // Pukei-Pukei
-            {}, {},
+            undefined, undefined,
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
             {
                 id: 19,
@@ -2449,7 +2448,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Anjanath
-            {}, {},
+            undefined, undefined,
             // Jyuratodus
             {
                 id: 23,
@@ -2479,7 +2478,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
             {
                 id: 27,
@@ -2508,11 +2507,11 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
-            {}, {},
+            undefined, undefined,
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -2541,7 +2540,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -2570,7 +2569,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kirin
-            {}, {}
+            undefined, undefined
         ]
     ],
     [
@@ -2647,7 +2646,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
             {
                 id: 9,
@@ -2675,15 +2674,15 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Tobi-Kadachi
-            {}, {},
+            undefined, undefined,
             // Pukei-Pukei
-            {}, {},
+            undefined, undefined,
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
             {
                 id: 21,
@@ -2711,9 +2710,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Jyuratodus
-            {}, {},
+            undefined, undefined,
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
             {
                 id: 27,
@@ -2742,7 +2741,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
             {
                 id: 31,
@@ -2771,9 +2770,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
-            {}, {},
+            undefined, undefined,
             // Teostra
             {
                 id: 37,
@@ -2959,9 +2958,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Tobi-Kadachi
             {
                 id: 13,
@@ -2989,9 +2988,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Pukei-Pukei
-            {}, {},
+            undefined, undefined,
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
             {
                 id: 19,
@@ -3019,7 +3018,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Anjanath
-            {}, {},
+            undefined, undefined,
             // Jyuratodus
             {
                 id: 23,
@@ -3049,11 +3048,11 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
-            {}, {},
+            undefined, undefined,
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
             {
                 id: 31,
@@ -3082,7 +3081,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -3111,7 +3110,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -3140,7 +3139,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kirin
-            {}, {}
+            undefined, undefined
         ]
     ],
     [
@@ -3217,9 +3216,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
             {
                 id: 11,
@@ -3248,7 +3247,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Tobi-Kadachi
-            {}, {},
+            undefined, undefined,
             // Pukei-Pukei
             {
                 id: 15,
@@ -3303,7 +3302,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
             {
                 id: 21,
@@ -3331,9 +3330,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Jyuratodus
-            {}, {},
+            undefined, undefined,
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
             {
                 id: 27,
@@ -3362,7 +3361,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
             {
                 id: 31,
@@ -3391,7 +3390,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -3420,7 +3419,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -3552,9 +3551,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Jagras
-            {}, {},
+            undefined, undefined,
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
             {
                 id: 11,
@@ -3637,9 +3636,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
             {
                 id: 21,
@@ -3666,9 +3665,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Jyuratodus
-            {}, {},
+            undefined, undefined,
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
             {
                 id: 27,
@@ -3697,7 +3696,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
             {
                 id: 31,
@@ -3726,7 +3725,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -3755,7 +3754,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -3784,7 +3783,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Kirin
-            {}, {}
+            undefined, undefined
         ]
     ],
     [
@@ -3888,9 +3887,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Tobi-Kadachi
             {
                 id: 13,
@@ -3918,13 +3917,13 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Pukei-Pukei
-            {}, {},
+            undefined, undefined,
             // Tzitzi-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
-            {}, {},
+            undefined, undefined,
             // Jyuratodus
             {
                 id: 23,
@@ -3954,7 +3953,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Radobaan
-            {}, {},
+            undefined, undefined,
             // Rathalos
             {
                 id: 27,
@@ -3983,11 +3982,11 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
-            {}, {},
+            undefined, undefined,
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
             {
                 id: 35,
@@ -4016,7 +4015,7 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Teostra
-            {}, {},
+            undefined, undefined,
             // Nergigante
             {
                 id: 39,
@@ -4175,9 +4174,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Barroth
-            {}, {},
+            undefined, undefined,
             // Kulu-Ya-Ku
-            {}, {},
+            undefined, undefined,
             // Tobi-Kadachi
             {
                 id: 13,
@@ -4258,11 +4257,11 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Great Girros
-            {}, {},
+            undefined, undefined,
             // Anjanath
-            {}, {},
+            undefined, undefined,
             // Jyuratodus
-            {}, {},
+            undefined, undefined,
             // Radobaan
             {
                 id: 25,
@@ -4290,9 +4289,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Rathalos
-            {}, {},
+            undefined, undefined,
             // Azure Rathalos
-            {}, {},
+            undefined, undefined,
             // Diablos
             {
                 id: 31,
@@ -4321,9 +4320,9 @@ export const WEAPON_TABLE: Map<WeaponType, Weapon[]> = new Map([
                 upgrade: undefined
             },
             // Black Diablos
-            {}, {},
+            undefined, undefined,
             // Kushala Daora
-            {}, {},
+            undefined, undefined,
             // Teostra
             {
                 id: 37,

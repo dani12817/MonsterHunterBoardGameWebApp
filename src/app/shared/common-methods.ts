@@ -81,7 +81,16 @@ export class CommonMethods {
     }
 
     public static generateWeaponIcon(weapon: string): string {
-        return `/assets/img/weapon/${weapon}/icon/rarity1.webp`;
+        return this.generateWeaponRarityIcon(1, weapon as WeaponType);
+        //return `/assets/img/weapon/${weapon}/icon/rarity1.webp`;
+    }
+
+    public static generateWeaponRarityIcon(rarity: number, weaponType: WeaponType): string {
+        return `/assets/img/weapon/${weaponType}/icon/rarity${rarity}.webp`;
+    }
+
+    public static generateWeaponImage(weapon: string, rarity: number, weaponType: WeaponType): string {
+        return `/assets/img/weapon/${weaponType}/${weapon}_rarity${rarity}.jpg`;
     }
 
 }

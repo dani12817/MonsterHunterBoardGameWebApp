@@ -7,3 +7,4 @@ export * from './campaign-materials.mapper';
 export * from './material-local.mapper';
 export * from './quest-local.mapper';
 export * from './user.mapper';
+export * from './weapon-local.mapper';

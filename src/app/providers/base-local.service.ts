@@ -16,7 +16,7 @@ export abstract class BaseLocalService<E extends BaseLocal, D> {
   }
 
   getAllDto() {
-    return this._baseMapper.modelToDtoList(this._databaseTable);
+    return this._baseMapper.modelToDtoList(this.getAll());
   }
 
 }

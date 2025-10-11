@@ -41,6 +41,16 @@
                     <span class="hidden sm:inline">{{ campaignHunter.name }}</span>
                 </ng-template>
 
+                <div class="weapons-container grid w-12 pt-2 m-0 align-content-start">
+                    @for (weapon of weaponsLocalMap.get(campaignHunter.weaponType); track $index) {
+                        <equipment-card  *ngIf="weapon"
+                            class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                            [equipment]="weapon"
+                            [hunterEquipmentEquipped]="campaignHunter.weaponEquipped!"
+                            [hunterEquipmentList]="campaignHunter.weapons!"
+                            [equipmentIndex]="$index" />
+                    }
+                </div>
             </mat-tab>
         }
     </mat-tab-group>

@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { NgIf } from '@angular/common';
 
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,21 +13,26 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { CampaignQuestCardComponent, CampaignMaterialCardComponent } from '../../shared/components';
+import { CampaignQuestCardComponent, CampaignMaterialCardComponent, EquipmentCardComponent } from '../../shared/components';
 import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 
-import { CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService, QuestsLocalService } from '../../providers';
+import { CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService, QuestsLocalService, WeaponLocalService } from '../../providers';
 
-import { CampaignDto, CampaignHunterDto, CampaignMaterialsDto, CampaignQuestsDto, MaterialLocalDto, QuestLocalDto } from '../../models';
+import { 
+  CampaignDto, 
+  CampaignHunterDto, CampaignMaterialsDto, CampaignQuestsDto, 
+  MaterialLocalDto, QuestLocalDto, WeaponLocalDto 
+} from '../../models';
 
 import { CommonMethods } from '../../shared/common-methods';
+import { WeaponType } from '../../shared/enums';
 
 @Component({
   selector: 'app-campaign-detail',
   imports: [
-    /*NgIf, NgFor,*/ FormsModule, ReactiveFormsModule, /*KeyValuePipe,*/ RouterModule,
+    NgIf, /*NgFor,*/ FormsModule, ReactiveFormsModule, /*KeyValuePipe,*/ RouterModule,
     MatChipsModule, MatButtonModule, MatIconModule, MatSnackBarModule, MatDialogModule, MatFormFieldModule, MatToolbarModule, MatTabsModule,
-    CampaignQuestCardComponent, CampaignMaterialCardComponent,
+    CampaignQuestCardComponent, CampaignMaterialCardComponent, EquipmentCardComponent,
     TranslatePipe
   ],
   templateUrl: './campaign-detail.component.html',
@@ -43,6 +49,7 @@ export class CampaignDetailComponent implements OnInit {
   
   private _questsLocalService = inject(QuestsLocalService);
   private _materialsLocalService = inject(MaterialsLocalService);
+  private _weaponLocalService = inject(WeaponLocalService);
 
   campaignDetail!: CampaignDto;
   campaignQuestsDetail!: CampaignQuestsDto;
@@ -51,12 +58,14 @@ export class CampaignDetailComponent implements OnInit {
   
   questsLocalList: QuestLocalDto[];
   materialsLocalList: MaterialLocalDto[];
+  weaponsLocalMap: Map<WeaponType, (WeaponLocalDto | undefined)[]>;
 
   commonMethods = CommonMethods;
 
   constructor() {
     this.questsLocalList = this._questsLocalService.getAllDto();
     this.materialsLocalList = this._materialsLocalService.getAllDto();
+    this.weaponsLocalMap = this._weaponLocalService.getAllDto();
   }
 
   ngOnInit() {
