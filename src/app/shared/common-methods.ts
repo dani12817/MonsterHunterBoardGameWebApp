@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialogConfig } from '@angular/material/dialog';
 
-import { BaseCampaign, CampaignQuestsDto } from '../models';
+import { BaseCampaign, CampaignHunterDto, CampaignQuestsDto, WeaponLocalDto } from '../models';
 
 import { ArmourType, MaterialType, WeaponType } from './enums';
 import { ASSETS_FOLDER, MAX_QUEST_MISSIONS } from './constants';

@@ -1,18 +1,9 @@
-import { BaseDto, BaseItem, MaterialCraft, MaterialCraftDto } from "./";
+import { BaseEquipment, BaseEquipmentDto } from "./";
 
-interface BaseWeapon extends BaseItem {
-    base?: boolean;
-}
-
-export interface WeaponLocal extends BaseWeapon {
-    materials?: MaterialCraft[];
-    previous?: number;
+export interface WeaponLocal extends BaseEquipment {
     upgrade?: number[];
 }
 
-export interface WeaponLocalDto extends BaseWeapon, BaseDto {
-    materials?: MaterialCraftDto[];
-    previous?: number;
-    //previous?: WeaponLocalDto;
+export interface WeaponLocalDto extends BaseEquipmentDto {
     //upgrade?: WeaponLocalDto[];
 }

@@ -9,7 +9,7 @@ interface BaseCampaignHunter extends BaseFirebase {
     weaponEquipped?: number;
     armourHeadEquipped?: number;
     armourChestEquipped?: number;
-    armourLegEquipped?: number;
+    armourLegEquipped?: number; 
     weapons?: number[];
     armoursHead?: number[];
     armoursChest?: number[];
@@ -23,3 +23,16 @@ export interface CampaignHunter extends BaseCampaignHunter {
 export interface CampaignHunterDto extends BaseCampaignHunter {
     campaign?: string;
 }
+
+export const  BaseCampaignHunterKeys = {
+    weaponEquipped: "weaponEquipped",
+    armourHeadEquipped: "armourHeadEquipped",
+    armourChestEquipped: "armourChestEquipped",
+    armourLegEquipped: "armourChestEquipped",
+    weapons: "weapons",
+    armoursHead: "armoursHead",
+    armoursChest: "armoursChest",
+    armoursLeg: "armoursLeg",
+};
+
+export type BaseCampaignHunterKeys = typeof BaseCampaignHunterKeys[keyof typeof BaseCampaignHunterKeys];

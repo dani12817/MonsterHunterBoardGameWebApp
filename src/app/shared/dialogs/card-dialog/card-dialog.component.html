@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="mat-elevation-z1">
+    <mat-toolbar-row>
+        <span class="toolbar-separator flex-auto ml-5"></span>
+
+        <div class="dialog-toolbar-title">{{ 'card.title' | translate }}</div>
+
+        <span class="toolbar-separator flex-auto"></span>
+
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div mat-dialog-content class="campaign-edit-dialog-content pb-2 p-3">
+    <img class="w-12 border-round-2xl" 
+        [src]="equipmentToForge.image"/>
+</div>

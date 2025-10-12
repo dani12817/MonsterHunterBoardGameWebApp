@@ -1,0 +1,47 @@
+<mat-toolbar color="primary" class="mat-elevation-z1">
+    <mat-toolbar-row>
+        <button mat-icon-button
+            (click)="forgeEquipment()">
+            <mat-icon></mat-icon>
+        </button>
+
+        <span class="toolbar-separator flex-auto"></span>
+
+        <div class="dialog-toolbar-title">{{ 'forgeEquipment.title' | translate }}</div>
+
+        <span class="toolbar-separator flex-auto"></span>
+
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div mat-dialog-content class="campaign-edit-dialog-content pb-0 p-4">
+    <img class="w-12 border-round-2xl" 
+        [src]="equipmentToForge.image"/>
+    
+    <div class="materials-container w-12" >
+        @for (materialCraft of equipmentToForge.materials; track $index) {
+            <div class="material-item-container flex flex-row py-2">
+                <div class="material-name-container flex-grow-1 mr-2">
+                    {{ materialCraft.material.name }}
+                </div>
+
+                <div class="material-quantity-container" 
+                    [class]="hasMaterialsNeeded(materialCraft) ? 'text-green-500' : 'text-red-500'">
+                    {{ materialCraft.amount }} / {{ materialsList[materialCraft.material.id - 1] }}
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div mat-dialog-actions class="p-4 pt-2">
+    <button class="w-full"
+        mat-raised-button color="primary"
+        [disabled]="cannotBeForged"
+        (click)="forgeEquipment()">
+        {{ 'actions.forge' | translate }}
+    </button>
+</div>

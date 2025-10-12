@@ -13,16 +13,25 @@
     <div class="weapon-actions-container flex -m-2 mt-2">
         <button mat-raised-button
             *ngIf="isForged()"
+            class="flex-grow-1 m-2 background-orange"
+            (click)="openCardDetail()">
+            {{ 'actions.show' | translate }}
+        </button>
+
+        <button mat-raised-button
+            *ngIf="isForged()"
             color="accent"
             class="flex-grow-1 m-2"
+            (click)="equipEquipment()"
             [disabled]="isEquipped()">
             {{ 'actions.equip' | translate }}
         </button>
 
         <button mat-raised-button
-            *ngIf="!equipment.base"
+            *ngIf="!isForged()"
             color="primary"
             class="flex-grow-1 m-2"
+            (click)="openForgeEquipment()"
             [disabled]="!canBeForged()">
             {{ 'actions.forge' | translate }}
         </button>

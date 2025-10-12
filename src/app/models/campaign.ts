@@ -4,8 +4,8 @@ import { BaseFirebase, UserDetail } from "./";
 
 export interface BaseCampaign extends BaseFirebase {
     days?: number;
-    quests?: any[];
-    materials?: number[];
+    //quests?: any[];
+    //materials?: number[];
     sharedStorage?: boolean;
     createdOn?: any;
 }

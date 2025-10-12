@@ -6,6 +6,6 @@ export interface MaterialCraft {
 }
 
 export interface MaterialCraftDto {
-    material?: MaterialLocal[];
-    amount?: number;
+    material: MaterialLocal;
+    amount: number;
 }

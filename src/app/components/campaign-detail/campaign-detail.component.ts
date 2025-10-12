@@ -13,7 +13,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { CampaignQuestCardComponent, CampaignMaterialCardComponent, EquipmentCardComponent } from '../../shared/components';
+import { 
+  CampaignQuestCardComponent, CampaignMaterialCardComponent, 
+  EquipmentCardComponent, BaseEquipmentCardComponent 
+} from '../../shared/components';
 import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 
 import { CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService, QuestsLocalService, WeaponLocalService } from '../../providers';
@@ -21,7 +24,7 @@ import { CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService,
 import { 
   CampaignDto, 
   CampaignHunterDto, CampaignMaterialsDto, CampaignQuestsDto, 
-  MaterialLocalDto, QuestLocalDto, WeaponLocalDto 
+  MaterialLocalDto, QuestLocalDto, WeaponLocalDto, BaseCampaignHunterKeys
 } from '../../models';
 
 import { CommonMethods } from '../../shared/common-methods';
@@ -32,7 +35,7 @@ import { WeaponType } from '../../shared/enums';
   imports: [
     NgIf, /*NgFor,*/ FormsModule, ReactiveFormsModule, /*KeyValuePipe,*/ RouterModule,
     MatChipsModule, MatButtonModule, MatIconModule, MatSnackBarModule, MatDialogModule, MatFormFieldModule, MatToolbarModule, MatTabsModule,
-    CampaignQuestCardComponent, CampaignMaterialCardComponent, EquipmentCardComponent,
+    CampaignQuestCardComponent, CampaignMaterialCardComponent, BaseEquipmentCardComponent, EquipmentCardComponent,
     TranslatePipe
   ],
   templateUrl: './campaign-detail.component.html',
@@ -61,6 +64,7 @@ export class CampaignDetailComponent implements OnInit {
   weaponsLocalMap: Map<WeaponType, (WeaponLocalDto | undefined)[]>;
 
   commonMethods = CommonMethods;
+  baseCampaignHunterKeys = BaseCampaignHunterKeys;
 
   constructor() {
     this.questsLocalList = this._questsLocalService.getAllDto();
@@ -92,6 +96,24 @@ export class CampaignDetailComponent implements OnInit {
     dialogRef.afterClosed().subscribe(response => {
       this.campaignHunterList.push(response);
     });
+  }
+
+  getWeaponFromCampaignHunter(campaignHunter: CampaignHunterDto) {
+      return this.weaponsLocalMap.get(campaignHunter.weaponType)![campaignHunter.weaponEquipped! - 1]!;
+  }
+
+  equipEquipment(equipment: number, campaignHunter: CampaignHunterDto, campaignHunterKey: BaseCampaignHunterKeys) {
+    campaignHunter[campaignHunterKey] = equipment;
+    // console.log("campaignHunter", campaignHunter);
+    // console.log("campaignHunterList", this.campaignHunterList);
+    this._snackBar.open(this._translate.instant("messages.success.equip"),
+      this._translate.instant("actions.close"), {duration: 5000});
+  }
+
+  equipmentForged(equipment: number, campaignHunter: CampaignHunterDto, campaignHunterKey: BaseCampaignHunterKeys) {
+    campaignHunter[campaignHunterKey][equipment - 1] = 1;
+    this._snackBar.open(this._translate.instant("messages.success.forged"),
+      this._translate.instant("actions.close"), {duration: 5000});
   }
 
   saveCampaignData() {
