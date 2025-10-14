@@ -6,12 +6,12 @@ import { WeaponType } from "../shared/enums";
 
 interface BaseCampaignHunter extends BaseFirebase {
     weaponType: WeaponType;
-    weaponEquipped?: number;
-    armourHeadEquipped?: number;
-    armourChestEquipped?: number;
-    armourLegEquipped?: number; 
+    weaponEquipped: number;
+    armourHelmEquipped: number;
+    armourChestEquipped: number;
+    armourLegEquipped: number; 
     weapons?: number[];
-    armoursHead?: number[];
+    armoursHelm?: number[];
     armoursChest?: number[];
     armoursLeg?: number[];
 }
@@ -26,11 +26,11 @@ export interface CampaignHunterDto extends BaseCampaignHunter {
 
 export const  BaseCampaignHunterKeys = {
     weaponEquipped: "weaponEquipped",
-    armourHeadEquipped: "armourHeadEquipped",
+    armourHelmEquipped: "armourHelmEquipped",
     armourChestEquipped: "armourChestEquipped",
-    armourLegEquipped: "armourChestEquipped",
+    armourLegEquipped: "armourLegEquipped",
     weapons: "weapons",
-    armoursHead: "armoursHead",
+    armoursHelm: "armoursHelm",
     armoursChest: "armoursChest",
     armoursLeg: "armoursLeg",
 };

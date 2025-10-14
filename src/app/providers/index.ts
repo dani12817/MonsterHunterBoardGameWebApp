@@ -7,4 +7,5 @@ export * from './campaign-quests.service';
 export * from './materials-local.service';
 export * from './quests-local.service';
 export * from './user.service';
+export * from './armour-local.service';
 export * from './weapon-local.service';

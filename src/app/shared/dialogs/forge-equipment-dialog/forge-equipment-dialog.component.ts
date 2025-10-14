@@ -26,7 +26,7 @@ export class ForgeEquipmentDialogComponent {
   equipmentToForge: BaseEquipmentDto;
   materialsList: number[];
 
-  cannotBeForged: boolean = true;
+  canBeForged: boolean = true;
 
   constructor(private dialogRef: MatDialogRef<ForgeEquipmentDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
     // console.log("equipmentToForge", this.data);
@@ -37,9 +37,8 @@ export class ForgeEquipmentDialogComponent {
   }
 
   private _checkEquipmentToForge() {
-    for (const materialCraft of this.equipmentToForge.materials!) {
-      this.cannotBeForged = !this.hasMaterialsNeeded(materialCraft);
-    }
+    this.canBeForged = (this.equipmentToForge.materials ?? [])
+      .every((materialCraft) => this.hasMaterialsNeeded(materialCraft));
   }
 
   public hasMaterialsNeeded(materialCraft: MaterialCraftDto) {

@@ -41,25 +41,107 @@
                     <span class="hidden sm:inline">{{ campaignHunter.name }}</span>
                 </ng-template>
 
-                <div class="equipment-container grid w-12 pt-2 m-0 justify-content-center">
+                <div class="equipment-container grid w-12 py-2 m-0 justify-content-center">
                     <base-equipment
                         class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
                         [equipment]="getWeaponFromCampaignHunter(campaignHunter)" />
-                </div>
 
-                <div class="weapons-container grid w-12 pt-2 m-0 align-content-start">
-                    @for (weapon of weaponsLocalMap.get(campaignHunter.weaponType); track $index) {
-                        <equipment-card  *ngIf="weapon"
+                    @for (armourType of armourTypeKeys | keyvalue:commonMethods.unsorted; track $index) {
+                        <base-equipment
                             class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
-                            [equipment]="weapon"
-                            [hunterEquipmentEquipped]="campaignHunter.weaponEquipped!"
-                            [hunterEquipmentList]="campaignHunter.weapons!"
-                            [materialsList]="campaignMaterialsDetail.materials"
-                            [equipmentIndex]="$index"
-                            (changeEquipped)="equipEquipment($event, campaignHunter, baseCampaignHunterKeys.weaponEquipped)"
-                            (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.weapons)" />
+                            [equipment]="getArmourFromCampaignHunter(campaignHunter, armourType.value)" />
                     }
                 </div>
+                
+                <mat-tab-group class="w-12" animationDuration="0ms">
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img class="w-1-5 mr-2"
+                                [src]="commonMethods.generateWeaponIcon(campaignHunter.weaponType)" />
+                            <span class="hidden sm:inline">{{ `weaponNames.${campaignHunter.weaponType}` | translate }}</span>
+                        </ng-template>
+
+                        <div class="weapons-container grid w-12 pt-2 m-0 align-content-start">
+                            @for (weapon of weaponsLocalMap.get(campaignHunter.weaponType); track $index) {
+                                <equipment-card *ngIf="weapon"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    [equipment]="weapon"
+                                    [hunterEquipmentEquipped]="campaignHunter.weaponEquipped"
+                                    [hunterEquipmentList]="campaignHunter.weapons!"
+                                    [materialsList]="campaignMaterialsDetail.materials"
+                                    [equipmentIndex]="$index"
+                                    (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.weaponEquipped)"
+                                    (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.weapons)" />
+                            }
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img class="w-1-5 mr-2"
+                                [src]="commonMethods.generateArmourIcon(armourTypeKeys.helm)" />
+                            <span class="hidden sm:inline">{{ `armour.${armourTypeKeys.helm}.name` | translate }}</span>
+                        </ng-template>
+
+                        <div class="armour-head-container grid w-12 pt-2 m-0 align-content-start">
+                            @for (armourHelm of armoursLocalMap.get(armourTypeKeys.helm); track $index) {
+                                <equipment-card *ngIf="armourHelm && showArmour(armourHelm, campaignHunter)"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    [equipment]="armourHelm"
+                                    [hunterEquipmentEquipped]="campaignHunter.armourHelmEquipped"
+                                    [hunterEquipmentList]="campaignHunter.armoursHelm!"
+                                    [materialsList]="campaignMaterialsDetail.materials"
+                                    [equipmentIndex]="$index"
+                                    (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.armourHelmEquipped)"
+                                    (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.armoursHelm)" />
+                            }
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img class="w-1-5 mr-2"
+                                [src]="commonMethods.generateArmourIcon(armourTypeKeys.chest)" />
+                            <span class="hidden sm:inline">{{ `armour.${armourTypeKeys.chest}.name` | translate }}</span>
+                        </ng-template>
+
+                        <div class="armour-chest-container grid w-12 pt-2 m-0 align-content-start">
+                            @for (armourChest of armoursLocalMap.get(armourTypeKeys.chest); track $index) {
+                                <equipment-card *ngIf="armourChest && showArmour(armourChest, campaignHunter)"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    [equipment]="armourChest"
+                                    [hunterEquipmentEquipped]="campaignHunter.armourChestEquipped"
+                                    [hunterEquipmentList]="campaignHunter.armoursChest!"
+                                    [materialsList]="campaignMaterialsDetail.materials"
+                                    [equipmentIndex]="$index"
+                                    (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.armourChestEquipped)"
+                                    (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.armoursChest)" />
+                            }
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <img class="w-1-5 mr-2"
+                                [src]="commonMethods.generateArmourIcon(armourTypeKeys.leg)" />
+                            <span class="hidden sm:inline">{{ `armour.${armourTypeKeys.leg}.name` | translate }}</span>
+                        </ng-template>
+
+                        <div class="armour-leg-container grid w-12 pt-2 m-0 align-content-start">
+                            @for (armourLeg of armoursLocalMap.get(armourTypeKeys.leg); track $index) {
+                                <equipment-card *ngIf="armourLeg && showArmour(armourLeg, campaignHunter)"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    [equipment]="armourLeg"
+                                    [hunterEquipmentEquipped]="campaignHunter.armourLegEquipped"
+                                    [hunterEquipmentList]="campaignHunter.armoursLeg!"
+                                    [materialsList]="campaignMaterialsDetail.materials"
+                                    [equipmentIndex]="$index"
+                                    (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.armourLegEquipped)"
+                                    (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.armoursLeg)" />
+                            }
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
             </mat-tab>
         }
     </mat-tab-group>

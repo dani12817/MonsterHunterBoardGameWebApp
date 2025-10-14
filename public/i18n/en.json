@@ -714,6 +714,7 @@
     },
     "armour": {
         "helm": {
+            "name": "Helm",
             "leather": "Leather Headgear",
             "chainmail": "Chainmail Headgear",
             "mineral": "Alloy Helm",
@@ -738,8 +739,10 @@
             "kirin": "Kirin Horn"
         },
         "chest": {
+            "name": "Chest",
             "leather": "Leather Mail",
             "chainmail": "Chainmail Vest",
+            "mineral": "Alloy Mail",
             "bone": "Bone Mail",
             "greatJagras": "Jagras Mail",
             "barroth": "Barroth Mail",
@@ -761,6 +764,7 @@
             "kirin": "Kirin Jacket"
         },
         "leg": {
+            "name": "Leg",
             "leather": "Leather Trousers",
             "chainmail": "Chainmail Trousers",
             "mineral": "Alloy Greaves",

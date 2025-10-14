@@ -37,6 +37,10 @@ export class CampaignHunterMapper extends BaseFirebaseMapper<CampaignHunter, Cam
         return {
             ...documentData.data(),
             id: documentData.id,
+            weaponEquipped: documentData.data().weaponEquipped ?? 0,
+            armourHelmEquipped: documentData.data().armourHelmEquipped ?? 0,
+            armourChestEquipped: documentData.data().armourChestEquipped ?? 0,
+            armourLegEquipped: documentData.data().armourLegEquipped ?? 0,
         };
     }
 

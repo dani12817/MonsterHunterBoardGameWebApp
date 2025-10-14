@@ -7,12 +7,16 @@ import { BaseCampaign, CampaignHunterDto, CampaignQuestsDto, WeaponLocalDto } fr
 import { ArmourType, MaterialType, WeaponType } from './enums';
 import { ASSETS_FOLDER, MAX_QUEST_MISSIONS } from './constants';
 
-import { ARMOUR_TABLE, MATERIAL_TABLE, QUEST_TABLE, WEAPON_TABLE } from '../../db';
+import { ARMOUR_TABLE, BASE_ARMOUR_PER_TYPE, MATERIAL_TABLE, QUEST_TABLE, WEAPON_TABLE } from '../../db';
 
 @Injectable()
 export class CommonMethods {
     public static dialogConfig(width: string, panelClass: string, data?: any): MatDialogConfig<any> {
         return {width: width, panelClass: panelClass, data: data, disableClose: true}
+    }
+
+    public static capitalize(value: string) {
+        return value[0].toUpperCase() + value.substring(1).toLowerCase();
     }
 
     public static loadCampaignQuestsDefaultData<T extends BaseCampaign>(campaign: T) {
@@ -41,15 +45,15 @@ export class CommonMethods {
     
 
     public static loadCampaignWeaponsDefaultData() {
-        return this._fillWithZerosButFirst(WEAPON_TABLE.get(WeaponType.greatsword)!);
+        return this._fillWithZerosBut(WEAPON_TABLE.get(WeaponType.greatsword)!);
     }
 
     public static loadCampaignArmoursDefaultData() {
-        return this._fillWithZerosButFirst(ARMOUR_TABLE.get(ArmourType.chest)!);
+        return this._fillWithZerosBut(ARMOUR_TABLE.get(ArmourType.chest)!, 2);
     }
 
-    private static _fillWithZerosButFirst(list: any[]) {
-        return [1].concat(Array<number>(list.length - 1).fill(0));
+    private static _fillWithZerosBut(list: any[], lengthNotFilled: number = 1) {
+        return Array<number>(lengthNotFilled).fill(1).concat(Array<number>(list.length - lengthNotFilled).fill(0));
     }
 
     public static generateMonsterName(monster: string): string {
@@ -92,5 +96,23 @@ export class CommonMethods {
     public static generateWeaponImage(weapon: string, rarity: number, weaponType: WeaponType): string {
         return `/assets/img/weapon/${weaponType}/${weapon}_rarity${rarity}.jpg`;
     }
+
+    public static generateArmourIcon(armourType: ArmourType): string {
+        return this.generateArmourRarityIcon(1, armourType);
+    }
+
+    public static generateArmourRarityIcon(rarity: number, armourType: ArmourType): string {
+        return `/assets/img/armour/${armourType}/icon/rarity${rarity}.webp`;
+    }
+
+    public static generateArmourImage(armour: string, armourType: ArmourType): string {
+        return `/assets/img/armour/${armourType}/${armour}.jpg`;
+    }
+
+    public static getBaseArmour(weaponType: WeaponType) {
+        return BASE_ARMOUR_PER_TYPE.get(weaponType) ?? 0
+    }
+    
+    public static unsorted(a: any, b: any): number { return 0; }
 
 }

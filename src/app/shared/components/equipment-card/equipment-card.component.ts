@@ -3,7 +3,6 @@ import { RouterModule } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { NgIf } from '@angular/common';
 
-import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -36,15 +35,15 @@ export class EquipmentCardComponent extends BaseEquipmentCardComponent {
   }
 
   isEquipped() {
-    return this.hunterEquipmentEquipped - 1 === this.equipmentIndex;
+    return this.hunterEquipmentEquipped === this.equipmentIndex;
   }
 
   canBeForged() {
-    return !this.equipment.previous || !!this.hunterEquipmentList[this.equipment.previous! - 1];
+    return !this.equipment.previous || !!this.hunterEquipmentList[this.equipment.previous-1];
   }
 
   equipEquipment() {
-    this.changeEquipped.emit(this.equipment.id);
+    this.changeEquipped.emit(this.equipmentIndex);
   }
 
   openForgeEquipment() {
@@ -55,9 +54,16 @@ export class EquipmentCardComponent extends BaseEquipmentCardComponent {
     dialogRef.afterClosed().subscribe((equipmentForged: boolean) => {
       // console.log("afterClosed", equipmentForged);
       if (equipmentForged) {
-        this.equipmentForged.emit(this.equipment.id);
+        this._useMaterialsToForge();
+        this.equipmentForged.emit(this.equipmentIndex);
       }
     });
+  }
+
+  private _useMaterialsToForge() {
+    for (const material of this.equipment.materials ?? []) {
+      this.materialsList[material.material.id - 1] -= material.amount;
+    }
   }
 
 }

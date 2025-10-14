@@ -40,7 +40,7 @@
 <div mat-dialog-actions class="p-4 pt-2">
     <button class="w-full"
         mat-raised-button color="primary"
-        [disabled]="cannotBeForged"
+        [disabled]="!canBeForged"
         (click)="forgeEquipment()">
         {{ 'actions.forge' | translate }}
     </button>

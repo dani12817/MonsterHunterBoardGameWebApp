@@ -1,13 +1,21 @@
-import { Armour } from "../app/models";
+import { ArmourLocal } from "../app/models";
 import { ArmourType, EquipmentTree, WeaponType } from "../app/shared/enums";
 
-export const ARMOUR_TABLE: Map<ArmourType, Armour[]> = new Map([
+export const ARMOUR_TABLE: Map<ArmourType, ArmourLocal[]> = new Map([
     [
         ArmourType.helm, 
         [
             // Base
             {
+                id: 0,
+                name: EquipmentTree.leather,
+                base: true,
+                rarity: 1,
+                materials: undefined,
+            },
+            {
                 id: 1,
+                name: EquipmentTree.chainmail,
                 base: true,
                 rarity: 1,
                 materials: undefined,
@@ -245,7 +253,15 @@ export const ARMOUR_TABLE: Map<ArmourType, Armour[]> = new Map([
         [
             // Base
             {
+                id: 0,
+                name: EquipmentTree.leather,
+                base: true,
+                rarity: 1,
+                materials: undefined,
+            },
+            {
                 id: 1,
+                name: EquipmentTree.chainmail,
                 base: true,
                 rarity: 1,
                 materials: undefined,
@@ -484,7 +500,15 @@ export const ARMOUR_TABLE: Map<ArmourType, Armour[]> = new Map([
         [
             // Base
             {
+                id: 0,
+                name: EquipmentTree.leather,
+                base: true,
+                rarity: 1,
+                materials: undefined,
+            },
+            {
                 id: 1,
+                name: EquipmentTree.chainmail,
                 base: true,
                 rarity: 1,
                 materials: undefined,
@@ -716,8 +740,6 @@ export const ARMOUR_TABLE: Map<ArmourType, Armour[]> = new Map([
     ]
 ]);
 
-
-
 export const BASE_ARMOUR_TABLE: Map<WeaponType, EquipmentTree> = new Map([
     [ WeaponType.greatsword, EquipmentTree.chainmail ],
     [ WeaponType.swordShield, EquipmentTree.leather ],
@@ -733,4 +755,21 @@ export const BASE_ARMOUR_TABLE: Map<WeaponType, EquipmentTree> = new Map([
     [ WeaponType.bow, EquipmentTree.chainmail ],
     [ WeaponType.lightBowgun, EquipmentTree.leather ],
     [ WeaponType.heavyBowgun, EquipmentTree.leather ],
+]);
+
+export const BASE_ARMOUR_PER_TYPE: Map<WeaponType, number> = new Map([
+    [ WeaponType.greatsword, 1 ],
+    [ WeaponType.swordShield, 0 ],
+    [ WeaponType.dualBlades, 0 ],
+    [ WeaponType.longsword, 1 ],
+    [ WeaponType.hammer, 0 ],
+    [ WeaponType.huntingHorn, 0 ],
+    [ WeaponType.lance, 1 ],
+    [ WeaponType.gunlance, 1 ],
+    [ WeaponType.switchAxe, 1 ],
+    [ WeaponType.chargeBlade, 0 ],
+    [ WeaponType.insectGlaive, 1 ],
+    [ WeaponType.bow, 1 ],
+    [ WeaponType.lightBowgun, 0 ],
+    [ WeaponType.heavyBowgun, 0 ],
 ]);

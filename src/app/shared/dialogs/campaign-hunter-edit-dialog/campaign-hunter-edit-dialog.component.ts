@@ -51,7 +51,7 @@ export class CampaignHunterEditDialogComponent {
   );
 
   constructor(private dialogRef: MatDialogRef<CampaignHunterEditDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
-    console.log("camapignId", this.data);
+    //console.log("camapignId", this.data);
   }
 
   submit() {
@@ -67,15 +67,17 @@ export class CampaignHunterEditDialogComponent {
   }
 
   private prepareCampaignHunter(): CampaignHunterDto {
+    let baseArmour = CommonMethods.getBaseArmour(this.campaignHunterForm.get("weaponType")?.value);
+
     return {
       ...this.campaignHunterForm.getValue(),
       campaign: this.data.campaignId,
-      weaponEquipped: 1,
-      armourHeadEquipped: 1,
-      armourChestEquipped: 1,
-      armourLegEquipped: 1,
+      weaponEquipped: 0,
+      armourHelmEquipped: baseArmour,
+      armourChestEquipped: baseArmour,
+      armourLegEquipped: baseArmour,
       weapons: CommonMethods.loadCampaignWeaponsDefaultData(),
-      armoursHead: CommonMethods.loadCampaignArmoursDefaultData(),
+      armoursHelm: CommonMethods.loadCampaignArmoursDefaultData(),
       armoursChest: CommonMethods.loadCampaignArmoursDefaultData(),
       armoursLeg: CommonMethods.loadCampaignArmoursDefaultData(),
     };

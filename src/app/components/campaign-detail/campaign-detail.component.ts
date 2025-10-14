@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { NgIf } from '@angular/common';
+import { KeyValuePipe, NgFor, NgIf } from '@angular/common';
 
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,16 +19,18 @@ import {
 } from '../../shared/components';
 import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 
-import { CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService, QuestsLocalService, WeaponLocalService } from '../../providers';
+import { ArmourLocalService, CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService, QuestsLocalService, WeaponLocalService } from '../../providers';
 
 import { 
   CampaignDto, 
   CampaignHunterDto, CampaignMaterialsDto, CampaignQuestsDto, 
-  MaterialLocalDto, QuestLocalDto, WeaponLocalDto, BaseCampaignHunterKeys
+  MaterialLocalDto, QuestLocalDto, 
+  BaseCampaignHunterKeys, WeaponLocalDto, ArmourLocalDto
 } from '../../models';
 
 import { CommonMethods } from '../../shared/common-methods';
-import { WeaponType } from '../../shared/enums';
+import { ArmourType, WeaponType } from '../../shared/enums';
+import { BASE_ARMOUR_PER_TYPE } from '../../../db';
 
 @Component({
   selector: 'app-campaign-detail',
@@ -36,7 +38,7 @@ import { WeaponType } from '../../shared/enums';
     NgIf, /*NgFor,*/ FormsModule, ReactiveFormsModule, /*KeyValuePipe,*/ RouterModule,
     MatChipsModule, MatButtonModule, MatIconModule, MatSnackBarModule, MatDialogModule, MatFormFieldModule, MatToolbarModule, MatTabsModule,
     CampaignQuestCardComponent, CampaignMaterialCardComponent, BaseEquipmentCardComponent, EquipmentCardComponent,
-    TranslatePipe
+    TranslatePipe, KeyValuePipe
   ],
   templateUrl: './campaign-detail.component.html',
   styleUrl: './campaign-detail.component.scss'
@@ -53,6 +55,7 @@ export class CampaignDetailComponent implements OnInit {
   private _questsLocalService = inject(QuestsLocalService);
   private _materialsLocalService = inject(MaterialsLocalService);
   private _weaponLocalService = inject(WeaponLocalService);
+  private _armourLocalService = inject(ArmourLocalService);
 
   campaignDetail!: CampaignDto;
   campaignQuestsDetail!: CampaignQuestsDto;
@@ -62,14 +65,18 @@ export class CampaignDetailComponent implements OnInit {
   questsLocalList: QuestLocalDto[];
   materialsLocalList: MaterialLocalDto[];
   weaponsLocalMap: Map<WeaponType, (WeaponLocalDto | undefined)[]>;
+  armoursLocalMap: Map<ArmourType, (ArmourLocalDto | undefined)[]>;
 
   commonMethods = CommonMethods;
   baseCampaignHunterKeys = BaseCampaignHunterKeys;
+  armourTypeKeys = ArmourType;
 
   constructor() {
     this.questsLocalList = this._questsLocalService.getAllDto();
     this.materialsLocalList = this._materialsLocalService.getAllDto();
     this.weaponsLocalMap = this._weaponLocalService.getAllDto();
+    this.armoursLocalMap = this._armourLocalService.getAllDto();
+    //console.log("armoursLocalMap", this.armoursLocalMap);
   }
 
   ngOnInit() {
@@ -89,6 +96,13 @@ export class CampaignDetailComponent implements OnInit {
     });
   }
 
+  showArmour(armourHelm: ArmourLocalDto, campaignHunter: CampaignHunterDto) {
+    if (armourHelm.base) {
+      return BASE_ARMOUR_PER_TYPE.get(campaignHunter.weaponType) == armourHelm.id;
+    }
+    return true;
+  }
+
   openNewCampaignHunter() {
     const dialogRef = this._dialog.open(CampaignHunterEditDialogComponent, 
       CommonMethods.dialogConfig('420px', 'campaign-hunter-edit-dialog', {campaignId: this.campaignDetail.id}));
@@ -99,19 +113,21 @@ export class CampaignDetailComponent implements OnInit {
   }
 
   getWeaponFromCampaignHunter(campaignHunter: CampaignHunterDto) {
-      return this.weaponsLocalMap.get(campaignHunter.weaponType)![campaignHunter.weaponEquipped! - 1]!;
+    return this.weaponsLocalMap.get(campaignHunter.weaponType)![campaignHunter.weaponEquipped]!;
   }
 
-  equipEquipment(equipment: number, campaignHunter: CampaignHunterDto, campaignHunterKey: BaseCampaignHunterKeys) {
+  getArmourFromCampaignHunter(campaignHunter: CampaignHunterDto, armourType: ArmourType) {
+    return this.armoursLocalMap.get(armourType)![campaignHunter[`armour${CommonMethods.capitalize(armourType)}Equipped`]]!;
+  }
+
+  changeEquipped(equipment: number, campaignHunter: CampaignHunterDto, campaignHunterKey: BaseCampaignHunterKeys) {
     campaignHunter[campaignHunterKey] = equipment;
-    // console.log("campaignHunter", campaignHunter);
-    // console.log("campaignHunterList", this.campaignHunterList);
     this._snackBar.open(this._translate.instant("messages.success.equip"),
       this._translate.instant("actions.close"), {duration: 5000});
   }
 
   equipmentForged(equipment: number, campaignHunter: CampaignHunterDto, campaignHunterKey: BaseCampaignHunterKeys) {
-    campaignHunter[campaignHunterKey][equipment - 1] = 1;
+    campaignHunter[campaignHunterKey][equipment] = 1;
     this._snackBar.open(this._translate.instant("messages.success.forged"),
       this._translate.instant("actions.close"), {duration: 5000});
   }

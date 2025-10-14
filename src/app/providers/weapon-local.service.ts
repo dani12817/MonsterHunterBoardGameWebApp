@@ -1,8 +1,7 @@
 import { inject, Injectable } from "@angular/core";
 
-import { BaseLocalService } from ".";
 import { WeaponLocalMapper } from "../mappers";
-import { WeaponLocal, WeaponLocalDto } from "../models";
+import { WeaponLocalDto } from "../models";
 
 import { WEAPON_TABLE } from "../../db";
 import { WeaponType } from "../shared/enums";
