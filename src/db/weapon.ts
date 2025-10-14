@@ -3887,35 +3887,34 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                 upgrade: undefined
             },
             // Barroth
-            undefined, undefined,
-            // Kulu-Ya-Ku
-            undefined, undefined,
-            // Tobi-Kadachi
             {
                 id: 13,
-                name: EquipmentTree.tobiKadachi,
+                name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 66, amount: 3 },
-                    { material: 67, amount: 2 },
-                    { material: 69, amount: 1 }
+                    { material: 56, amount: 3 },
+                    { material: 58, amount: 2 },
+                    { material: 59, amount: 1 }
                 ],
                 previous: 4,
                 upgrade: [14]
             },
             {
                 id: 14,
-                name: EquipmentTree.tobiKadachi,
+                name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 66, amount: 2 },
-                    { material: 67, amount: 2 },
-                    { material: 69, amount: 2 }
+                    { material: 57, amount: 3 },
+                    { material: 58, amount: 2 },
+                    { material: 59, amount: 2 }
                 ],
                 previous: 13,
                 upgrade: undefined
             },
+            // Kulu-Ya-Ku
+            undefined, undefined,
+            // Tobi-Kadachi
+            undefined, undefined,
             // Pukei-Pukei
             undefined, undefined,
             // Tzitzi-Ya-Ku
