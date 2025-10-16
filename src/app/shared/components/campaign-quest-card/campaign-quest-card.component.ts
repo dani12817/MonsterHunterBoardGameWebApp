@@ -5,7 +5,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
-import { CampaignQuestsDto, QuestLocalDto } from '../../../models';
+import { QuestLocalDto } from '../../../models';
 
 @Component({
   selector: 'campaign-quest-card',

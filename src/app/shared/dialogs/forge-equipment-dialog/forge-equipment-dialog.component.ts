@@ -45,8 +45,8 @@ export class ForgeEquipmentDialogComponent {
     return this.materialsList[materialCraft.material.id] >= materialCraft.amount;
   }
 
-  forgeEquipment() {
-    this.dialogRef.close(true);
+  forgeEquipment(forceWithoutMaterials: boolean = false) {
+    this.dialogRef.close({forceWithoutMaterials: forceWithoutMaterials});
   }
 
 }

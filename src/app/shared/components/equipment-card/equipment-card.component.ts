@@ -50,10 +50,12 @@ export class EquipmentCardComponent extends BaseEquipmentCardComponent {
       CommonMethods.dialogConfig('420px', 'forge-equipment-dialog', 
         {equipmentToForge: this.equipment, materialsList: this.materialsList}));
 
-    dialogRef.afterClosed().subscribe((equipmentForged: boolean) => {
+    dialogRef.afterClosed().subscribe((forged: any) => {
       // console.log("afterClosed", equipmentForged);
-      if (equipmentForged) {
-        this._useMaterialsToForge();
+      if (forged) {
+        if (!forged.forceWithoutMaterials) {
+          this._useMaterialsToForge();
+        }
         this.equipmentForged.emit(this.equipment.id);
       }
     });
