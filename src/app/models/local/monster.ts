@@ -1,4 +1,4 @@
-import { BaseDto, BaseLocal, ArmourLocal, MaterialLocal, WeaponLocal } from "./";
+import { BaseDto, BaseLocal, ArmourLocal, MaterialLocal, WeaponLocal } from "..";
 
 interface BaseMonster extends BaseLocal {
   description: string;

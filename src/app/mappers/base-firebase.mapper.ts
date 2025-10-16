@@ -2,7 +2,7 @@ import { Firestore } from "@angular/fire/firestore";
 import { inject } from "@angular/core";
 import { collection, CollectionReference, DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
 
-import { BaseMapper } from "./base.mapper";
+import { BaseMapper } from "./local/base.mapper";
 import { BaseFirebase } from "../models";
 
 export abstract class BaseFirebaseMapper<E extends BaseFirebase, D>

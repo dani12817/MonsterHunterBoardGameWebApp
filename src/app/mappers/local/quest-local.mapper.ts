@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 
-import { BaseMapper } from ".";
-import { QuestLocal, QuestLocalDto, QuestMission, QuestMissionDto } from "../models";
+import { BaseMapper } from "..";
+import { QuestLocal, QuestLocalDto, QuestMission, QuestMissionDto } from "../../models";
 
-import { CommonMethods } from "../shared/common-methods";
+import { CommonMethods } from "../../shared/common-methods";
 
 @Injectable({
   providedIn: 'root'

@@ -1,4 +1,5 @@
-import { BaseEquipment, BaseEquipmentDto } from "./";
+import { BaseEquipment, BaseEquipmentDto } from "..";
+
 
 export interface ArmourLocal extends BaseEquipment {
 }

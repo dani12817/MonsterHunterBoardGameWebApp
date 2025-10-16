@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialogConfig } from '@angular/material/dialog';
 
-import { BaseCampaign, CampaignHunterDto, CampaignQuestsDto, WeaponLocalDto } from '../models';
+import { BaseCampaign, CampaignHunterDto, CampaignQuestsDto, MaterialLocal, WeaponLocalDto } from '../models';
 
 import { ArmourType, MaterialType, WeaponType } from './enums';
 import { ASSETS_FOLDER, MAX_QUEST_MISSIONS } from './constants';
@@ -76,12 +76,12 @@ export class CommonMethods {
         return `material.${material}`;
     }
 
-    public static generateMaterialIcon(material: string, type: MaterialType): string {
-        return `${ASSETS_FOLDER}/material/${type}/icon/${material}.png`;
+    public static generateMaterialIcon(material: MaterialLocal): string {
+        return `${ASSETS_FOLDER}/material/${material.type}/icon/${material.image}.png`;
     }
 
-    public static generateMaterialImage(material: string, type: MaterialType): string {
-        return `${ASSETS_FOLDER}/material/${type}/${material}.webp`;
+    public static generateMaterialImage(material: MaterialLocal): string {
+        return `${ASSETS_FOLDER}/material/${material.type}/${material.image}.webp`;
     }
 
     public static generateWeaponIcon(weapon: string): string {

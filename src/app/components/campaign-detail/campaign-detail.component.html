@@ -9,7 +9,7 @@
             </ng-template>
 
             <div class="materials-container grid w-12 pt-2 m-0 align-content-start">
-                @for (materialLocal of materialsLocalList; track $index) {
+                @for (materialLocal of materialLocalList; track $index) {
                     <campaign-material-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
                         [materialLocal]="materialLocal"
                         [campaignMaterial]="campaignMaterialsDetail"
@@ -25,7 +25,7 @@
             </ng-template>
 
             <div class="quests-container grid w-12 pt-2 m-0 align-content-start">
-                @for (questLocal of questsLocalList; track $index) {
+                @for (questLocal of questLocalList; track $index) {
                     <campaign-quest-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
                         [questLocal]="questLocal"
                         [campaignQuest]="campaignQuestsDetail.quests![$index]" />

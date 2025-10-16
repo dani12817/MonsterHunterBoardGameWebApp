@@ -19,7 +19,10 @@ import {
 } from '../../shared/components';
 import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 
-import { ArmourLocalService, CampaignMaterialsService, CampaignQuestsService, MaterialsLocalService, QuestsLocalService, WeaponLocalService } from '../../providers';
+import { 
+  CampaignMaterialsService, CampaignQuestsService, 
+  MaterialLocalService, QuestLocalService, WeaponLocalService, ArmourLocalService
+} from '../../providers';
 
 import { 
   CampaignDto, 
@@ -53,8 +56,8 @@ export class CampaignDetailComponent implements OnInit {
   private _campaignMaterialsService = inject(CampaignMaterialsService);
   private _campaignQuestsService = inject(CampaignQuestsService);
   
-  private _questsLocalService = inject(QuestsLocalService);
-  private _materialsLocalService = inject(MaterialsLocalService);
+  private _questLocalService = inject(QuestLocalService);
+  private _materialLocalService = inject(MaterialLocalService);
   private _weaponLocalService = inject(WeaponLocalService);
   private _armourLocalService = inject(ArmourLocalService);
 
@@ -63,8 +66,8 @@ export class CampaignDetailComponent implements OnInit {
   campaignMaterialsDetail!: CampaignMaterialsDto;
   campaignHunterList!: CampaignHunterDto[];
   
-  questsLocalList: QuestLocalDto[];
-  materialsLocalList: MaterialLocalDto[];
+  questLocalList: QuestLocalDto[];
+  materialLocalList: MaterialLocalDto[];
   weaponsLocalMap: Map<WeaponType, (WeaponLocalDto | undefined)[]>;
   armoursLocalMap: Map<ArmourType, (ArmourLocalDto | undefined)[]>;
 
@@ -75,8 +78,8 @@ export class CampaignDetailComponent implements OnInit {
   MAX_HUNTERS_PER_CAMPAIGN = MAX_HUNTERS_PER_CAMPAIGN;
 
   constructor() {
-    this.questsLocalList = this._questsLocalService.getAllDto();
-    this.materialsLocalList = this._materialsLocalService.getAllDto();
+    this.questLocalList = this._questLocalService.getAllDto();
+    this.materialLocalList = this._materialLocalService.getAllDto();
     this.weaponsLocalMap = this._weaponLocalService.getAllDto();
     this.armoursLocalMap = this._armourLocalService.getAllDto();
     //console.log("armoursLocalMap", this.armoursLocalMap);

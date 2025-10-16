@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 
-import { BaseMapper } from ".";
-import { MaterialLocal, MaterialLocalDto } from "../models";
+import { BaseMapper } from "..";
+import { MaterialLocal, MaterialLocalDto } from "../../models";
 
-import { CommonMethods } from "../shared/common-methods";
+import { CommonMethods } from "../../shared/common-methods";
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +18,8 @@ export class MaterialLocalMapper extends BaseMapper<MaterialLocal, MaterialLocal
         return {
             ...model,
             name: model.name,
-            icon: CommonMethods.generateMaterialIcon(model.image, model.type),
-            image: CommonMethods.generateMaterialImage(model.image, model.type),
+            icon: CommonMethods.generateMaterialIcon(model),
+            image: CommonMethods.generateMaterialImage(model),
             gathering: [],
             monsters: [],
             reward: []

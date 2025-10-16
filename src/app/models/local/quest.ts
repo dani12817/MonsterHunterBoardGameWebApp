@@ -1,4 +1,4 @@
-import { BaseLocal } from "./";
+import { BaseLocal } from "..";
 
 export interface QuestLocal extends BaseLocal {
     quests: QuestMission[];

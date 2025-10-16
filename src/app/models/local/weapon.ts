@@ -1,4 +1,4 @@
-import { BaseEquipment, BaseEquipmentDto } from "./";
+import { BaseEquipment, BaseEquipmentDto } from "..";
 
 export interface WeaponLocal extends BaseEquipment {
     upgrade?: number[];

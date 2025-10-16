@@ -1,5 +1,5 @@
-import { BaseMapper } from "../mappers";
-import { BaseLocal } from "../models";
+import { BaseMapper } from "../../mappers";
+import { BaseLocal } from "../../models";
 
 export abstract class BaseLocalService<E extends BaseLocal, D> {
   protected _databaseTable: E[];

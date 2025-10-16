@@ -1,11 +1,11 @@
 import { inject, Injectable } from "@angular/core";
 
-import { BaseMapper, EquipmentLocalMapper } from ".";
+import { BaseMapper, EquipmentLocalMapper } from "..";
 
-import { WeaponLocal, WeaponLocalDto } from "../models";
+import { WeaponLocal, WeaponLocalDto } from "../../models";
 
-import { CommonMethods } from "../shared/common-methods";
-import { WeaponType } from "../shared/enums";
+import { CommonMethods } from "../../shared/common-methods";
+import { WeaponType } from "../../shared/enums";
 
 @Injectable({
   providedIn: 'root'

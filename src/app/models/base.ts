@@ -1,4 +1,4 @@
-import { MaterialCraft, MaterialCraftDto } from "./material-craft";
+import { MaterialCraft, MaterialCraftDto } from "./local/material-craft";
 
 export interface BaseModel {
     [key: string]: any,

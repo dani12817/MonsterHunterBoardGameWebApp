@@ -1,4 +1,4 @@
-import { MaterialLocal } from "./";
+import { MaterialLocalDto } from "..";
 
 export interface MaterialCraft {
     material?: number;
@@ -6,6 +6,6 @@ export interface MaterialCraft {
 }
 
 export interface MaterialCraftDto {
-    material: MaterialLocal;
+    material: MaterialLocalDto;
     amount: number;
 }

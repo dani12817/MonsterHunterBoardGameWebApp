@@ -1,4 +1,4 @@
-import { BaseModel } from "../models";
+import { BaseModel } from "../../models";
 
 export abstract class BaseMapper<E extends BaseModel, D> {
 

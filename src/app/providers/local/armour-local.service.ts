@@ -1,10 +1,10 @@
 import { inject, Injectable } from "@angular/core";
 
-import { ArmourLocalMapper } from "../mappers";
-import { ArmourLocalDto } from "../models";
+import { ArmourLocalMapper } from "../../mappers";
+import { ArmourLocalDto } from "../../models";
 
-import { ARMOUR_TABLE } from "../../db";
-import { ArmourType } from "../shared/enums";
+import { ARMOUR_TABLE } from "../../../db";
+import { ArmourType } from "../../shared/enums";
 
 @Injectable({
   providedIn: 'root'
