@@ -24,6 +24,8 @@
     <div class="materials-container w-12" >
         @for (materialCraft of equipmentToForge.materials; track $index) {
             <div class="material-item-container flex flex-row py-2">
+                <img class="w-1-5 mr-1 img-icon-boder-black" [src]="materialCraft.material.icon">
+
                 <div class="material-name-container flex-grow-1 mr-2">
                     {{ materialCraft.material.name }}
                 </div>

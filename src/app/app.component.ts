@@ -16,12 +16,4 @@ import { MATERIAL_TABLE } from '../db';
 export class AppComponent {
   title = 'MonsterHunterBoardGameWebApp';
 
-  constructor() {
-    for (let index = 0; index < MATERIAL_TABLE.length; index++) {
-      const element = MATERIAL_TABLE[index];
-      if (element.id != index) {
-        console.log("NO OK "+element.name);
-      }
-    }
-  }
 }
