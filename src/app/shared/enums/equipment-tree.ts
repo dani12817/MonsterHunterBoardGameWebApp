@@ -21,6 +21,8 @@ export const EquipmentTree = {
     teostra: "teostra",
     nergigante: "nergigante",
     kirin: "kirin",
+    barioth: "barioth",
+    rajang: "rajang",
 } as const;
 
 export type EquipmentTree = typeof EquipmentTree[keyof typeof EquipmentTree];

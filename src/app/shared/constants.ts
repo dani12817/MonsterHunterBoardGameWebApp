@@ -15,3 +15,5 @@ export const ASSETS_MATERIAL_FOLDER = "/material";
 export const ASSETS_WEAPON_FOLDER = "/weapon";
 export const ASSETS_ARMOUR_FOLDER = "/armour";
 export const ASSETS_ICON_FOLDER = "/icon";
+
+export const MAX_HUNTERS_PER_CAMPAIGN = 4;

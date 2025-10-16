@@ -7,124 +7,124 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 15, 19, 27, 35, 39]
+                upgrade: [1, 14, 18, 26, 34, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 7, 9, 41]
+                upgrade: [4, 6, 8, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             {
-                id: 7,
+                id: 6,
                 name: EquipmentTree.greatJagras,
                 rarity: 3,
                 materials: [
-                    { material: 21, amount: 1 },
-                    { material: 42, amount: 2 },
-                    { material: 43, amount: 1 },
-                    { material: 44, amount: 2 }
+                    { material: 20, amount: 1 },
+                    { material: 41, amount: 2 },
+                    { material: 42, amount: 1 },
+                    { material: 43, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [8]
+                previous: 3,
+                upgrade: [7]
             },
             {
-                id: 8,
+                id: 7,
                 name: EquipmentTree.greatJagras,
                 rarity: 4,
                 materials: [
-                    { material: 22, amount: 1 },
-                    { material: 42, amount: 2 },
-                    { material: 44, amount: 2 },
-                    { material: 45, amount: 2 }
+                    { material: 21, amount: 1 },
+                    { material: 41, amount: 2 },
+                    { material: 43, amount: 2 },
+                    { material: 44, amount: 2 }
                 ],
-                previous: 7,
+                previous: 6,
                 upgrade: undefined
             },
             // Barroth
             {
-                id: 9,
+                id: 8,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 56, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 1 }
+                    { material: 55, amount: 3 },
+                    { material: 57, amount: 3 },
+                    { material: 58, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [10]
+                previous: 3,
+                upgrade: [9]
             },
             {
-                id: 10,
+                id: 9,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
+                    { material: 56, amount: 3 },
                     { material: 57, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 2 }
+                    { material: 58, amount: 2 }
                 ],
-                previous: 9,
+                previous: 8,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
@@ -133,57 +133,57 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Pukei-Pukei
             {
-                id: 15,
+                id: 14,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 3,
                 materials: [
-                    { material: 23, amount: 1 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 },
-                    { material: 55, amount: 1 }
+                    { material: 22, amount: 1 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 },
+                    { material: 54, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [16]
+                previous: 0,
+                upgrade: [15]
             },
             {
-                id: 16,
+                id: 15,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 4,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 24, amount: 2 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 23, amount: 2 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 15,
+                previous: 14,
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
             undefined, undefined,
             // Great Girros
             {
-                id: 19,
+                id: 18,
                 name: EquipmentTree.greatGirros,
                 rarity: 3,
                 materials: [
-                    { material: 41, amount: 2 },
-                    { material: 80, amount: 4 },
-                    { material: 82, amount: 3 }
+                    { material: 40, amount: 2 },
+                    { material: 79, amount: 4 },
+                    { material: 81, amount: 3 }
                 ],
-                previous: 1,
-                upgrade: [20]
+                previous: 0,
+                upgrade: [19]
             },
             {
-                id: 20,
+                id: 19,
                 name: EquipmentTree.greatGirros,
                 rarity: 4,
                 materials: [
-                    { material: 40, amount: 1 },
-                    { material: 80, amount: 2 },
-                    { material: 82, amount: 2 },
-                    { material: 83, amount: 2 }
+                    { material: 39, amount: 1 },
+                    { material: 79, amount: 2 },
+                    { material: 81, amount: 2 },
+                    { material: 82, amount: 2 }
                 ],
-                previous: 19,
+                previous: 18,
                 upgrade: undefined
             },
             // Anjanath
@@ -192,55 +192,55 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Radobaan
             {
-                id: 25,
+                id: 24,
                 name: EquipmentTree.radobaan,
                 rarity: 3,
                 materials: [
-                    { material: 26, amount: 2 },
-                    { material: 84, amount: 3 },
-                    { material: 87, amount: 2 }
+                    { material: 25, amount: 2 },
+                    { material: 83, amount: 3 },
+                    { material: 86, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [26]
+                previous: 0,
+                upgrade: [25]
             },
             {
-                id: 26,
+                id: 25,
                 name: EquipmentTree.radobaan,
                 rarity: 4,
                 materials: [
-                    { material: 18, amount: 2 },
-                    { material: 27, amount: 1 },
-                    { material: 85, amount: 4 },
-                    { material: 86, amount: 2 }
+                    { material: 17, amount: 2 },
+                    { material: 26, amount: 1 },
+                    { material: 84, amount: 4 },
+                    { material: 85, amount: 2 }
                 ],
-                previous: 25,
+                previous: 24,
                 upgrade: undefined
             },
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 2 },
-                    { material: 91, amount: 2 },
-                    { material: 95, amount: 1 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 2 },
+                    { material: 90, amount: 2 },
+                    { material: 94, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 1 },
-                    { material: 92, amount: 1 },
-                    { material: 96, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 1 },
+                    { material: 91, amount: 1 },
+                    { material: 95, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Rathalos Azure
@@ -251,84 +251,84 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -340,124 +340,124 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 15, 19, 27, 37, 39]
+                upgrade: [1, 14, 18, 26, 36, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 7, 9, 41]
+                upgrade: [4, 6, 8, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             {
-                id: 7,
+                id: 6,
                 name: EquipmentTree.greatJagras,
                 rarity: 3,
                 materials: [
-                    { material: 21, amount: 1 },
-                    { material: 42, amount: 2 },
-                    { material: 43, amount: 1 },
-                    { material: 44, amount: 2 }
+                    { material: 20, amount: 1 },
+                    { material: 41, amount: 2 },
+                    { material: 42, amount: 1 },
+                    { material: 43, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [8]
+                previous: 3,
+                upgrade: [7]
             },
             {
-                id: 8,
+                id: 7,
                 name: EquipmentTree.greatJagras,
                 rarity: 4,
                 materials: [
-                    { material: 22, amount: 1 },
-                    { material: 42, amount: 3 },
-                    { material: 44, amount: 1 },
-                    { material: 45, amount: 2 }
+                    { material: 21, amount: 1 },
+                    { material: 41, amount: 3 },
+                    { material: 43, amount: 1 },
+                    { material: 44, amount: 2 }
                 ],
-                previous: 7,
+                previous: 6,
                 upgrade: undefined
             },
             // Barroth
             {
-                id: 9,
+                id: 8,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 56, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 1 }
+                    { material: 55, amount: 3 },
+                    { material: 57, amount: 3 },
+                    { material: 58, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [10]
+                previous: 3,
+                upgrade: [9]
             },
             {
-                id: 10,
+                id: 9,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
+                    { material: 56, amount: 3 },
                     { material: 57, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 1 }
+                    { material: 58, amount: 1 }
                 ],
-                previous: 9,
+                previous: 8,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
@@ -466,57 +466,57 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Pukei-Pukei
             {
-                id: 15,
+                id: 14,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 3,
                 materials: [
-                    { material: 23, amount: 1 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 },
-                    { material: 55, amount: 1 }
+                    { material: 22, amount: 1 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 },
+                    { material: 54, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [16]
+                previous: 0,
+                upgrade: [15]
             },
             {
-                id: 16,
+                id: 15,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 4,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 24, amount: 2 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 23, amount: 2 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 15,
+                previous: 14,
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
             undefined, undefined,
             // Great Girros
             {
-                id: 19,
+                id: 18,
                 name: EquipmentTree.greatGirros,
                 rarity: 3,
                 materials: [
-                    { material: 41, amount: 2 },
-                    { material: 80, amount: 4 },
-                    { material: 82, amount: 3 }
+                    { material: 40, amount: 2 },
+                    { material: 79, amount: 4 },
+                    { material: 81, amount: 3 }
                 ],
-                previous: 1,
-                upgrade: [20]
+                previous: 0,
+                upgrade: [19]
             },
             {
-                id: 20,
+                id: 19,
                 name: EquipmentTree.greatGirros,
                 rarity: 4,
                 materials: [
-                    { material: 40, amount: 1 },
-                    { material: 80, amount: 2 },
-                    { material: 82, amount: 2 },
-                    { material: 83, amount: 2 }
+                    { material: 39, amount: 1 },
+                    { material: 79, amount: 2 },
+                    { material: 81, amount: 2 },
+                    { material: 82, amount: 2 }
                 ],
-                previous: 19,
+                previous: 18,
                 upgrade: undefined
             },
             // Anjanath
@@ -525,54 +525,54 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Radobaan
             {
-                id: 25,
+                id: 24,
                 name: EquipmentTree.radobaan,
                 rarity: 3,
                 materials: [
-                    { material: 26, amount: 2 },
-                    { material: 84, amount: 3 },
-                    { material: 87, amount: 2 }
+                    { material: 25, amount: 2 },
+                    { material: 83, amount: 3 },
+                    { material: 86, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [26]
+                previous: 0,
+                upgrade: [25]
             },
             {
-                id: 26,
+                id: 25,
                 name: EquipmentTree.radobaan,
                 rarity: 4,
                 materials: [
-                    { material: 18, amount: 2 },
-                    { material: 27, amount: 1 },
-                    { material: 85, amount: 4 },
-                    { material: 86, amount: 2 }
+                    { material: 17, amount: 2 },
+                    { material: 26, amount: 1 },
+                    { material: 84, amount: 4 },
+                    { material: 85, amount: 2 }
                 ],
-                previous: 25,
+                previous: 24,
                 upgrade: undefined
             },
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 1 },
-                    { material: 93, amount: 2 },
-                    { material: 97, amount: 1 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 1 },
+                    { material: 92, amount: 2 },
+                    { material: 96, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 2 },
-                    { material: 92, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 2 },
+                    { material: 91, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Rathalos Azure
@@ -585,82 +585,82 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Teostra
             {
-                id: 37,
+                id: 36,
                 name: EquipmentTree.teostra,
                 rarity: 4,
                 materials: [
                     
-                    { material: 127, amount: 2 },
-                    { material: 128, amount: 1 },
-                    { material: 132, amount: 1 },
-                    { material: 134, amount: 1 }
+                    { material: 126, amount: 2 },
+                    { material: 127, amount: 1 },
+                    { material: 131, amount: 1 },
+                    { material: 133, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [37]
             },
             {
-                id: 38,
+                id: 37,
                 name: EquipmentTree.teostra,
                 rarity: 5,
                 materials: [
-                    { material: 130, amount: 3 },
-                    { material: 132, amount: 2 },
-                    { material: 135, amount: 1 }
+                    { material: 129, amount: 3 },
+                    { material: 131, amount: 2 },
+                    { material: 134, amount: 1 }
                 ],
-                previous: 35,
+                previous: 36,
                 upgrade: undefined
             },
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -672,72 +672,72 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 11, 17, 35, 37, 39]
+                upgrade: [1, 10, 16, 34, 36, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 13, 21, 23, 31, 41]
+                upgrade: [4, 12, 20, 22, 30, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
@@ -746,138 +746,138 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kulu-Ya-Ku
             {
-                id: 11,
+                id: 10,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 5, amount: 3 },
-                    { material: 46, amount: 4 },
-                    { material: 47, amount: 2 },
-                    { material: 49, amount: 1 }
+                    { material: 4, amount: 3 },
+                    { material: 45, amount: 4 },
+                    { material: 46, amount: 2 },
+                    { material: 48, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [12]
+                previous: 0,
+                upgrade: [11]
             },
             {
-                id: 12,
+                id: 11,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 13, amount: 4 },
+                    { material: 12, amount: 4 },
+                    { material: 46, amount: 3 },
                     { material: 47, amount: 3 },
-                    { material: 48, amount: 3 },
-                    { material: 49, amount: 2 }
+                    { material: 48, amount: 2 }
                 ],
-                previous: 11,
+                previous: 10,
                 upgrade: undefined
             },
             // Tobi-Kadachi
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 3,
                 materials: [
-                    { material: 6, amount: 2 },
-                    { material: 32, amount: 2 },
-                    { material: 69, amount: 2 },
-                    { material: 70, amount: 1 }
+                    { material: 5, amount: 2 },
+                    { material: 31, amount: 2 },
+                    { material: 68, amount: 2 },
+                    { material: 69, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 4,
                 materials: [
-                    { material: 33, amount: 1 },
-                    { material: 69, amount: 2 },
-                    { material: 70, amount: 2 }
+                    { material: 32, amount: 1 },
+                    { material: 68, amount: 2 },
+                    { material: 69, amount: 2 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Pukei-Pukei
             undefined, undefined,
             // Tzitzi-Ya-Ku
             {
-                id: 17,
+                id: 16,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 76, amount: 3 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 75, amount: 3 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [18]
+                previous: 0,
+                upgrade: [17]
             },
             {
-                id: 18,
+                id: 17,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 8, amount: 1 },
-                    { material: 76, amount: 5 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 7, amount: 1 },
+                    { material: 75, amount: 5 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 17,
+                previous: 16,
                 upgrade: undefined
             },
             // Great Girros
             undefined, undefined,
             // Anjanath
             {
-                id: 21,
+                id: 20,
                 name: EquipmentTree.anjanath,
                 rarity: 3,
                 materials: [
-                    { material: 28, amount: 1 },
-                    { material: 71, amount: 3 },
-                    { material: 73, amount: 2 }
+                    { material: 27, amount: 1 },
+                    { material: 70, amount: 3 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [22]
+                previous: 3,
+                upgrade: [21]
             },
             {
-                id: 22,
+                id: 21,
                 name: EquipmentTree.anjanath,
                 rarity: 4,
                 materials: [
-                    { material: 10, amount: 2 },
-                    { material: 72, amount: 4 },
-                    { material: 73, amount: 4 }
+                    { material: 9, amount: 2 },
+                    { material: 71, amount: 4 },
+                    { material: 72, amount: 4 }
                 ],
-                previous: 21,
+                previous: 20,
                 upgrade: undefined
             },
             // Jyuratodus
             {
-                id: 23,
+                id: 22,
                 name: EquipmentTree.jyuratodus,
                 rarity: 3,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 61, amount: 3 },
-                    { material: 62, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 60, amount: 3 },
+                    { material: 61, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [24]
+                previous: 3,
+                upgrade: [23]
             },
             {
-                id: 24,
+                id: 23,
                 name: EquipmentTree.jyuratodus,
                 rarity: 4,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 38, amount: 1 },
-                    { material: 61, amount: 2 },
-                    { material: 63, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 37, amount: 1 },
+                    { material: 60, amount: 2 },
+                    { material: 62, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 23,
+                previous: 22,
                 upgrade: undefined
             },
             // Radobaan
@@ -888,138 +888,138 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Diablos
             {
-                id: 31,
+                id: 30,
                 name: EquipmentTree.diablos,
                 rarity: 3,
                 materials: [
-                    { material: 17, amount: 2 },
-                    { material: 105, amount: 4 },
-                    { material: 108, amount: 2 },
-                    { material: 109, amount: 1 }
+                    { material: 16, amount: 2 },
+                    { material: 104, amount: 4 },
+                    { material: 107, amount: 2 },
+                    { material: 108, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [32]
+                previous: 3,
+                upgrade: [31]
             },
             {
-                id: 32,
+                id: 31,
                 name: EquipmentTree.diablos,
                 rarity: 4,
                 materials: [
+                    { material: 105, amount: 2 },
                     { material: 106, amount: 2 },
-                    { material: 107, amount: 2 },
-                    { material: 110, amount: 2 },
-                    { material: 111, amount: 1 }
+                    { material: 109, amount: 2 },
+                    { material: 110, amount: 1 }
                 ],
-                previous: 31,
+                previous: 30,
                 upgrade: undefined
             },
             // Black Diablos
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             {
-                id: 37,
+                id: 36,
                 name: EquipmentTree.teostra,
                 rarity: 4,
                 materials: [
                     
-                    { material: 127, amount: 2 },
-                    { material: 128, amount: 1 },
-                    { material: 132, amount: 1 },
-                    { material: 134, amount: 1 }
+                    { material: 126, amount: 2 },
+                    { material: 127, amount: 1 },
+                    { material: 131, amount: 1 },
+                    { material: 133, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [37]
             },
             {
-                id: 38,
+                id: 37,
                 name: EquipmentTree.teostra,
                 rarity: 5,
                 materials: [
-                    { material: 130, amount: 3 },
-                    { material: 132, amount: 2 },
-                    { material: 135, amount: 1 }
+                    { material: 129, amount: 3 },
+                    { material: 131, amount: 2 },
+                    { material: 134, amount: 1 }
                 ],
-                previous: 35,
+                previous: 36,
                 upgrade: undefined
             },
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -1031,72 +1031,72 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 11, 17, 27, 37, 39]
+                upgrade: [1, 10, 16, 26, 36, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 13, 21, 23]
+                upgrade: [4, 12, 20, 22]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
@@ -1105,167 +1105,167 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kulu-Ya-Ku
             {
-                id: 11,
+                id: 10,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 5, amount: 3 },
-                    { material: 46, amount: 4 },
-                    { material: 47, amount: 2 },
-                    { material: 49, amount: 1 }
+                    { material: 4, amount: 3 },
+                    { material: 45, amount: 4 },
+                    { material: 46, amount: 2 },
+                    { material: 48, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [12]
+                previous: 0,
+                upgrade: [11]
             },
             {
-                id: 12,
+                id: 11,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 13, amount: 4 },
+                    { material: 12, amount: 4 },
+                    { material: 46, amount: 3 },
                     { material: 47, amount: 3 },
-                    { material: 48, amount: 3 },
-                    { material: 49, amount: 2 }
+                    { material: 48, amount: 2 }
                 ],
-                previous: 11,
+                previous: 10,
                 upgrade: undefined
             },
             // Tobi-Kadachi
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 3,
                 materials: [
-                    { material: 66, amount: 2 },
-                    { material: 67, amount: 3 },
-                    { material: 69, amount: 1 }
+                    { material: 65, amount: 2 },
+                    { material: 66, amount: 3 },
+                    { material: 68, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 4,
                 materials: [
-                    { material: 7, amount: 2 },
+                    { material: 6, amount: 2 },
+                    { material: 65, amount: 1 },
                     { material: 66, amount: 1 },
-                    { material: 67, amount: 1 },
-                    { material: 69, amount: 3 }
+                    { material: 68, amount: 3 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Pukei-Pukei
             undefined, undefined,
             // Tzitzi-Ya-Ku
             {
-                id: 17,
+                id: 16,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 76, amount: 3 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 75, amount: 3 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [18]
+                previous: 0,
+                upgrade: [17]
             },
             {
-                id: 18,
+                id: 17,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 8, amount: 1 },
-                    { material: 76, amount: 5 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 7, amount: 1 },
+                    { material: 75, amount: 5 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 17,
+                previous: 16,
                 upgrade: undefined
             },
             // Great Girros
             undefined, undefined,
             // Anjanath
             {
-                id: 21,
+                id: 20,
                 name: EquipmentTree.anjanath,
                 rarity: 3,
                 materials: [
-                    { material: 28, amount: 1 },
-                    { material: 71, amount: 3 },
-                    { material: 73, amount: 2 }
+                    { material: 27, amount: 1 },
+                    { material: 70, amount: 3 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [22]
+                previous: 3,
+                upgrade: [21]
             },
             {
-                id: 22,
+                id: 21,
                 name: EquipmentTree.anjanath,
                 rarity: 4,
                 materials: [
-                    { material: 29, amount: 2 },
-                    { material: 72, amount: 2 },
-                    { material: 73, amount: 2 }
+                    { material: 28, amount: 2 },
+                    { material: 71, amount: 2 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 21,
+                previous: 20,
                 upgrade: undefined
             },
             // Jyuratodus
             {
-                id: 23,
+                id: 22,
                 name: EquipmentTree.jyuratodus,
                 rarity: 3,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 61, amount: 3 },
-                    { material: 62, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 60, amount: 3 },
+                    { material: 61, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [24]
+                previous: 3,
+                upgrade: [23]
             },
             {
-                id: 24,
+                id: 23,
                 name: EquipmentTree.jyuratodus,
                 rarity: 4,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 38, amount: 1 },
-                    { material: 61, amount: 2 },
-                    { material: 63, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 37, amount: 1 },
+                    { material: 60, amount: 2 },
+                    { material: 62, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 23,
+                previous: 22,
                 upgrade: undefined
             },
             // Radobaan
             undefined, undefined,
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 2 },
-                    { material: 91, amount: 2 },
-                    { material: 95, amount: 1 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 2 },
+                    { material: 90, amount: 2 },
+                    { material: 94, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 1 },
-                    { material: 92, amount: 1 },
-                    { material: 96, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 1 },
+                    { material: 91, amount: 1 },
+                    { material: 95, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Azure Rathalos
@@ -1278,56 +1278,56 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Teostra
             {
-                id: 37,
+                id: 36,
                 name: EquipmentTree.teostra,
                 rarity: 4,
                 materials: [
                     
-                    { material: 127, amount: 2 },
-                    { material: 128, amount: 1 },
-                    { material: 132, amount: 1 },
-                    { material: 134, amount: 1 }
+                    { material: 126, amount: 2 },
+                    { material: 127, amount: 1 },
+                    { material: 131, amount: 1 },
+                    { material: 133, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [37]
             },
             {
-                id: 38,
+                id: 37,
                 name: EquipmentTree.teostra,
                 rarity: 5,
                 materials: [
-                    { material: 130, amount: 3 },
-                    { material: 132, amount: 2 },
-                    { material: 135, amount: 1 }
+                    { material: 129, amount: 3 },
+                    { material: 131, amount: 2 },
+                    { material: 134, amount: 1 }
                 ],
-                previous: 35,
+                previous: 36,
                 upgrade: undefined
             },
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 40,
                 upgrade: undefined
             },
             // Kirin
@@ -1339,235 +1339,235 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 15, 19, 35, 39]
+                upgrade: [1, 14, 18, 34, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 9, 11, 21, 25, 31]
+                upgrade: [4, 8, 10, 20, 26, 30]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             undefined, undefined,
             // Barroth
             {
-                id: 9,
+                id: 8,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 56, amount: 4 },
-                    { material: 58, amount: 2 },
-                    { material: 59, amount: 1 }
+                    { material: 55, amount: 4 },
+                    { material: 57, amount: 2 },
+                    { material: 58, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [10]
+                previous: 3,
+                upgrade: [9]
             },
             {
-                id: 10,
+                id: 9,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
-                    { material: 57, amount: 3 },
-                    { material: 58, amount: 2 },
-                    { material: 59, amount: 2 }
+                    { material: 56, amount: 3 },
+                    { material: 57, amount: 2 },
+                    { material: 58, amount: 2 }
                 ],
-                previous: 9,
+                previous: 8,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
             {
-                id: 11,
+                id: 10,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 5, amount: 3 },
-                    { material: 46, amount: 4 },
-                    { material: 47, amount: 2 },
-                    { material: 49, amount: 1 }
+                    { material: 4, amount: 3 },
+                    { material: 45, amount: 4 },
+                    { material: 46, amount: 2 },
+                    { material: 48, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [12]
+                previous: 0,
+                upgrade: [11]
             },
             {
-                id: 12,
+                id: 11,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 13, amount: 4 },
+                    { material: 12, amount: 4 },
+                    { material: 46, amount: 3 },
                     { material: 47, amount: 3 },
-                    { material: 48, amount: 3 },
-                    { material: 49, amount: 2 }
+                    { material: 48, amount: 2 }
                 ],
-                previous: 11,
+                previous: 10,
                 upgrade: undefined
             },
             // Tobi-Kadachi
             undefined, undefined,
             // Pukei-Pukei
             {
-                id: 15,
+                id: 14,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 3,
                 materials: [
-                    { material: 23, amount: 1 },
-                    { material: 50, amount: 3 },
-                    { material: 52, amount: 2 }
+                    { material: 22, amount: 1 },
+                    { material: 49, amount: 3 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [16]
+                previous: 0,
+                upgrade: [15]
             },
             {
-                id: 16,
+                id: 15,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 4,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 24, amount: 2 },
-                    { material: 50, amount: 3 },
-                    { material: 52, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 23, amount: 2 },
+                    { material: 49, amount: 3 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 15,
+                previous: 14,
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
             undefined, undefined,
             // Great Girros
             {
-                id: 19,
+                id: 18,
                 name: EquipmentTree.greatGirros,
                 rarity: 3,
                 materials: [
-                    { material: 41, amount: 2 },
-                    { material: 80, amount: 4 },
-                    { material: 82, amount: 3 }
+                    { material: 40, amount: 2 },
+                    { material: 79, amount: 4 },
+                    { material: 81, amount: 3 }
                 ],
-                previous: 1,
-                upgrade: [20]
+                previous: 0,
+                upgrade: [19]
             },
             {
-                id: 20,
+                id: 19,
                 name: EquipmentTree.greatGirros,
                 rarity: 4,
                 materials: [
-                    { material: 40, amount: 1 },
-                    { material: 80, amount: 2 },
-                    { material: 82, amount: 2 },
-                    { material: 83, amount: 2 }
+                    { material: 39, amount: 1 },
+                    { material: 79, amount: 2 },
+                    { material: 81, amount: 2 },
+                    { material: 82, amount: 2 }
                 ],
-                previous: 19,
+                previous: 18,
                 upgrade: undefined
             },
             // Anjanath
             {
-                id: 21,
+                id: 20,
                 name: EquipmentTree.anjanath,
                 rarity: 3,
                 materials: [
-                    { material: 28, amount: 1 },
-                    { material: 71, amount: 3 },
-                    { material: 73, amount: 2 }
+                    { material: 27, amount: 1 },
+                    { material: 70, amount: 3 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [22]
+                previous: 3,
+                upgrade: [21]
             },
             {
-                id: 22,
+                id: 21,
                 name: EquipmentTree.anjanath,
                 rarity: 4,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 71, amount: 2 },
-                    { material: 73, amount: 4 }
+                    { material: 28, amount: 1 },
+                    { material: 70, amount: 2 },
+                    { material: 72, amount: 4 }
                 ],
-                previous: 21,
+                previous: 20,
                 upgrade: undefined
             },
             // Jyuratodus
             undefined, undefined,
             // Radobaan
             {
-                id: 25,
+                id: 24,
                 name: EquipmentTree.radobaan,
                 rarity: 3,
                 materials: [
-                    { material: 26, amount: 2 },
-                    { material: 84, amount: 3 },
-                    { material: 87, amount: 2 }
+                    { material: 25, amount: 2 },
+                    { material: 83, amount: 3 },
+                    { material: 86, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [26]
+                previous: 0,
+                upgrade: [25]
             },
             {
-                id: 26,
+                id: 25,
                 name: EquipmentTree.radobaan,
                 rarity: 4,
                 materials: [
-                    { material: 18, amount: 2 },
-                    { material: 27, amount: 1 },
-                    { material: 85, amount: 4 },
-                    { material: 86, amount: 2 }
+                    { material: 17, amount: 2 },
+                    { material: 26, amount: 1 },
+                    { material: 84, amount: 4 },
+                    { material: 85, amount: 2 }
                 ],
-                previous: 25,
+                previous: 24,
                 upgrade: undefined
             },
             // Rathalos
@@ -1576,87 +1576,87 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Diablos
             {
-                id: 31,
+                id: 30,
                 name: EquipmentTree.diablos,
                 rarity: 3,
                 materials: [
-                    { material: 17, amount: 3 },
-                    { material: 105, amount: 4 },
-                    { material: 108, amount: 2 },
-                    { material: 109, amount: 1 }
+                    { material: 16, amount: 3 },
+                    { material: 104, amount: 4 },
+                    { material: 107, amount: 2 },
+                    { material: 108, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [32]
+                previous: 3,
+                upgrade: [31]
             },
             {
-                id: 32,
+                id: 31,
                 name: EquipmentTree.diablos,
                 rarity: 4,
                 materials: [
+                    { material: 105, amount: 2 },
                     { material: 106, amount: 2 },
-                    { material: 107, amount: 2 },
-                    { material: 110, amount: 2 },
-                    { material: 111, amount: 1 }
+                    { material: 109, amount: 2 },
+                    { material: 110, amount: 1 }
                 ],
-                previous: 31,
+                previous: 30,
                 upgrade: undefined
             },
             // Black Diablos
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 40,
                 upgrade: undefined
             },
             // Kirin
@@ -1668,72 +1668,72 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 11, 37, 39]
+                upgrade: [1, 10, 36, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 13, 15, 21, 23, 25, 41]
+                upgrade: [4, 12, 14, 20, 22, 24, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
@@ -1742,84 +1742,84 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kulu-Ya-Ku
             {
-                id: 11,
+                id: 10,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 5, amount: 3 },
-                    { material: 46, amount: 4 },
-                    { material: 47, amount: 2 },
-                    { material: 49, amount: 1 }
+                    { material: 4, amount: 3 },
+                    { material: 45, amount: 4 },
+                    { material: 46, amount: 2 },
+                    { material: 48, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [12]
+                previous: 0,
+                upgrade: [11]
             },
             {
-                id: 12,
+                id: 11,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 13, amount: 4 },
+                    { material: 12, amount: 4 },
+                    { material: 46, amount: 3 },
                     { material: 47, amount: 3 },
-                    { material: 48, amount: 3 },
-                    { material: 49, amount: 2 }
+                    { material: 48, amount: 2 }
                 ],
-                previous: 11,
+                previous: 10,
                 upgrade: undefined
             },
             // Tobi-Kadachi
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 2 },
-                    { material: 6, amount: 2 },
-                    { material: 32, amount: 2 },
-                    { material: 69, amount: 2 },
-                    { material: 70, amount: 1 }
+                    { material: 1, amount: 2 },
+                    { material: 5, amount: 2 },
+                    { material: 31, amount: 2 },
+                    { material: 68, amount: 2 },
+                    { material: 69, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 4,
                 materials: [
-                    { material: 4, amount: 2 },
-                    { material: 33, amount: 1 },
-                    { material: 69, amount: 2 },
-                    { material: 70, amount: 2 }
+                    { material: 3, amount: 2 },
+                    { material: 32, amount: 1 },
+                    { material: 68, amount: 2 },
+                    { material: 69, amount: 2 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Pukei-Pukei
             {
-                id: 15,
+                id: 14,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 3,
                 materials: [
-                    { material: 23, amount: 1 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 },
-                    { material: 55, amount: 1 }
+                    { material: 22, amount: 1 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 },
+                    { material: 54, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [16]
+                previous: 0,
+                upgrade: [15]
             },
             {
-                id: 16,
+                id: 15,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 4,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 24, amount: 2 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 23, amount: 2 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 15,
+                previous: 14,
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
@@ -1828,81 +1828,81 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Anjanath
             {
-                id: 21,
+                id: 20,
                 name: EquipmentTree.anjanath,
                 rarity: 3,
                 materials: [
-                    { material: 28, amount: 1 },
-                    { material: 71, amount: 3 },
-                    { material: 73, amount: 2 }
+                    { material: 27, amount: 1 },
+                    { material: 70, amount: 3 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [22]
+                previous: 3,
+                upgrade: [21]
             },
             {
-                id: 22,
+                id: 21,
                 name: EquipmentTree.anjanath,
                 rarity: 4,
                 materials: [
-                    { material: 10, amount: 2 },
-                    { material: 72, amount: 4 },
-                    { material: 73, amount: 4 }
+                    { material: 9, amount: 2 },
+                    { material: 71, amount: 4 },
+                    { material: 72, amount: 4 }
                 ],
-                previous: 21,
+                previous: 20,
                 upgrade: undefined
             },
             // Jyuratodus
             {
-                id: 23,
+                id: 22,
                 name: EquipmentTree.jyuratodus,
                 rarity: 3,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 61, amount: 3 },
-                    { material: 62, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 60, amount: 3 },
+                    { material: 61, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [24]
+                previous: 3,
+                upgrade: [23]
             },
             {
-                id: 24,
+                id: 23,
                 name: EquipmentTree.jyuratodus,
                 rarity: 4,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 38, amount: 1 },
-                    { material: 61, amount: 2 },
-                    { material: 63, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 37, amount: 1 },
+                    { material: 60, amount: 2 },
+                    { material: 62, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 23,
+                previous: 22,
                 upgrade: undefined
             },
             // Radobaan
             {
-                id: 25,
+                id: 24,
                 name: EquipmentTree.radobaan,
                 rarity: 3,
                 materials: [
-                    { material: 26, amount: 2 },
-                    { material: 84, amount: 3 },
-                    { material: 87, amount: 2 }
+                    { material: 25, amount: 2 },
+                    { material: 83, amount: 3 },
+                    { material: 86, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [26]
+                previous: 0,
+                upgrade: [25]
             },
             {
-                id: 26,
+                id: 25,
                 name: EquipmentTree.radobaan,
                 rarity: 4,
                 materials: [
-                    { material: 18, amount: 2 },
-                    { material: 27, amount: 1 },
-                    { material: 85, amount: 4 },
-                    { material: 86, amount: 2 }
+                    { material: 17, amount: 2 },
+                    { material: 26, amount: 1 },
+                    { material: 84, amount: 4 },
+                    { material: 85, amount: 2 }
                 ],
-                previous: 25,
+                previous: 24,
                 upgrade: undefined
             },
             // Rathalos
@@ -1917,82 +1917,82 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Teostra
             {
-                id: 37,
+                id: 36,
                 name: EquipmentTree.teostra,
                 rarity: 4,
                 materials: [
                     
-                    { material: 127, amount: 2 },
-                    { material: 128, amount: 1 },
-                    { material: 132, amount: 1 },
-                    { material: 134, amount: 1 }
+                    { material: 126, amount: 2 },
+                    { material: 127, amount: 1 },
+                    { material: 131, amount: 1 },
+                    { material: 133, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [37]
             },
             {
-                id: 38,
+                id: 37,
                 name: EquipmentTree.teostra,
                 rarity: 5,
                 materials: [
-                    { material: 130, amount: 3 },
-                    { material: 132, amount: 2 },
-                    { material: 135, amount: 1 }
+                    { material: 129, amount: 3 },
+                    { material: 131, amount: 2 },
+                    { material: 134, amount: 1 }
                 ],
-                previous: 35,
+                previous: 36,
                 upgrade: undefined
             },
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -2004,154 +2004,154 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
+                upgrade: [1, 10, 26, 34, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
                 upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3, 11, 27, 35, 39]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 9, 13, 23, 41]
+                upgrade: [4, 8, 12, 22, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             undefined, undefined,
             // Barroth
             {
-                id: 9,
+                id: 8,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 56, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 1 }
+                    { material: 55, amount: 3 },
+                    { material: 57, amount: 3 },
+                    { material: 58, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [10]
+                previous: 3,
+                upgrade: [9]
             },
             {
-                id: 10,
+                id: 9,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
+                    { material: 56, amount: 3 },
                     { material: 57, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 2 }
+                    { material: 58, amount: 2 }
                 ],
-                previous: 9,
+                previous: 8,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
             {
-                id: 11,
+                id: 10,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 5, amount: 3 },
-                    { material: 46, amount: 4 },
-                    { material: 47, amount: 2 },
-                    { material: 49, amount: 1 }
+                    { material: 4, amount: 3 },
+                    { material: 45, amount: 4 },
+                    { material: 46, amount: 2 },
+                    { material: 48, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [12]
+                previous: 0,
+                upgrade: [11]
             },
             {
-                id: 12,
+                id: 11,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 13, amount: 4 },
+                    { material: 12, amount: 4 },
+                    { material: 46, amount: 3 },
                     { material: 47, amount: 3 },
-                    { material: 48, amount: 3 },
-                    { material: 49, amount: 2 }
+                    { material: 48, amount: 2 }
                 ],
-                previous: 11,
+                previous: 10,
                 upgrade: undefined
             },
             // Tobi-Kadachi
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 2 },
-                    { material: 6, amount: 2 },
-                    { material: 32, amount: 2 },
-                    { material: 69, amount: 2 },
-                    { material: 70, amount: 1 }
+                    { material: 1, amount: 2 },
+                    { material: 5, amount: 2 },
+                    { material: 31, amount: 2 },
+                    { material: 68, amount: 2 },
+                    { material: 69, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 4,
                 materials: [
-                    { material: 4, amount: 2 },
-                    { material: 33, amount: 1 },
-                    { material: 69, amount: 2 },
-                    { material: 70, amount: 2 }
+                    { material: 3, amount: 2 },
+                    { material: 32, amount: 1 },
+                    { material: 68, amount: 2 },
+                    { material: 69, amount: 2 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Pukei-Pukei
@@ -2164,31 +2164,31 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Jyuratodus
             {
-                id: 23,
+                id: 22,
                 name: EquipmentTree.jyuratodus,
                 rarity: 3,
                 materials: [
-                    { material: 13, amount: 2 },
-                    { material: 30, amount: 1 },
-                    { material: 61, amount: 3 },
-                    { material: 62, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 12, amount: 2 },
+                    { material: 29, amount: 1 },
+                    { material: 60, amount: 3 },
+                    { material: 61, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [24]
+                previous: 3,
+                upgrade: [23]
             },
             {
-                id: 24,
+                id: 23,
                 name: EquipmentTree.jyuratodus,
                 rarity: 4,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 38, amount: 1 },
-                    { material: 61, amount: 2 },
-                    { material: 63, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 37, amount: 1 },
+                    { material: 60, amount: 2 },
+                    { material: 62, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 23,
+                previous: 22,
                 upgrade: undefined
             },
             // Radobaan
@@ -2203,84 +2203,84 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -2292,125 +2292,125 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 23, 27, 35, 39]
+                upgrade: [1, 22, 26, 36, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 7, 9, 19]
+                upgrade: [4, 6, 8, 18]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             {
-                id: 7,
+                id: 6,
                 name: EquipmentTree.greatJagras,
                 rarity: 3,
                 materials: [
-                    { material: 21, amount: 1 },
-                    { material: 42, amount: 3 },
-                    { material: 43, amount: 1 },
-                    { material: 44, amount: 1 }
+                    { material: 20, amount: 1 },
+                    { material: 41, amount: 3 },
+                    { material: 42, amount: 1 },
+                    { material: 43, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [8]
+                previous: 3,
+                upgrade: [7]
             },
             {
-                id: 8,
+                id: 7,
                 name: EquipmentTree.greatJagras,
                 rarity: 4,
                 materials: [
-                    { material: 22, amount: 1 },
-                    { material: 42, amount: 2 },
-                    { material: 44, amount: 2 },
-                    { material: 45, amount: 2 }
+                    { material: 21, amount: 1 },
+                    { material: 41, amount: 2 },
+                    { material: 43, amount: 2 },
+                    { material: 44, amount: 2 }
                 ],
-                previous: 7,
+                previous: 6,
                 upgrade: undefined
             },
             // Barroth
             {
-                id: 9,
+                id: 8,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 56, amount: 3 },
-                    { material: 58, amount: 2 },
-                    { material: 59, amount: 1 }
+                    { material: 55, amount: 3 },
+                    { material: 57, amount: 2 },
+                    { material: 58, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [10]
+                previous: 3,
+                upgrade: [9]
             },
             {
-                id: 10,
+                id: 9,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
+                    { material: 56, amount: 3 },
                     { material: 57, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 2 },
-                    { material: 60, amount: 2 }
+                    { material: 58, amount: 2 },
+                    { material: 59, amount: 2 }
                 ],
-                previous: 9,
+                previous: 8,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
@@ -2423,87 +2423,87 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Great Girros
             {
-                id: 19,
+                id: 18,
                 name: EquipmentTree.greatGirros,
                 rarity: 3,
                 materials: [
-                    { material: 41, amount: 2 },
-                    { material: 80, amount: 4 },
-                    { material: 82, amount: 3 }
+                    { material: 40, amount: 2 },
+                    { material: 79, amount: 4 },
+                    { material: 81, amount: 3 }
                 ],
-                previous: 1,
-                upgrade: [20]
+                previous: 0,
+                upgrade: [19]
             },
             {
-                id: 20,
+                id: 19,
                 name: EquipmentTree.greatGirros,
                 rarity: 4,
                 materials: [
-                    { material: 40, amount: 1 },
-                    { material: 80, amount: 2 },
-                    { material: 82, amount: 2 },
-                    { material: 83, amount: 2 }
+                    { material: 39, amount: 1 },
+                    { material: 79, amount: 2 },
+                    { material: 81, amount: 2 },
+                    { material: 82, amount: 2 }
                 ],
-                previous: 19,
+                previous: 18,
                 upgrade: undefined
             },
             // Anjanath
             undefined, undefined,
             // Jyuratodus
             {
-                id: 23,
+                id: 22,
                 name: EquipmentTree.jyuratodus,
                 rarity: 3,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 61, amount: 3 },
-                    { material: 62, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 60, amount: 3 },
+                    { material: 61, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [24]
+                previous: 3,
+                upgrade: [23]
             },
             {
-                id: 24,
+                id: 23,
                 name: EquipmentTree.jyuratodus,
                 rarity: 4,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 38, amount: 1 },
-                    { material: 61, amount: 2 },
-                    { material: 63, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 37, amount: 1 },
+                    { material: 60, amount: 2 },
+                    { material: 62, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 23,
+                previous: 22,
                 upgrade: undefined
             },
             // Radobaan
             undefined, undefined,
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 2 },
-                    { material: 91, amount: 1 },
-                    { material: 95, amount: 2 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 2 },
+                    { material: 90, amount: 1 },
+                    { material: 94, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 1 },
-                    { material: 92, amount: 1 },
-                    { material: 96, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 1 },
+                    { material: 91, amount: 1 },
+                    { material: 95, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Azure Rathalos
@@ -2514,58 +2514,58 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 40,
                 upgrade: undefined
             },
             // Kirin
@@ -2577,100 +2577,100 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 27, 37, 39]
+                upgrade: [1, 26, 36, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 9, 21, 31, 41]
+                upgrade: [4, 8, 20, 30, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             undefined, undefined,
             // Barroth
             {
-                id: 9,
+                id: 8,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 56, amount: 4 },
-                    { material: 58, amount: 2 },
-                    { material: 59, amount: 1 }
+                    { material: 55, amount: 4 },
+                    { material: 57, amount: 2 },
+                    { material: 58, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [10]
+                previous: 3,
+                upgrade: [9]
             },
             {
-                id: 10,
+                id: 9,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
+                    { material: 56, amount: 3 },
                     { material: 57, amount: 3 },
-                    { material: 58, amount: 3 },
-                    { material: 59, amount: 2 },
-                    { material: 60, amount: 2 }
+                    { material: 58, amount: 2 },
+                    { material: 59, amount: 2 }
                 ],
-                previous: 9,
+                previous: 8,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
@@ -2685,28 +2685,28 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Anjanath
             {
-                id: 21,
+                id: 20,
                 name: EquipmentTree.anjanath,
                 rarity: 3,
                 materials: [
-                    { material: 28, amount: 1 },
-                    { material: 71, amount: 1 },
-                    { material: 72, amount: 2 },
-                    { material: 73, amount: 2 }
+                    { material: 27, amount: 1 },
+                    { material: 70, amount: 1 },
+                    { material: 71, amount: 2 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [22]
+                previous: 3,
+                upgrade: [21]
             },
             {
-                id: 22,
+                id: 21,
                 name: EquipmentTree.anjanath,
                 rarity: 4,
                 materials: [
-                    { material: 10, amount: 2 },
-                    { material: 72, amount: 4 },
-                    { material: 74, amount: 4 }
+                    { material: 9, amount: 2 },
+                    { material: 71, amount: 4 },
+                    { material: 73, amount: 4 }
                 ],
-                previous: 21,
+                previous: 20,
                 upgrade: undefined
             },
             // Jyuratodus
@@ -2715,58 +2715,58 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 1 },
-                    { material: 91, amount: 2 },
-                    { material: 95, amount: 2 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 1 },
+                    { material: 90, amount: 2 },
+                    { material: 94, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 1 },
-                    { material: 92, amount: 1 },
-                    { material: 96, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 1 },
+                    { material: 91, amount: 1 },
+                    { material: 95, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Azure Rathalos
             undefined, undefined,
             // Diablos
             {
-                id: 31,
+                id: 30,
                 name: EquipmentTree.diablos,
                 rarity: 3,
                 materials: [
-                    { material: 17, amount: 2 },
-                    { material: 105, amount: 4 },
-                    { material: 108, amount: 2 },
-                    { material: 109, amount: 1 }
+                    { material: 16, amount: 2 },
+                    { material: 104, amount: 4 },
+                    { material: 107, amount: 2 },
+                    { material: 108, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [32]
+                previous: 3,
+                upgrade: [31]
             },
             {
-                id: 32,
+                id: 31,
                 name: EquipmentTree.diablos,
                 rarity: 4,
                 materials: [
+                    { material: 105, amount: 2 },
                     { material: 106, amount: 2 },
-                    { material: 107, amount: 2 },
-                    { material: 110, amount: 2 },
-                    { material: 111, amount: 1 }
+                    { material: 109, amount: 2 },
+                    { material: 110, amount: 1 }
                 ],
-                previous: 31,
+                previous: 30,
                 upgrade: undefined
             },
             // Black Diablos
@@ -2775,82 +2775,82 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Teostra
             {
-                id: 37,
+                id: 36,
                 name: EquipmentTree.teostra,
                 rarity: 4,
                 materials: [
                     
-                    { material: 127, amount: 2 },
-                    { material: 128, amount: 1 },
-                    { material: 132, amount: 1 },
-                    { material: 134, amount: 1 }
+                    { material: 126, amount: 2 },
+                    { material: 127, amount: 1 },
+                    { material: 131, amount: 1 },
+                    { material: 133, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [37]
             },
             {
-                id: 38,
+                id: 37,
                 name: EquipmentTree.teostra,
                 rarity: 5,
                 materials: [
-                    { material: 130, amount: 3 },
-                    { material: 132, amount: 2 },
-                    { material: 135, amount: 1 }
+                    { material: 129, amount: 3 },
+                    { material: 131, amount: 2 },
+                    { material: 134, amount: 1 }
                 ],
-                previous: 35,
+                previous: 36,
                 upgrade: undefined
             },
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -2862,99 +2862,99 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
+                upgrade: [1, 22, 34, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
                 upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3, 23, 35, 39]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 7, 13, 19, 31]
+                upgrade: [4, 6, 12, 18, 30]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             {
-                id: 7,
+                id: 6,
                 name: EquipmentTree.greatJagras,
                 rarity: 3,
                 materials: [
-                    { material: 21, amount: 1 },
-                    { material: 42, amount: 3 },
-                    { material: 43, amount: 1 },
-                    { material: 44, amount: 1 }
+                    { material: 20, amount: 1 },
+                    { material: 41, amount: 3 },
+                    { material: 42, amount: 1 },
+                    { material: 43, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [8]
+                previous: 3,
+                upgrade: [7]
             },
             {
-                id: 8,
+                id: 7,
                 name: EquipmentTree.greatJagras,
                 rarity: 4,
                 materials: [
-                    { material: 22, amount: 1 },
-                    { material: 42, amount: 2 },
-                    { material: 44, amount: 2 },
-                    { material: 45, amount: 2 }
+                    { material: 21, amount: 1 },
+                    { material: 41, amount: 2 },
+                    { material: 43, amount: 2 },
+                    { material: 44, amount: 2 }
                 ],
-                previous: 7,
+                previous: 6,
                 upgrade: undefined
             },
             // Barroth
@@ -2963,28 +2963,28 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Tobi-Kadachi
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 3,
                 materials: [
-                    { material: 66, amount: 3 },
-                    { material: 67, amount: 2 },
-                    { material: 69, amount: 1 }
+                    { material: 65, amount: 3 },
+                    { material: 66, amount: 2 },
+                    { material: 68, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 4,
                 materials: [
-                    { material: 7, amount: 2 },
+                    { material: 6, amount: 2 },
+                    { material: 65, amount: 2 },
                     { material: 66, amount: 2 },
-                    { material: 67, amount: 2 },
-                    { material: 69, amount: 2 }
+                    { material: 68, amount: 2 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Pukei-Pukei
@@ -2993,58 +2993,58 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Great Girros
             {
-                id: 19,
+                id: 18,
                 name: EquipmentTree.greatGirros,
                 rarity: 3,
                 materials: [
-                    { material: 41, amount: 2 },
-                    { material: 80, amount: 4 },
-                    { material: 82, amount: 3 }
+                    { material: 40, amount: 2 },
+                    { material: 79, amount: 4 },
+                    { material: 81, amount: 3 }
                 ],
-                previous: 1,
-                upgrade: [20]
+                previous: 0,
+                upgrade: [19]
             },
             {
-                id: 20,
+                id: 19,
                 name: EquipmentTree.greatGirros,
                 rarity: 4,
                 materials: [
-                    { material: 40, amount: 1 },
-                    { material: 80, amount: 2 },
-                    { material: 82, amount: 2 },
-                    { material: 83, amount: 2 }
+                    { material: 39, amount: 1 },
+                    { material: 79, amount: 2 },
+                    { material: 81, amount: 2 },
+                    { material: 82, amount: 2 }
                 ],
-                previous: 19,
+                previous: 18,
                 upgrade: undefined
             },
             // Anjanath
             undefined, undefined,
             // Jyuratodus
             {
-                id: 23,
+                id: 22,
                 name: EquipmentTree.jyuratodus,
                 rarity: 3,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 61, amount: 3 },
-                    { material: 62, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 60, amount: 3 },
+                    { material: 61, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [24]
+                previous: 3,
+                upgrade: [23]
             },
             {
-                id: 24,
+                id: 23,
                 name: EquipmentTree.jyuratodus,
                 rarity: 4,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 38, amount: 1 },
-                    { material: 61, amount: 2 },
-                    { material: 63, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 37, amount: 1 },
+                    { material: 60, amount: 2 },
+                    { material: 62, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 23,
+                previous: 22,
                 upgrade: undefined
             },
             // Radobaan
@@ -3055,87 +3055,87 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Diablos
             {
-                id: 31,
+                id: 30,
                 name: EquipmentTree.diablos,
                 rarity: 3,
                 materials: [
-                    { material: 17, amount: 2 },
-                    { material: 105, amount: 4 },
-                    { material: 108, amount: 2 },
-                    { material: 109, amount: 1 }
+                    { material: 16, amount: 2 },
+                    { material: 104, amount: 4 },
+                    { material: 107, amount: 2 },
+                    { material: 108, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [32]
+                previous: 3,
+                upgrade: [31]
             },
             {
-                id: 32,
+                id: 31,
                 name: EquipmentTree.diablos,
                 rarity: 4,
                 materials: [
+                    { material: 105, amount: 2 },
                     { material: 106, amount: 2 },
-                    { material: 107, amount: 2 },
-                    { material: 110, amount: 2 },
-                    { material: 111, amount: 1 }
+                    { material: 109, amount: 2 },
+                    { material: 110, amount: 1 }
                 ],
-                previous: 31,
+                previous: 30,
                 upgrade: undefined
             },
             // Black Diablos
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 40,
                 upgrade: undefined
             },
             // Kirin
@@ -3147,72 +3147,72 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 11, 15, 17, 27, 35, 39]
+                upgrade: [1, 10, 14, 16, 26, 34, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 21, 31, 41]
+                upgrade: [4, 20, 30, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
@@ -3221,112 +3221,112 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kulu-Ya-Ku
             {
-                id: 11,
+                id: 10,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 5, amount: 3 },
-                    { material: 46, amount: 4 },
-                    { material: 47, amount: 2 },
-                    { material: 49, amount: 1 }
+                    { material: 4, amount: 3 },
+                    { material: 45, amount: 4 },
+                    { material: 46, amount: 2 },
+                    { material: 48, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [12]
+                previous: 0,
+                upgrade: [11]
             },
             {
-                id: 12,
+                id: 11,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 13, amount: 4 },
+                    { material: 12, amount: 4 },
+                    { material: 46, amount: 3 },
                     { material: 47, amount: 3 },
-                    { material: 48, amount: 3 },
-                    { material: 49, amount: 2 }
+                    { material: 48, amount: 2 }
                 ],
-                previous: 11,
+                previous: 10,
                 upgrade: undefined
             },
             // Tobi-Kadachi
             undefined, undefined,
             // Pukei-Pukei
             {
-                id: 15,
+                id: 14,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 3,
                 materials: [
-                    { material: 23, amount: 1 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 },
-                    { material: 55, amount: 1 }
+                    { material: 22, amount: 1 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 },
+                    { material: 54, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [16]
+                previous: 0,
+                upgrade: [15]
             },
             {
-                id: 16,
+                id: 15,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 4,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 24, amount: 2 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 23, amount: 2 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 15,
+                previous: 14,
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
             {
-                id: 17,
+                id: 16,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 76, amount: 3 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 75, amount: 3 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [18]
+                previous: 0,
+                upgrade: [17]
             },
             {
-                id: 18,
+                id: 17,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 8, amount: 1 },
-                    { material: 76, amount: 5 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 7, amount: 1 },
+                    { material: 75, amount: 5 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 17,
+                previous: 16,
                 upgrade: undefined
             },
             // Great Girros
             undefined, undefined,
             // Anjanath
             {
-                id: 21,
+                id: 20,
                 name: EquipmentTree.anjanath,
                 rarity: 3,
                 materials: [
-                    { material: 28, amount: 1 },
-                    { material: 71, amount: 1 },
-                    { material: 72, amount: 2 },
-                    { material: 73, amount: 2 }
+                    { material: 27, amount: 1 },
+                    { material: 70, amount: 1 },
+                    { material: 71, amount: 2 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [22]
+                previous: 3,
+                upgrade: [21]
             },
             {
-                id: 22,
+                id: 21,
                 name: EquipmentTree.anjanath,
                 rarity: 4,
                 materials: [
-                    { material: 10, amount: 2 },
-                    { material: 72, amount: 4 },
-                    { material: 74, amount: 4 }
+                    { material: 9, amount: 2 },
+                    { material: 71, amount: 4 },
+                    { material: 73, amount: 4 }
                 ],
-                previous: 21,
+                previous: 20,
                 upgrade: undefined
             },
             // Jyuratodus
@@ -3335,142 +3335,142 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 1 },
-                    { material: 91, amount: 2 },
-                    { material: 95, amount: 2 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 1 },
+                    { material: 90, amount: 2 },
+                    { material: 94, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 1 },
-                    { material: 92, amount: 1 },
-                    { material: 96, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 1 },
+                    { material: 91, amount: 1 },
+                    { material: 95, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Azure Rathalos
             undefined, undefined,
             // Diablos
             {
-                id: 31,
+                id: 30,
                 name: EquipmentTree.diablos,
                 rarity: 3,
                 materials: [
-                    { material: 17, amount: 3 },
-                    { material: 105, amount: 4 },
-                    { material: 108, amount: 2 },
-                    { material: 109, amount: 1 }
+                    { material: 16, amount: 3 },
+                    { material: 104, amount: 4 },
+                    { material: 107, amount: 2 },
+                    { material: 108, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [32]
+                previous: 3,
+                upgrade: [31]
             },
             {
-                id: 32,
+                id: 31,
                 name: EquipmentTree.diablos,
                 rarity: 4,
                 materials: [
+                    { material: 105, amount: 2 },
                     { material: 106, amount: 2 },
-                    { material: 107, amount: 2 },
-                    { material: 110, amount: 2 },
-                    { material: 111, amount: 1 }
+                    { material: 109, amount: 2 },
+                    { material: 110, amount: 1 }
                 ],
-                previous: 31,
+                previous: 30,
                 upgrade: undefined
             },
             // Black Diablos
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -3482,72 +3482,72 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 11, 27, 35, 39]
+                upgrade: [1, 10, 26, 34, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 13, 15, 21, 31]
+                upgrade: [4, 12, 14, 20, 30]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
@@ -3556,83 +3556,83 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kulu-Ya-Ku
             {
-                id: 11,
+                id: 10,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 5, amount: 3 },
-                    { material: 46, amount: 4 },
-                    { material: 47, amount: 2 },
-                    { material: 49, amount: 1 }
+                    { material: 4, amount: 3 },
+                    { material: 45, amount: 4 },
+                    { material: 46, amount: 2 },
+                    { material: 48, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [12]
+                previous: 0,
+                upgrade: [11]
             },
             {
-                id: 12,
+                id: 11,
                 name: EquipmentTree.kuluYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 13, amount: 4 },
+                    { material: 12, amount: 4 },
+                    { material: 46, amount: 3 },
                     { material: 47, amount: 3 },
-                    { material: 48, amount: 3 },
-                    { material: 49, amount: 2 }
+                    { material: 48, amount: 2 }
                 ],
-                previous: 11,
+                previous: 10,
                 upgrade: undefined
             },
             // Tobi-Kadachi
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 3,
                 materials: [
-                    { material: 6, amount: 2 },
-                    { material: 32, amount: 1 },
-                    { material: 69, amount: 2 },
-                    { material: 70, amount: 2 }
+                    { material: 5, amount: 2 },
+                    { material: 31, amount: 1 },
+                    { material: 68, amount: 2 },
+                    { material: 69, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 4,
                 materials: [
-                    { material: 7, amount: 2 },
+                    { material: 6, amount: 2 },
+                    { material: 65, amount: 2 },
                     { material: 66, amount: 2 },
-                    { material: 67, amount: 2 },
-                    { material: 69, amount: 2 }
+                    { material: 68, amount: 2 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Pukei-Pukei
             {
-                id: 15,
+                id: 14,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 3,
                 materials: [
-                    { material: 23, amount: 1 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 },
-                    { material: 55, amount: 1 }
+                    { material: 22, amount: 1 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 },
+                    { material: 54, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [16]
+                previous: 0,
+                upgrade: [15]
             },
             {
-                id: 16,
+                id: 15,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 4,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 24, amount: 2 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 23, amount: 2 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 15,
+                previous: 14,
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
@@ -3641,27 +3641,27 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Anjanath
             {
-                id: 21,
+                id: 20,
                 name: EquipmentTree.anjanath,
                 rarity: 3,
                 materials: [
-                    { material: 28, amount: 1 },
-                    { material: 71, amount: 3 },
-                    { material: 73, amount: 2 }
+                    { material: 27, amount: 1 },
+                    { material: 70, amount: 3 },
+                    { material: 72, amount: 2 }
                 ],
-                previous: 4,
-                upgrade: [22]
+                previous: 3,
+                upgrade: [21]
             },
             {
-                id: 22,
+                id: 21,
                 name: EquipmentTree.anjanath,
                 rarity: 4,
                 materials: [
-                    { material: 10, amount: 2 },
-                    { material: 72, amount: 4 },
-                    { material: 73, amount: 4 }
+                    { material: 9, amount: 2 },
+                    { material: 71, amount: 4 },
+                    { material: 72, amount: 4 }
                 ],
-                previous: 21,
+                previous: 20,
                 upgrade: undefined
             },
             // Jyuratodus
@@ -3670,116 +3670,116 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 1 },
-                    { material: 91, amount: 2 },
-                    { material: 95, amount: 2 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 1 },
+                    { material: 90, amount: 2 },
+                    { material: 94, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 1 },
-                    { material: 92, amount: 1 },
-                    { material: 96, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 1 },
+                    { material: 91, amount: 1 },
+                    { material: 95, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Azure Rathalos
             undefined, undefined,
             // Diablos
             {
-                id: 31,
+                id: 30,
                 name: EquipmentTree.diablos,
                 rarity: 3,
                 materials: [
-                    { material: 17, amount: 2 },
-                    { material: 105, amount: 4 },
-                    { material: 108, amount: 2 },
-                    { material: 109, amount: 1 }
+                    { material: 16, amount: 2 },
+                    { material: 104, amount: 4 },
+                    { material: 107, amount: 2 },
+                    { material: 108, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [32]
+                previous: 3,
+                upgrade: [31]
             },
             {
-                id: 32,
+                id: 31,
                 name: EquipmentTree.diablos,
                 rarity: 4,
                 materials: [
+                    { material: 105, amount: 2 },
                     { material: 106, amount: 2 },
-                    { material: 107, amount: 2 },
-                    { material: 110, amount: 2 },
-                    { material: 111, amount: 1 }
+                    { material: 109, amount: 2 },
+                    { material: 110, amount: 1 }
                 ],
-                previous: 31,
+                previous: 30,
                 upgrade: undefined
             },
             // Black Diablos
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 40,
                 upgrade: undefined
             },
             // Kirin
@@ -3791,124 +3791,124 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 7, 27, 35, 39]
+                upgrade: [1, 6, 26, 34, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 9, 23, 41]
+                upgrade: [4, 8, 22, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             {
-                id: 7,
+                id: 6,
                 name: EquipmentTree.greatJagras,
                 rarity: 3,
                 materials: [
-                    { material: 21, amount: 1 },
-                    { material: 42, amount: 3 },
-                    { material: 43, amount: 1 },
-                    { material: 44, amount: 1 }
+                    { material: 20, amount: 1 },
+                    { material: 41, amount: 3 },
+                    { material: 42, amount: 1 },
+                    { material: 43, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [8]
+                previous: 3,
+                upgrade: [7]
             },
             {
-                id: 8,
+                id: 7,
                 name: EquipmentTree.greatJagras,
                 rarity: 4,
                 materials: [
-                    { material: 22, amount: 1 },
-                    { material: 42, amount: 2 },
-                    { material: 44, amount: 2 },
-                    { material: 45, amount: 2 }
+                    { material: 21, amount: 1 },
+                    { material: 41, amount: 2 },
+                    { material: 43, amount: 2 },
+                    { material: 44, amount: 2 }
                 ],
-                previous: 7,
+                previous: 6,
                 upgrade: undefined
             },
             // Barroth
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
-                    { material: 56, amount: 3 },
-                    { material: 58, amount: 2 },
-                    { material: 59, amount: 1 }
+                    { material: 55, amount: 3 },
+                    { material: 57, amount: 2 },
+                    { material: 58, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
-                    { material: 57, amount: 3 },
-                    { material: 58, amount: 2 },
-                    { material: 59, amount: 2 }
+                    { material: 56, amount: 3 },
+                    { material: 57, amount: 2 },
+                    { material: 58, amount: 2 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku
@@ -3925,59 +3925,59 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Jyuratodus
             {
-                id: 23,
+                id: 22,
                 name: EquipmentTree.jyuratodus,
                 rarity: 3,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 61, amount: 3 },
-                    { material: 62, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 60, amount: 3 },
+                    { material: 61, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [24]
+                previous: 3,
+                upgrade: [23]
             },
             {
-                id: 24,
+                id: 23,
                 name: EquipmentTree.jyuratodus,
                 rarity: 4,
                 materials: [
-                    { material: 30, amount: 1 },
-                    { material: 38, amount: 1 },
-                    { material: 61, amount: 2 },
-                    { material: 63, amount: 2 },
-                    { material: 65, amount: 1 }
+                    { material: 29, amount: 1 },
+                    { material: 37, amount: 1 },
+                    { material: 60, amount: 2 },
+                    { material: 62, amount: 2 },
+                    { material: 64, amount: 1 }
                 ],
-                previous: 23,
+                previous: 22,
                 upgrade: undefined
             },
             // Radobaan
             undefined, undefined,
             // Rathalos
             {
-                id: 27,
+                id: 26,
                 name: EquipmentTree.rathalos,
                 rarity: 3,
                 materials: [
-                    { material: 29, amount: 1 },
-                    { material: 88, amount: 2 },
-                    { material: 91, amount: 2 },
-                    { material: 95, amount: 1 }
+                    { material: 28, amount: 1 },
+                    { material: 87, amount: 2 },
+                    { material: 90, amount: 2 },
+                    { material: 94, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [28]
+                previous: 0,
+                upgrade: [27]
             },
             {
-                id: 28,
+                id: 27,
                 name: EquipmentTree.rathalos,
                 rarity: 4,
                 materials: [
-                    { material: 88, amount: 2 },
-                    { material: 90, amount: 1 },
-                    { material: 92, amount: 1 },
-                    { material: 96, amount: 1 }
+                    { material: 87, amount: 2 },
+                    { material: 89, amount: 1 },
+                    { material: 91, amount: 1 },
+                    { material: 95, amount: 1 }
                 ],
-                previous: 27,
+                previous: 26,
                 upgrade: undefined
             },
             // Azure Rathalos
@@ -3988,84 +3988,84 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Kushala Daora
             {
-                id: 35,
+                id: 34,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 4,
                 materials: [
                     
-                    { material: 121, amount: 1 },
-                    { material: 138, amount: 2 },
-                    { material: 140, amount: 2 },
-                    { material: 141, amount: 1 }
+                    { material: 120, amount: 1 },
+                    { material: 137, amount: 2 },
+                    { material: 139, amount: 2 },
+                    { material: 140, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [35]
             },
             {
-                id: 36,
+                id: 35,
                 name: EquipmentTree.kushalaDaora,
                 rarity: 5,
                 materials: [
-                    { material: 139, amount: 4 },
-                    { material: 141, amount: 3 },
-                    { material: 142, amount: 1 }
+                    { material: 138, amount: 4 },
+                    { material: 140, amount: 3 },
+                    { material: 141, amount: 1 }
                 ],
-                previous: 35,
+                previous: 34,
                 upgrade: undefined
             },
             // Teostra
             undefined, undefined,
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined
@@ -4077,99 +4077,99 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
         [
             // Mineral
             {
-                id: 1,
+                id: 0,
                 name: EquipmentTree.mineral,
                 base: true,
                 rarity: 1,
                 materials: undefined,
                 previous: undefined,
-                upgrade: [2, 7, 15, 17, 37, 39]
+                upgrade: [1, 6, 14, 16, 36, 38]
+            },
+            {
+                id: 1,
+                name: EquipmentTree.mineral,
+                rarity: 2,
+                materials: [
+                    { material: 0, amount: 1 },
+                    { material: 1, amount: 1 },
+                    { material: 15, amount: 1 }
+                ],
+                previous: 0,
+                upgrade: [2]
             },
             {
                 id: 2,
                 name: EquipmentTree.mineral,
-                rarity: 2,
-                materials: [
-                    { material: 1, amount: 1 },
-                    { material: 2, amount: 1 },
-                    { material: 16, amount: 1 }
-                ],
-                previous: 1,
-                upgrade: [3]
-            },
-            {
-                id: 3,
-                name: EquipmentTree.mineral,
                 rarity: 3,
                 materials: [
-                    { material: 2, amount: 3 },
+                    { material: 1, amount: 3 },
+                    { material: 2, amount: 2 },
                     { material: 3, amount: 2 },
-                    { material: 4, amount: 2 },
-                    { material: 7, amount: 2 }
+                    { material: 6, amount: 2 }
                 ],
-                previous: 3,
+                previous: 1,
                 upgrade: undefined
             },
             // Bone
             {
-                id: 4,
+                id: 3,
                 name: EquipmentTree.bone,
                 rarity: 1,
                 materials: [
-                    { material: 15, amount: 1 }
+                    { material: 14, amount: 1 }
                 ],
                 previous: undefined,
-                upgrade: [5, 13, 25, 31, 41]
+                upgrade: [4, 12, 24, 30, 40]
+            },
+            {
+                id: 4,
+                name: EquipmentTree.bone,
+                rarity: 2,
+                materials: [
+                    { material: 12, amount: 1 },
+                    { material: 15, amount: 1 },
+                    { material: 16, amount: 1 }
+                ],
+                previous: 3,
+                upgrade: [5]
             },
             {
                 id: 5,
                 name: EquipmentTree.bone,
-                rarity: 2,
-                materials: [
-                    { material: 13, amount: 1 },
-                    { material: 16, amount: 1 },
-                    { material: 17, amount: 1 }
-                ],
-                previous: 4,
-                upgrade: [6]
-            },
-            {
-                id: 6,
-                name: EquipmentTree.bone,
                 rarity: 3,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 18, amount: 2 },
-                    { material: 19, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 17, amount: 2 },
+                    { material: 18, amount: 2 }
                 ],
-                previous: 5,
+                previous: 4,
                 upgrade: undefined
             },
             // Great Jagras
             {
-                id: 7,
+                id: 6,
                 name: EquipmentTree.greatJagras,
                 rarity: 3,
                 materials: [
-                    { material: 21, amount: 1 },
-                    { material: 42, amount: 3 },
-                    { material: 43, amount: 1 },
-                    { material: 44, amount: 1 }
+                    { material: 20, amount: 1 },
+                    { material: 41, amount: 3 },
+                    { material: 42, amount: 1 },
+                    { material: 43, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [8]
+                previous: 3,
+                upgrade: [7]
             },
             {
-                id: 8,
+                id: 7,
                 name: EquipmentTree.greatJagras,
                 rarity: 4,
                 materials: [
-                    { material: 22, amount: 1 },
-                    { material: 42, amount: 2 },
-                    { material: 44, amount: 2 },
-                    { material: 45, amount: 2 }
+                    { material: 21, amount: 1 },
+                    { material: 41, amount: 2 },
+                    { material: 43, amount: 2 },
+                    { material: 44, amount: 2 }
                 ],
-                previous: 7,
+                previous: 6,
                 upgrade: undefined
             },
             // Barroth
@@ -4178,81 +4178,81 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Tobi-Kadachi
             {
-                id: 13,
+                id: 12,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 3,
                 materials: [
-                    { material: 66, amount: 3 },
-                    { material: 67, amount: 2 },
-                    { material: 69, amount: 1 }
+                    { material: 65, amount: 3 },
+                    { material: 66, amount: 2 },
+                    { material: 68, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [14]
+                previous: 3,
+                upgrade: [13]
             },
             {
-                id: 14,
+                id: 13,
                 name: EquipmentTree.tobiKadachi,
                 rarity: 4,
                 materials: [
-                    { material: 7, amount: 2 },
+                    { material: 6, amount: 2 },
+                    { material: 65, amount: 2 },
                     { material: 66, amount: 2 },
-                    { material: 67, amount: 2 },
-                    { material: 69, amount: 2 }
+                    { material: 68, amount: 2 }
                 ],
-                previous: 13,
+                previous: 12,
                 upgrade: undefined
             },
             // Pukei-Pukei
             {
-                id: 15,
+                id: 14,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 3,
                 materials: [
-                    { material: 23, amount: 1 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 },
-                    { material: 55, amount: 1 }
+                    { material: 22, amount: 1 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 },
+                    { material: 54, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [16]
+                previous: 0,
+                upgrade: [15]
             },
             {
-                id: 16,
+                id: 15,
                 name: EquipmentTree.pukeiPukei,
                 rarity: 4,
                 materials: [
-                    { material: 11, amount: 3 },
-                    { material: 24, amount: 2 },
-                    { material: 50, amount: 2 },
-                    { material: 52, amount: 2 }
+                    { material: 10, amount: 3 },
+                    { material: 23, amount: 2 },
+                    { material: 49, amount: 2 },
+                    { material: 51, amount: 2 }
                 ],
-                previous: 15,
+                previous: 14,
                 upgrade: undefined
             },
             // Tzitzi-Ya-Ku
             {
-                id: 17,
+                id: 16,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 3,
                 materials: [
-                    { material: 76, amount: 3 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 75, amount: 3 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [18]
+                previous: 0,
+                upgrade: [17]
             },
             {
-                id: 18,
+                id: 17,
                 name: EquipmentTree.tzitziYaKu,
                 rarity: 4,
                 materials: [
-                    { material: 8, amount: 1 },
-                    { material: 76, amount: 5 },
-                    { material: 78, amount: 2 },
-                    { material: 79, amount: 1 }
+                    { material: 7, amount: 1 },
+                    { material: 75, amount: 5 },
+                    { material: 77, amount: 2 },
+                    { material: 78, amount: 1 }
                 ],
-                previous: 17,
+                previous: 16,
                 upgrade: undefined
             },
             // Great Girros
@@ -4263,28 +4263,28 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Radobaan
             {
-                id: 25,
+                id: 24,
                 name: EquipmentTree.radobaan,
                 rarity: 3,
                 materials: [
-                    { material: 26, amount: 2 },
-                    { material: 84, amount: 3 },
-                    { material: 87, amount: 2 }
+                    { material: 25, amount: 2 },
+                    { material: 83, amount: 3 },
+                    { material: 86, amount: 2 }
                 ],
-                previous: 1,
-                upgrade: [26]
+                previous: 0,
+                upgrade: [25]
             },
             {
-                id: 26,
+                id: 25,
                 name: EquipmentTree.radobaan,
                 rarity: 4,
                 materials: [
-                    { material: 18, amount: 2 },
-                    { material: 27, amount: 1 },
-                    { material: 85, amount: 4 },
-                    { material: 86, amount: 2 }
+                    { material: 17, amount: 2 },
+                    { material: 26, amount: 1 },
+                    { material: 84, amount: 4 },
+                    { material: 85, amount: 2 }
                 ],
-                previous: 25,
+                previous: 24,
                 upgrade: undefined
             },
             // Rathalos
@@ -4293,29 +4293,29 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Diablos
             {
-                id: 31,
+                id: 30,
                 name: EquipmentTree.diablos,
                 rarity: 3,
                 materials: [
-                    { material: 17, amount: 2 },
-                    { material: 105, amount: 4 },
-                    { material: 108, amount: 2 },
-                    { material: 109, amount: 1 }
+                    { material: 16, amount: 2 },
+                    { material: 104, amount: 4 },
+                    { material: 107, amount: 2 },
+                    { material: 108, amount: 1 }
                 ],
-                previous: 4,
-                upgrade: [32]
+                previous: 3,
+                upgrade: [31]
             },
             {
-                id: 32,
+                id: 31,
                 name: EquipmentTree.diablos,
                 rarity: 4,
                 materials: [
+                    { material: 105, amount: 3 },
                     { material: 106, amount: 3 },
-                    { material: 107, amount: 3 },
-                    { material: 110, amount: 2 },
-                    { material: 111, amount: 1 }
+                    { material: 109, amount: 2 },
+                    { material: 110, amount: 1 }
                 ],
-                previous: 31,
+                previous: 30,
                 upgrade: undefined
             },
             // Black Diablos
@@ -4324,82 +4324,82 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             undefined, undefined,
             // Teostra
             {
-                id: 37,
+                id: 36,
                 name: EquipmentTree.teostra,
                 rarity: 4,
                 materials: [
                     
-                    { material: 127, amount: 2 },
-                    { material: 128, amount: 1 },
-                    { material: 132, amount: 1 },
-                    { material: 134, amount: 1 }
+                    { material: 126, amount: 2 },
+                    { material: 127, amount: 1 },
+                    { material: 131, amount: 1 },
+                    { material: 133, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [36]
+                previous: 0,
+                upgrade: [37]
             },
             {
-                id: 38,
+                id: 37,
                 name: EquipmentTree.teostra,
                 rarity: 5,
                 materials: [
-                    { material: 130, amount: 3 },
-                    { material: 132, amount: 2 },
-                    { material: 135, amount: 1 }
+                    { material: 129, amount: 3 },
+                    { material: 131, amount: 2 },
+                    { material: 134, amount: 1 }
                 ],
-                previous: 35,
+                previous: 36,
                 upgrade: undefined
             },
             // Nergigante
             {
-                id: 39,
+                id: 38,
                 name: EquipmentTree.nergigante,
                 rarity: 4,
                 materials: [
                     
+                    { material: 120, amount: 2 },
                     { material: 121, amount: 2 },
-                    { material: 122, amount: 2 },
-                    { material: 124, amount: 1 },
-                    { material: 125, amount: 1 }
+                    { material: 123, amount: 1 },
+                    { material: 124, amount: 1 }
                 ],
-                previous: 1,
-                upgrade: [40]
+                previous: 0,
+                upgrade: [39]
             },
             {
-                id: 40,
+                id: 39,
                 name: EquipmentTree.nergigante,
                 rarity: 5,
                 materials: [
-                    { material: 123, amount: 4 },
-                    { material: 124, amount: 3 },
-                    { material: 126, amount: 2 }
+                    { material: 122, amount: 4 },
+                    { material: 123, amount: 3 },
+                    { material: 125, amount: 2 }
                 ],
-                previous: 39,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
             {
-                id: 41,
+                id: 40,
                 name: EquipmentTree.kirin,
                 rarity: 4,
                 materials: [
                     
-                    { material: 8, amount: 1 },
-                    { material: 115, amount: 3 },
-                    { material: 116, amount: 1 },
-                    { material: 118, amount: 3 }
+                    { material: 7, amount: 1 },
+                    { material: 114, amount: 3 },
+                    { material: 115, amount: 1 },
+                    { material: 117, amount: 3 }
                 ],
-                previous: 4,
-                upgrade: [42]
+                previous: 3,
+                upgrade: [41]
             },
             {
-                id: 42,
+                id: 41,
                 name: EquipmentTree.kirin,
                 rarity: 5,
                 materials: [
-                    { material: 7, amount: 2 },
-                    { material: 115, amount: 2 },
-                    { material: 117, amount: 2 },
-                    { material: 119, amount: 2 }
+                    { material: 6, amount: 2 },
+                    { material: 114, amount: 2 },
+                    { material: 116, amount: 2 },
+                    { material: 118, amount: 2 }
                 ],
                 previous: 40,
                 upgrade: undefined

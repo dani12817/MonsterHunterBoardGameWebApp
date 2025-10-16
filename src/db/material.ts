@@ -3,293 +3,293 @@ import { MaterialLocal } from "../app/models";
 
 export const MATERIAL_TABLE: MaterialLocal[] = [
   {
-    id: 1,
+    id: 0,
     name: "Machalite Ore",
     description: "Ore that's more difficult to procure than Iron Ore. Produces fine metal.",
     rarity: 4,
     type: MaterialType.mineral,
     image: "blue",
     monsters: [],
-    gathering: [1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 17],
+    gathering: [0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 16],
     reward: []
   },
   {
-    id: 2,
+    id: 1,
     name: "Dragonite Ore",
     description: "An ore that yields metal superior to that of Machalite. Invaluable for making durable armor.",
     rarity: 4,
     type: MaterialType.mineral,
     image: "green",
     monsters: [],
-    gathering: [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 18],
+    gathering: [0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 17],
     reward: []
   },
   {
-    id: 3,
+    id: 2,
     name: "Carbalite Ore",
     description: "Ore obtained from mining outcrops. Still under research, but known to yield highly pure metal.",
     rarity: 6,
     type: MaterialType.mineral,
     image: "purple",
     monsters: [],
-    gathering: [1, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 18],
+    gathering: [0, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 17],
     reward: []
   },
   {
-    id: 4,
+    id: 3,
     name: "Fucium Ore",
     description: "Ore obtained from the Elder's Recess. A mysterious metal, capable of fusing nearly any two materials together.",
     rarity: 6,
     type: MaterialType.mineral,
     image: "pink",
     monsters: [],
-    gathering: [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14],
+    gathering: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
     reward: []
   },
   {
-    id: 5,
+    id: 4,
     name: "Earth Crystal",
     description: "Crystallized microbes prized as an abrasive when forging weapons. Mainly found in the Wildspire Waste.",
     rarity: 4,
     type: MaterialType.mineral,
     image: "white",
     monsters: [],
-    gathering: [3],
-    reward: [3]
+    gathering: [2],
+    reward: [2]
   },
   {
-    id: 6,
+    id: 5,
     name: "Coral Crystal",
     description: "Crystal prized at the Smithy for use in high-grade abrasives. Mainly found in the Coral Highlands.",
     rarity: 4,
     type: MaterialType.mineral,
     image: "blue",
     monsters: [],
-    gathering: [1, 4, 6, 8, 11, 12],
+    gathering: [0, 3, 5, 7, 10, 11],
     reward: []
   },
   {
-    id: 7,
+    id: 6,
     name: "Dragonvein Crystal",
     description: "Mined from high rank areas. Many expect this newly-discovered crystal to usher in a new era of metalwork.",
     rarity: 6,
     type: MaterialType.mineral,
     image: "red",
     monsters: [],
-    gathering: [3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 18],
+    gathering: [2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 17],
     reward: []
   },
   {
-    id: 8,
+    id: 7,
     name: "Lightcrystal",
     description: "A precious and extremely hard substance with a faint glow. Sometimes used for crafting tools.",
     rarity: 5,
     type: MaterialType.mineral,
     image: "grey",
     monsters: [],
-    gathering: [6, 13, 18],
+    gathering: [5, 12, 17],
     reward: []
   },
   {
-    id: 9,
+    id: 8,
     name: "Novacrystal",
     description: "High quality Lightcrystal. Highly coveted for its rarity, it's used for only the finest of metalworking.",
     rarity: 7,
     type: MaterialType.mineral,
     image: "white",
     monsters: [],
-    gathering: [14, 16],
-    reward: [14, 16]
+    gathering: [13, 15],
+    reward: [13, 15]
   },
   {
-    id: 10,
+    id: 9,
     name: "Firecell Stone",
     description: "A magma-like deposit that only trained hands can work with. Armor made from it is first-class.",
     rarity: 7,
     type: MaterialType.mineral,
     image: "orange",
     monsters: [],
-    gathering: [1, 2, 4, 8, 11, 12, 16],
-    reward: [16]
+    gathering: [0, 1, 3, 7, 10, 11, 15],
+    reward: [15]
   },
   {
-    id: 11,
+    id: 10,
     name: "Quality Bone",
     description: "A bone used as crafting material. Its ease of use and hardness allow it to be shaped into better gear.",
     rarity: 6,
     type: MaterialType.bone,
     image: "white",
     monsters: [],
-    gathering: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    gathering: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
     reward: []
   },
   {
-    id: 12,
+    id: 11,
     name: "Ancient Bone",
     description: "A bone used as crafting material. Can be found in bonepiles in the Ancient Forest. Its size evokes a certain primal quality.",
     rarity: 4,
     type: MaterialType.bone,
     image: "green",
     monsters: [],
-    gathering: [1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14],
+    gathering: [0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13],
     reward: []
   },
   {
-    id: 13,
+    id: 12,
     name: "Boulder Bone",
     description: "A bone used as crafting material. Can be found in bonepiles in the Wildspire Waste. Its size evokes a certain primal quality.",
     rarity: 4,
     type: MaterialType.bone,
     image: "yellow",
     monsters: [],
-    gathering: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-    reward: [3]
+    gathering: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    reward: [2]
   },
   {
-    id: 14,
+    id: 13,
     name: "Coral Bone",
     description: "A bone used as crafting material. Can be found in bonepiles in the Coral Highlands. Its size evokes a certain primal quality.",
     rarity: 4,
     type: MaterialType.bone,
     image: "pink",
     monsters: [],
-    gathering: [18],
+    gathering: [17],
     reward: []
   },
   {
-    id: 15,
+    id: 14,
     name: "Monster Bone Small",
     description: "A material found in bonepiles. Indispensable for both hunting and daily life.",
     rarity: 4,
     type: MaterialType.bone,
     image: "yellow",
     monsters: [],
-    gathering: [1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14],
-    reward: [1, 2]
+    gathering: [0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13],
+    reward: [0, 1]
   },
   {
-    id: 16,
+    id: 15,
     name: "Monster Bone Medium",
     description: "Bone obtained from large monsters. Strong yet flexible, it's as reliable as steel or wood.",
     rarity: 4,
     type: MaterialType.bone,
     image: "yellow",
     monsters: [],
-    gathering: [1, 2, 3, 7],
-    reward: [4, 5, 11]
+    gathering: [0, 1, 2, 6],
+    reward: [3, 4, 10]
   },
   {
-    id: 17,
+    id: 16,
     name: "Monster Bone Large",
     description: "Bone obtained from large monsters. Hard to work with due to its size, but vital when crafting larger items.",
     rarity: 4,
     type: MaterialType.bone,
     image: "yellow",
     monsters: [],
-    gathering: [1, 2, 4, 5, 6, 7, 8, 9, 10],
-    reward: [8, 9, 12]
+    gathering: [0, 1, 3, 4, 5, 6, 7, 8, 9],
+    reward: [7, 8, 11]
   },
   {
-    id: 18,
+    id: 17,
     name: "Monster Keenbone",
     description: "Bone obtained from high rank large monsters. It has a razor-sharp tip that retains its strength after forging.",
     rarity: 6,
     type: MaterialType.bone,
     image: "pink",
     monsters: [],
-    gathering: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    reward: [4, 8]
+    gathering: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    reward: [3, 7]
   },
   {
-    id: 19,
+    id: 18,
     name: "Monster Hardbone",
     description: "Precious bone obtained from high rank large monsters. Their rarity makes them highly sought after.",
     rarity: 6,
     type: MaterialType.bone,
     image: "red",
     monsters: [],
-    gathering: [1, 2, 4, 5, 6, 7, 8, 9, 10],
+    gathering: [0, 1, 3, 4, 5, 6, 7, 8, 9],
     reward: []
   },
   {
-    id: 20,
+    id: 19,
     name: "Elder Dragon Bone",
     description: "A bone from an elder dragon. It exudes the great majesty of the beast that bore it.",
     rarity: 7,
     type: MaterialType.bone,
     image: "purple",
     monsters: [],
-    gathering: [15, 17],
-    reward: [15, 17]
+    gathering: [14, 16],
+    reward: [14, 16]
   },
   {
-    id: 21,
+    id: 20,
     name: "Sharp Claw",
     description: "Obtained from small fanged wyverns. Unlike wyvern claws, this is shaped to grip objects.",
     rarity: 4,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [1],
-    gathering: [1],
-    reward: [1]
+    monsters: [0],
+    gathering: [0],
+    reward: [0]
   },
   {
-    id: 22,
+    id: 21,
     name: "Piercing Claw",
     description: "Material from high rank small fanged wyverns. Sharp enough that it might serve as a makeshift knife.",
     rarity: 6,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [1],
-    gathering: [1],
-    reward: [1]
+    monsters: [0],
+    gathering: [0],
+    reward: [0]
   },
   {
-    id: 23,
+    id: 22,
     name: "Poison Sac",
     description: "A monster organ that contains a lethal toxin. Handle with extreme care.",
     rarity: 4,
     type: MaterialType.sac,
     image: "purple",
-    monsters: [5],
-    gathering: [5],
-    reward: [5]
+    monsters: [4],
+    gathering: [4],
+    reward: [4]
   },
   {
-    id: 24,
+    id: 23,
     name: "Toxin Sac",
     description: "A monster organ filled with an extremely potent toxin. Just touching it is dangerous.",
     rarity: 6,
     type: MaterialType.sac,
     image: "purple",
     monsters: [],
-    gathering: [5],
-    reward: [5]
+    gathering: [4],
+    reward: [4]
   },
   {
-    id: 25,
+    id: 24,
     name: "Paralysis Sac",
     description: "A monster organ that contains paralyzing neurotoxins.",
     rarity: 4,
     type: MaterialType.sac,
     image: "yellow_light",
     monsters: [],
-    gathering: [7],
+    gathering: [6],
     reward: []
   },
   {
-    id: 26,
+    id: 25,
     name: "Sleep Sac",
     description: "A monster organ that contains a knockout powder capable of inducing sleep.",
     rarity: 4,
     type: MaterialType.sac,
     image: "blue",
     monsters: [],
-    gathering: [10],
-    reward: [10]
+    gathering: [9],
+    reward: [9]
   },
   {
-    id: 27,
+    id: 26,
     name: "Coma Sac",
     description: "A monster organ that contains dangerous powder. One whiff can induce a coma.",
     rarity: 6,
@@ -297,263 +297,263 @@ export const MATERIAL_TABLE: MaterialLocal[] = [
     image: "blue",
     monsters: [],
     gathering: [],
-    reward: [10]
+    reward: [9]
   },
   {
-    id: 28,
+    id: 27,
     name: "Flame Sac",
     description: "A monster organ filled with flammable powder. Handle with extreme care.",
     rarity: 4,
     type: MaterialType.sac,
     image: "red",
     monsters: [],
-    gathering: [8],
-    reward: [8]
+    gathering: [7],
+    reward: [7]
   },
   {
-    id: 29,
+    id: 28,
     name: "Inferno Sac",
     description: "A monster organ filled with powder that ignites if it so much as touches air. Danger!",
     rarity: 6,
     type: MaterialType.sac,
     image: "red",
-    monsters: [8, 11, 12],
-    gathering: [11, 12],
-    reward: [8, 11, 12]
+    monsters: [7, 10, 11],
+    gathering: [10, 11],
+    reward: [7, 10, 11]
   },
   {
-    id: 30,
+    id: 29,
     name: "Aqua Sac",
     description: "A monster organ designed to hold and preserve water.",
     rarity: 4,
     type: MaterialType.sac,
     image: "blue_light",
     monsters: [],
-    gathering: [9],
-    reward: [9]
+    gathering: [8],
+    reward: [8]
   },
   {
-    id: 31,
+    id: 30,
     name: "Torrent Sac",
     description: "A monster organ designed to hold and preserve copious amounts of water.",
     rarity: 6,
     type: MaterialType.sac,
     image: "blue_light",
     monsters: [],
-    gathering: [9],
+    gathering: [8],
     reward: []
   },
   {
-    id: 32,
+    id: 31,
     name: "Electro Sac",
     description: "A monster organ that can store up electricity, which is released on impact.",
     rarity: 4,
     type: MaterialType.sac,
     image: "yellow",
     monsters: [],
-    gathering: [4],
-    reward: [4]
+    gathering: [3],
+    reward: [3]
   },
   {
-    id: 33,
+    id: 32,
     name: "Thunder Sac",
     description: "A monster organ that can store up large amounts of high voltage electricity.",
     rarity: 6,
     type: MaterialType.sac,
     image: "yellow",
     monsters: [],
-    gathering: [4],
-    reward: [4]
+    gathering: [3],
+    reward: [3]
   },
   {
-    id: 34,
+    id: 33,
     name: "Bird Wyvern Gem",
     description: "A valuable gem that can be harvested from bird wyverns. Said to fetch a high price on the market.",
     rarity: 7,
     type: MaterialType.gem,
     image: "blue",
     monsters: [],
-    gathering: [3, 13],
+    gathering: [2, 12],
     reward: []
   },
   {
-    id: 35,
+    id: 34,
     name: "Wyvern Gem",
     description: "Throughout a wyvern's life, impurities gather and form this peculiar gem.",
     rarity: 7,
     type: MaterialType.gem,
     image: "blue_light",
     monsters: [],
-    gathering: [9, 13, 14, 16],
-    reward: [14]
+    gathering: [8, 12, 13, 15],
+    reward: [13]
   },
   {
-    id: 36,
+    id: 35,
     name: "Elder Dragon Blood",
     description: "Contains an unknown compound. The object of much scholarly research.",
     rarity: 7,
     type: MaterialType.potion,
     image: "red",
     monsters: [],
-    gathering: [15, 17],
-    reward: [15, 17]
+    gathering: [14, 16],
+    reward: [14, 16]
   },
   {
-    id: 37,
+    id: 36,
     name: "Warm Pelt",
     description: "A pelt from a small animal. Used for many things, but mostly just regular clothes.",
     rarity: 4,
     type: MaterialType.hide,
     image: "green",
     monsters: [],
-    gathering: [4, 8, 11, 12],
+    gathering: [3, 7, 10, 11],
     reward: []
   },
   {
-    id: 38,
+    id: 37,
     name: "Gajau Scale",
     description: "Rare Gajau material. Obtained by carving. Water- resistant, used to craft gear.",
     rarity: 6,
     type: MaterialType.hide,
     image: "brown",
-    monsters: [9],
+    monsters: [8],
     gathering: [],
-    reward: [9]
+    reward: [8]
   },
   {
-    id: 39,
+    id: 38,
     name: "Wingdrake Hide",
     description: "A material carved from wingdrakes. Lightweight and often used when crafting armor.",
     rarity: 4,
     type: MaterialType.wing,
     image: "brown_light",
     monsters: [],
-    gathering: [4, 8, 11, 12],
+    gathering: [3, 7, 10, 11],
     reward: []
   },
   {
-    id: 40,
+    id: 39,
     name: "Girros Scale",
     description: "Girros material. Obtained by carving. Used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "grey",
     monsters: [],
-    gathering: [7],
+    gathering: [6],
     reward: []
   },
   {
-    id: 41,
+    id: 40,
     name: "Girros Fang",
     description: "Girros material. Obtained by carving. Grants paralytic properties.",
     rarity: 4,
     type: MaterialType.claw,
     image: "yellow_light",
     monsters: [],
-    gathering: [7],
+    gathering: [6],
     reward: []
   },
   {
-    id: 42,
+    id: 41,
     name: "Great Jagras Scale",
     description: "Great Jagras material. Obtained by breaking its forelegs. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.scale,
     image: "yellow",
     monsters: [],
-    gathering: [1],
-    reward: [1]
+    gathering: [0],
+    reward: [0]
   },
   {
-    id: 43,
+    id: 42,
     name: "Great Jagras Hide",
     description: "Great Jagras material. Obtained by breaking its forelegs. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.hide,
     image: "yellow",
-    monsters: [1],
-    gathering: [1],
-    reward: [1]
+    monsters: [0],
+    gathering: [0],
+    reward: [0]
   },
   {
-    id: 44,
+    id: 43,
     name: "Great Jagras Claw",
     description: "Great Jagras material. Obtained by breaking its forelegs. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "yellow",
-    monsters: [1],
-    gathering: [1],
-    reward: [1]
+    monsters: [0],
+    gathering: [0],
+    reward: [0]
   },
   {
-    id: 45,
+    id: 44,
     name: "Great Jagras Mane",
     description: "Great Jagras material. Obtained by breaking its head. Used for many purposes.",
     rarity: 4,
     type: MaterialType.other,
     image: "yellow",
-    monsters: [1],
-    gathering: [1],
-    reward: [1]
+    monsters: [0],
+    gathering: [0],
+    reward: [0]
   },
   {
-    id: 46,
+    id: 45,
     name: "Kulu-Ya-Ku Scale",
     description: "Kulu-Ya-Ku material. Mostly obtained as a reward. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "brown_light",
-    monsters: [3],
-    gathering: [3],
-    reward: [3]
+    monsters: [2],
+    gathering: [2],
+    reward: [2]
   },
   {
-    id: 47,
+    id: 46,
     name: "Kulu-Ya-Ku Hide",
     description: "Kulu-Ya-Ku material. Mostly obtained by carving. Supple, often used in gear.",
     rarity: 4,
     type: MaterialType.hide,
     image: "brown_light",
-    monsters: [3],
-    gathering: [3],
-    reward: [3]
+    monsters: [2],
+    gathering: [2],
+    reward: [2]
   },
   {
-    id: 48,
+    id: 47,
     name: "Kulu-Ya-Ku Plume",
     description: "Kulu-Ya-Ku material. Obtained by breaking its forelimbs. Used for many purposes.",
     rarity: 4,
     type: MaterialType.other,
     image: "orange_light",
-    monsters: [3],
-    gathering: [3],
-    reward: [3]
+    monsters: [2],
+    gathering: [2],
+    reward: [2]
   },
   {
-    id: 49,
+    id: 48,
     name: "Kulu-Ya-Ku Beak",
     description: "Kulu-Ya-Ku material. Obtained by breaking its head. Hard, used in many weapons.",
     rarity: 4,
     type: MaterialType.head,
     image: "brown_light",
     monsters: [],
-    gathering: [3],
-    reward: [3]
+    gathering: [2],
+    reward: [2]
   },
   {
-    id: 50,
+    id: 49,
     name: "Pukei-Pukei Scale",
     description: "Pukei-Pukei material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "green",
     monsters: [],
-    gathering: [5],
-    reward: [5]
+    gathering: [4],
+    reward: [4]
   },
   {
-    id: 51,
+    id: 50,
     name: "Pukei-Pukei Carapace",
     description: "Rare Pukei-Pukei material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 6,
@@ -561,109 +561,109 @@ export const MATERIAL_TABLE: MaterialLocal[] = [
     image: "green",
     monsters: [],
     gathering: [],
-    reward: [5]
+    reward: [4]
   },
   {
-    id: 52,
+    id: 51,
     name: "Pukei-Pukei Quill",
     description: "Pukei-Pukei material. Obtained by breaking its wings. Used for many purposes.",
     rarity: 4,
     type: MaterialType.wing,
     image: "green",
     monsters: [],
-    gathering: [5],
-    reward: [5]
+    gathering: [4],
+    reward: [4]
   },
   {
-    id: 53,
+    id: 52,
     name: "Pukei-Pukei Wing",
     description: "Rare Pukei-Pukei material. Obtained by breaking its wings. Used for many purposes.",
     rarity: 6,
     type: MaterialType.wing,
     image: "green",
-    monsters: [5],
-    gathering: [5],
-    reward: [5]
+    monsters: [4],
+    gathering: [4],
+    reward: [4]
   },
   {
-    id: 54,
+    id: 53,
     name: "Pukei-Pukei Sac",
     description: "Pukei-Pukei material. Obtained by breaking its head. Grants poisonous properties.",
     rarity: 4,
     type: MaterialType.sac,
     image: "green",
     monsters: [],
-    gathering: [5],
-    reward: [5]
+    gathering: [4],
+    reward: [4]
   },
   {
-    id: 55,
+    id: 54,
     name: "Pukei-Pukei Tail",
     description: "Pukei-Pukei material. Obtained by carving its severed tail. Unusual, used to craft gear.",
     rarity: 4,
     type: MaterialType.tail,
     image: "green",
-    monsters: [5],
+    monsters: [4],
     gathering: [],
-    reward: [5]
+    reward: [4]
   },
   {
-    id: 56,
+    id: 55,
     name: "Barroth Shell",
     description: "Barroth material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.shell,
     image: "browny",
-    monsters: [2],
-    gathering: [2],
-    reward: [2]
+    monsters: [1],
+    gathering: [1],
+    reward: [1]
   },
   {
-    id: 57,
+    id: 56,
     name: "Barroth Carapace",
     description: "Rare Barroth material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 6,
     type: MaterialType.shell,
     image: "browny",
-    monsters: [2],
-    gathering: [2],
-    reward: [2]
+    monsters: [1],
+    gathering: [1],
+    reward: [1]
   },
   {
-    id: 58,
+    id: 57,
     name: "Barroth Ridge",
     description: "Barroth material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 4,
     type: MaterialType.other,
     image: "browny",
-    monsters: [2],
-    gathering: [2],
-    reward: [2]
+    monsters: [1],
+    gathering: [1],
+    reward: [1]
   },
   {
-    id: 59,
+    id: 58,
     name: "Barroth Claw",
     description: "Barroth material. Obtained by breaking its forelimbs. Hardy, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "browny",
-    monsters: [2],
-    gathering: [2],
-    reward: [2]
+    monsters: [1],
+    gathering: [1],
+    reward: [1]
   },
   {
-    id: 60,
+    id: 59,
     name: "Fertile Mud",
     description: "Barroth material. Obtained by breaking its mud covering. Unusual, used in select gear.",
     rarity: 4,
     type: MaterialType.mud,
     image: "browny",
     monsters: [],
-    gathering: [2],
+    gathering: [1],
     reward: []
   },
   {
-    id: 61,
+    id: 60,
     name: "Jyuratodus Scale",
     description: "Jyuratodus material. Mostly obtained by carving. Used for many purposes.",
     rarity: 4,
@@ -671,472 +671,472 @@ export const MATERIAL_TABLE: MaterialLocal[] = [
     image: "brown_light",
     monsters: [],
     gathering: [],
-    reward: [9]
+    reward: [8]
   },
   {
-    id: 62,
+    id: 61,
     name: "Jyuratodus Shell",
     description: "Jyuratodus material. Mostly obtained as a reward. Hardy, used to craft gear.",
     rarity: 4,
     type: MaterialType.shell,
     image: "brown_light",
     monsters: [],
-    gathering: [9],
-    reward: [9]
+    gathering: [8],
+    reward: [8]
   },
   {
-    id: 63,
+    id: 62,
     name: "Jyuratodus Carapace",
     description: "Rare Jyuratodus material. Mostly obtained as a reward. Hardy, used to craft gear.",
     rarity: 6,
     type: MaterialType.shell,
     image: "brown_light",
     monsters: [],
-    gathering: [9],
-    reward: [9]
+    gathering: [8],
+    reward: [8]
   },
   {
-    id: 64,
+    id: 63,
     name: "Jyuratodus Fang",
     description: "Jyuratodus material. Obtained by breaking its head. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "brown_light",
-    monsters: [9],
+    monsters: [8],
     gathering: [],
-    reward: [9]
+    reward: [8]
   },
   {
-    id: 65,
+    id: 64,
     name: "Jyuratodus Fin",
     description: "Jyuratodus material. Obtained by breaking its back. Used for many purposes.",
     rarity: 4,
     type: MaterialType.other,
     image: "brown_light",
-    monsters: [9],
-    gathering: [9],
-    reward: [9]
+    monsters: [8],
+    gathering: [8],
+    reward: [8]
   },
   {
-    id: 66,
+    id: 65,
     name: "Tobi-Kadachi Scale",
     description: "Tobi-Kadachi material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "blue_faded",
     monsters: [],
-    gathering: [4],
-    reward: [4]
+    gathering: [3],
+    reward: [3]
   },
   {
-    id: 67,
+    id: 66,
     name: "Tobi-Kadachi Pelt",
     description: "Tobi-Kadachi material. Mostly obtained as a reward. Highly thunder-resistant, used to craft gear.",
     rarity: 4,
     type: MaterialType.hide,
     image: "blue_faded",
-    monsters: [4],
+    monsters: [3],
     gathering: [],
-    reward: [4]
+    reward: [3]
   },
   {
-    id: 68,
+    id: 67,
     name: "Tobi-Kadachi Membrane",
     description: "Tobi-Kadachi material. Mostly obtained by carving. Supple, used to craft gear.",
     rarity: 4,
     type: MaterialType.wing,
     image: "blue_faded",
-    monsters: [4],
-    gathering: [4],
-    reward: [4]
+    monsters: [3],
+    gathering: [3],
+    reward: [3]
   },
   {
-    id: 69,
+    id: 68,
     name: "Tobi-Kadachi Claw",
     description: "Tobi-Kadachi material. Obtained by breaking its forelimbs. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "blue_faded",
     monsters: [],
-    gathering: [4],
-    reward: [4]
+    gathering: [3],
+    reward: [3]
   },
   {
-    id: 70,
+    id: 69,
     name: "Tobi-Kadachi Electrode",
     description: "Tobi-Kadachi material. Obtained by breaking its head. Grants thunder element properties.",
     rarity: 4,
     type: MaterialType.other,
     image: "blue_faded",
-    monsters: [4],
-    gathering: [4],
-    reward: [4]
+    monsters: [3],
+    gathering: [3],
+    reward: [3]
   },
   {
-    id: 71,
+    id: 70,
     name: "Anjanath Scale",
     description: "Anjanath material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "pink",
-    monsters: [8],
+    monsters: [7],
     gathering: [],
-    reward: [8]
+    reward: [7]
   },
   {
-    id: 72,
+    id: 71,
     name: "Anjanath Pelt",
     description: "Anjanath material. Mostly obtained as a reward. Highly heat-resistant, used to craft gear.",
     rarity: 4,
     type: MaterialType.hide,
     image: "pink",
     monsters: [],
-    gathering: [8],
-    reward: [8]
+    gathering: [7],
+    reward: [7]
   },
   {
-    id: 73,
+    id: 72,
     name: "Anjanath Fang",
     description: "Anjanath material. Obtained by breaking its head. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "pink",
-    monsters: [8],
-    gathering: [8],
-    reward: [8]
+    monsters: [7],
+    gathering: [7],
+    reward: [7]
   },
   {
-    id: 74,
+    id: 73,
     name: "Anjanath Nosebone",
     description: "Anjanath material. Obtained by breaking its head. Unusual and difficult to handle.",
     rarity: 4,
     type: MaterialType.bone,
     image: "pink",
     monsters: [],
-    gathering: [8],
-    reward: [8]
+    gathering: [7],
+    reward: [7]
   },
   {
-    id: 75,
+    id: 74,
     name: "Anjanath Tail",
     description: "Anjanath material. Obtained by carving its severed tail. Stiff, used to craft gear.",
     rarity: 4,
     type: MaterialType.tail,
     image: "pink",
-    monsters: [8],
-    gathering: [8],
-    reward: [8]
+    monsters: [7],
+    gathering: [7],
+    reward: [7]
   },
   {
-    id: 76,
+    id: 75,
     name: "Tzitzi-Ya-Ku Scale",
     description: "Tzitzi-Ya-Ku material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "blue",
     monsters: [],
-    gathering: [6],
-    reward: [6]
+    gathering: [5],
+    reward: [5]
   },
   {
-    id: 77,
+    id: 76,
     name: "Tzitzi-Ya-Ku Hide",
     description: "Tzitzi-Ya-Ku material. Mostly obtained as a reward. Supple, used to craft gear.",
     rarity: 4,
     type: MaterialType.hide,
     image: "blue",
-    monsters: [6],
-    gathering: [6],
-    reward: [6]
+    monsters: [5],
+    gathering: [5],
+    reward: [5]
   },
   {
-    id: 78,
+    id: 77,
     name: "Tzitzi-Ya-Ku Claw",
     description: "Tzitzi-Ya-Ku material. Mostly obtained by carving. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "blue",
-    monsters: [6],
-    gathering: [6],
-    reward: [6]
+    monsters: [5],
+    gathering: [5],
+    reward: [5]
   },
   {
-    id: 79,
+    id: 78,
     name: "Tzitzi-Ya-Ku Photophore",
     description: "Tzitzi-Ya-Ku material obtained by breaking its pulse organs. Unusual, used for many purposes.",
     rarity: 4,
     type: MaterialType.other,
     image: "blue",
+    monsters: [5],
+    gathering: [5],
+    reward: [5]
+  },
+  {
+    id: 79,
+    name: "Great Girros Scale",
+    description: "Great Girros material. Mostly obtained by carving. Broadly used for many purposes.",
+    rarity: 4,
+    type: MaterialType.scale,
+    image: "grey",
     monsters: [6],
     gathering: [6],
     reward: [6]
   },
   {
     id: 80,
-    name: "Great Girros Scale",
-    description: "Great Girros material. Mostly obtained by carving. Broadly used for many purposes.",
-    rarity: 4,
-    type: MaterialType.scale,
-    image: "grey",
-    monsters: [7],
-    gathering: [7],
-    reward: [7]
-  },
-  {
-    id: 81,
     name: "Great Girros Hide",
     description: "Great Girros material. Mostly obtained as a reward. Supple, used to craft gear.",
     rarity: 4,
     type: MaterialType.hide,
     image: "grey",
-    monsters: [7],
-    gathering: [7],
-    reward: [7]
+    monsters: [6],
+    gathering: [6],
+    reward: [6]
   },
   {
-    id: 82,
+    id: 81,
     name: "Great Girros Fang",
     description: "Great Girros material. Obtained by breaking its head. Grants paralytic properties.",
     rarity: 4,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [7],
-    gathering: [7],
-    reward: [7]
+    monsters: [6],
+    gathering: [6],
+    reward: [6]
   },
   {
-    id: 83,
+    id: 82,
     name: "Great Girros Tail",
     description: "Great Girros material. Obtained by carving its severed tail. Stiff, used to craft gear.",
     rarity: 4,
     type: MaterialType.tail,
     image: "grey",
-    monsters: [7],
-    gathering: [7],
-    reward: [7]
+    monsters: [6],
+    gathering: [6],
+    reward: [6]
   },
   {
-    id: 84,
+    id: 83,
     name: "Radobaan Scale",
     description: "Radobaan material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "white",
-    monsters: [10],
-    gathering: [10],
-    reward: [10]
+    monsters: [9],
+    gathering: [9],
+    reward: [9]
   },
   {
-    id: 85,
+    id: 84,
     name: "Radobaan Carapace",
     description: "Rare Radobaan material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 6,
     type: MaterialType.shell,
     image: "white",
-    monsters: [10],
-    gathering: [10],
-    reward: [10]
+    monsters: [9],
+    gathering: [9],
+    reward: [9]
   },
   {
-    id: 86,
+    id: 85,
     name: "Radobaan Oilshell",
     description: "Radobaan material. Obtained by carving its severed tail. Impact- resistant, used to craft gear.",
     rarity: 4,
     type: MaterialType.other,
     image: "white",
-    monsters: [10],
-    gathering: [10],
-    reward: [10]
+    monsters: [9],
+    gathering: [9],
+    reward: [9]
   },
   {
-    id: 87,
+    id: 86,
     name: "Wyvern Bonemass",
     description: "Radobaan material. Obtained by collecting rare drops. Highly dense, used for many purposes.",
     rarity: 4,
     type: MaterialType.bone,
     image: "white",
-    monsters: [10],
-    gathering: [10],
-    reward: [10]
+    monsters: [9],
+    gathering: [9],
+    reward: [9]
   },
   {
-    id: 88,
+    id: 87,
     name: "Rathalos Scale",
     description: "Rathalos material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "red",
     monsters: [],
-    gathering: [15, 16, 17, 18],
-    reward: [11]
+    gathering: [14, 15, 16, 17],
+    reward: [10]
   },
   {
-    id: 89,
+    id: 88,
     name: "Rathalos Shell",
     description: "Rathalos material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 4,
     type: MaterialType.shell,
     image: "red",
     monsters: [],
-    gathering: [11],
-    reward: [11]
+    gathering: [10],
+    reward: [10]
   },
   {
-    id: 90,
+    id: 89,
     name: "Rathalos Carapace",
     description: "Rare Rathalos material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 6,
     type: MaterialType.shell,
     image: "red",
     monsters: [],
-    gathering: [11, 15, 16, 17, 18],
-    reward: [11]
+    gathering: [10, 14, 15, 16, 17],
+    reward: [10]
   },
   {
-    id: 91,
+    id: 90,
     name: "Rathalos Webbing",
     description: "Rathalos material. Obtained by breaking its wings. Supple, used to craft gear.",
     rarity: 4,
     type: MaterialType.wing,
     image: "red",
     monsters: [],
-    gathering: [11],
-    reward: [11]
+    gathering: [10],
+    reward: [10]
   },
   {
-    id: 92,
+    id: 91,
     name: "Rathalos Wing",
     description: "Rare Rathalos material. Obtained by breaking its wings. Supple, used to craft gear.",
     rarity: 6,
     type: MaterialType.wing,
     image: "red",
-    monsters: [11],
-    gathering: [11, 15, 16, 17, 18],
-    reward: [11]
+    monsters: [10],
+    gathering: [10, 14, 15, 16, 17],
+    reward: [10]
   },
   {
-    id: 93,
+    id: 92,
     name: "Rathalos Tail",
     description: "Rathalos material. Obtained by carving its severed tail. Compatible with fire element.",
     rarity: 4,
     type: MaterialType.tail,
     image: "red",
     monsters: [],
-    gathering: [11],
-    reward: [11]
+    gathering: [10],
+    reward: [10]
   },
   {
-    id: 94,
+    id: 93,
     name: "Rathalos Wingtalon",
     description: "Rare material from Rathian and Rathalos. Obtained by breaking its wings.",
     rarity: 6,
     type: MaterialType.claw,
     image: "red",
     monsters: [],
-    gathering: [11],
-    reward: [11]
+    gathering: [10],
+    reward: [10]
   },
   {
-    id: 95,
+    id: 94,
     name: "Rathalos Marrow",
     description: "Rathalos material. Mostly obtained by carving. Grants fire element properties.",
     rarity: 4,
     type: MaterialType.other,
     image: "red",
-    monsters: [11],
-    gathering: [11],
-    reward: [11]
+    monsters: [10],
+    gathering: [10],
+    reward: [10]
   },
   {
-    id: 96,
+    id: 95,
     name: "Rathalos Medulla",
     description: "Rare Rathalos material. Obtained by carving. Grants fire element properties.",
     rarity: 6,
     type: MaterialType.other,
     image: "red",
     monsters: [],
-    gathering: [11, 15, 16, 17, 18],
-    reward: [11]
+    gathering: [10, 14, 15, 16, 17],
+    reward: [10]
   },
   {
-    id: 97,
+    id: 96,
     name: "Rathalos Plate",
     description: "Rathalos material. A valuable find, used to fortify gear. Said to be quite hard to come by.",
     rarity: 5,
     type: MaterialType.plate,
     image: "red",
-    monsters: [11],
+    monsters: [10],
     gathering: [],
-    reward: [11]
+    reward: [10]
   },
   {
-    id: 98,
+    id: 97,
     name: "Azure Rathalos Scale",
     description: "Azure Rathalos material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.scale,
     image: "blue",
     monsters: [],
-    gathering: [12],
-    reward: [12]
+    gathering: [11],
+    reward: [11]
   },
   {
-    id: 99,
+    id: 98,
     name: "Azure Rathalos Carapace",
     description: "Rare Azure Rathalos material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 6,
     type: MaterialType.shell,
     image: "blue",
     monsters: [],
-    gathering: [12],
-    reward: [12]
+    gathering: [11],
+    reward: [11]
   },
   {
-    id: 100,
+    id: 99,
     name: "Azure Rathalos Tail",
     description: "Rare Azure Rathalos material. Obtained by carving its severed tail. Compatible with fire element.",
     rarity: 6,
     type: MaterialType.tail,
     image: "blue",
-    monsters: [12],
-    gathering: [12],
-    reward: [12]
+    monsters: [11],
+    gathering: [11],
+    reward: [11]
   },
   {
-    id: 101,
+    id: 100,
     name: "Azure Rathalos Wing",
     description: "Rare Azure Rathalos material. Obtained by breaking its wings. Supple, used to craft gear.",
     rarity: 4,
     type: MaterialType.wing,
     image: "blue",
     monsters: [],
-    gathering: [12],
-    reward: [12]
+    gathering: [11],
+    reward: [11]
   },
   {
-    id: 102,
+    id: 101,
     name: "Azure Rath Wingtalon",
     description: "Rare material from Azure Rathalos. Obtained by breaking its wings.",
     rarity: 6,
     type: MaterialType.claw,
     image: "blue",
-    monsters: [12],
-    gathering: [12],
-    reward: [12]
+    monsters: [11],
+    gathering: [11],
+    reward: [11]
   },
   {
-    id: 103,
+    id: 102,
     name: "Azure Rathalos Marrow",
     description: "Azure Rathalos material. Mostly obtained by carving. Grants fire element properties.",
     rarity: 4,
     type: MaterialType.other,
     image: "blue",
-    monsters: [12],
-    gathering: [12],
-    reward: [12]
+    monsters: [11],
+    gathering: [11],
+    reward: [11]
   },
   {
-    id: 104,
+    id: 103,
     name: "Azure Rathalos Plate",
     description: "Azure Rathalos material. A valuable find, used to fortify gear. Said to be quite hard to come by.",
     rarity: 5,
@@ -1144,424 +1144,424 @@ export const MATERIAL_TABLE: MaterialLocal[] = [
     image: "blue",
     monsters: [],
     gathering: [],
-    reward: [12]
+    reward: [11]
   },
   {
-    id: 105,
+    id: 104,
     name: "Diablos Shell",
     description: "Diablos material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.shell,
     image: "brown",
-    monsters: [13],
-    gathering: [13],
-    reward: [13]
+    monsters: [12],
+    gathering: [12],
+    reward: [12]
   },
   {
-    id: 106,
+    id: 105,
     name: "Diablos Carapace",
     description: "Rare Diablos material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 6,
     type: MaterialType.shell,
     image: "brown",
-    monsters: [13],
-    gathering: [13, 15, 16, 17, 18],
-    reward: [13]
+    monsters: [12],
+    gathering: [12, 14, 15, 16, 17],
+    reward: [12]
   },
   {
-    id: 107,
+    id: 106,
     name: "Diablos Ridge",
     description: "Diablos material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 4,
     type: MaterialType.other,
     image: "brown",
-    monsters: [13],
-    gathering: [13, 15, 16, 17, 18],
-    reward: [13]
+    monsters: [12],
+    gathering: [12, 14, 15, 16, 17],
+    reward: [12]
   },
   {
-    id: 108,
+    id: 107,
     name: "Diablos Fang",
     description: "Diablos material. Mostly obtained by carving. Sharp, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "brown",
     monsters: [],
-    gathering: [13],
-    reward: [13]
+    gathering: [12],
+    reward: [12]
   },
   {
-    id: 109,
+    id: 108,
     name: "Twisted Horn",
     description: "Diablos material. Obtained by breaking its horns. Stout, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "brown",
     monsters: [],
-    gathering: [13],
-    reward: [13]
+    gathering: [12],
+    reward: [12]
   },
   {
-    id: 110,
+    id: 109,
     name: "Majestic Horn",
     description: "Rare Diablos material. Obtained by breaking its horns. Stout, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "brown",
-    monsters: [13, 14],
-    gathering: [13, 14, 15, 16, 17, 18],
-    reward: [13, 14]
+    monsters: [12, 13],
+    gathering: [12, 13, 14, 15, 16, 17],
+    reward: [12, 13]
   },
   {
-    id: 111,
+    id: 110,
     name: "Blos Medulla",
     description: "Rare Diablos material. A valuable find, used to fortify gear. Said to be quite hard to come by.",
     rarity: 6,
     type: MaterialType.other,
     image: "brown",
     monsters: [],
-    gathering: [15, 17, 18],
-    reward: [13, 14]
+    gathering: [14, 16, 17],
+    reward: [12, 13]
   },
   {
-    id: 112,
+    id: 111,
     name: "Black Diablos Carapace",
     description: "Rare Black Diablos material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 6,
     type: MaterialType.shell,
     image: "grey",
-    monsters: [14],
-    gathering: [14],
-    reward: [14]
+    monsters: [13],
+    gathering: [13],
+    reward: [13]
   },
   {
-    id: 113,
+    id: 112,
     name: "Black Diablos Ridge",
     description: "Black Diablos material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 4,
     type: MaterialType.other,
     image: "grey",
-    monsters: [14],
-    gathering: [14],
-    reward: [14]
+    monsters: [13],
+    gathering: [13],
+    reward: [13]
   },
   {
-    id: 114,
+    id: 113,
     name: "Black Spiral Horn",
     description: "Black Diablos material. Obtained by breaking its horns. Stout, used in many weapons.",
     rarity: 4,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [14],
-    gathering: [14],
-    reward: [14]
+    monsters: [13],
+    gathering: [13],
+    reward: [13]
   },
   {
-    id: 115,
+    id: 114,
     name: "Kirin Hide",
     description: "Kirin material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 4,
     type: MaterialType.hide,
     image: "white",
-    monsters: [18],
-    gathering: [18],
-    reward: [18]
+    monsters: [17],
+    gathering: [17],
+    reward: [17]
   },
   {
-    id: 116,
+    id: 115,
     name: "Kirin Tail",
     description: "Kirin material. Mostly obtained as a reward. Compatible with thunder element.",
     rarity: 4,
     type: MaterialType.other,
     image: "white",
-    monsters: [18],
-    gathering: [18],
-    reward: [18]
+    monsters: [17],
+    gathering: [17],
+    reward: [17]
   },
   {
-    id: 117,
+    id: 116,
     name: "Kirin Mane",
     description: "Kirin material. Mostly obtained by carving. Highly thunder-resistant, used to craft gear.",
     rarity: 4,
     type: MaterialType.other,
     image: "white",
     monsters: [],
-    gathering: [18],
-    reward: [18]
+    gathering: [17],
+    reward: [17]
   },
   {
-    id: 118,
+    id: 117,
     name: "Kirin Thunderhorn",
     description: "Kirin material. Obtain by breaking its horn. Grants thunder element properties.",
     rarity: 4,
     type: MaterialType.claw,
     image: "blue",
-    monsters: [18],
-    gathering: [18],
-    reward: [18]
+    monsters: [17],
+    gathering: [17],
+    reward: [17]
   },
   {
-    id: 119,
+    id: 118,
     name: "Kirin Azure Horn",
     description: "Rare Kirin material. Obtain by breaking its horn. Grants thunder element properties.",
     rarity: 7,
     type: MaterialType.claw,
     image: "blue",
     monsters: [],
-    gathering: [18],
-    reward: [18]
+    gathering: [17],
+    reward: [17]
   },
   {
-    id: 120,
+    id: 119,
     name: "Immortal Dragonscale",
     description: "Rare Nergigante material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 7,
     type: MaterialType.scale,
     image: "grey",
     monsters: [],
-    gathering: [17],
-    reward: [17]
+    gathering: [16],
+    reward: [16]
   },
   {
-    id: 121,
+    id: 120,
     name: "Nergigante Carapace",
     description: "Rare Nergigante material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 7,
     type: MaterialType.shell,
     image: "grey",
     monsters: [],
-    gathering: [15, 17],
-    reward: [17]
+    gathering: [14, 16],
+    reward: [16]
   },
   {
-    id: 122,
+    id: 121,
     name: "Nergigante Tail",
     description: "Rare Nergigante material. Obtained by carving its severed tail. Stiff, used to craft gear.",
     rarity: 7,
     type: MaterialType.tail,
     image: "grey",
-    monsters: [17],
-    gathering: [17],
-    reward: [17]
+    monsters: [16],
+    gathering: [16],
+    reward: [16]
   },
   {
-    id: 123,
+    id: 122,
     name: "Nergigante Horn",
     description: "Rare Nergigante material. Obtained by breaking its horns. Stout, used in many weapons.",
     rarity: 7,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [17],
-    gathering: [17],
-    reward: [17]
+    monsters: [16],
+    gathering: [16],
+    reward: [16]
   },
   {
-    id: 124,
+    id: 123,
     name: "Nergigante Talon",
     description: "Rare Nergigante material. Mostly obtained by carving. Sharp, used in many weapons.",
     rarity: 7,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [17],
-    gathering: [17],
-    reward: [17]
+    monsters: [16],
+    gathering: [16],
+    reward: [16]
   },
   {
-    id: 125,
+    id: 124,
     name: "Nergigante Regrowth Plate",
     description: "Rare Nergigante material. Obtained by collecting rare drops. Unusual, used to craft gear.",
     rarity: 7,
     type: MaterialType.other,
     image: "white",
-    monsters: [17],
-    gathering: [17],
-    reward: [17]
+    monsters: [16],
+    gathering: [16],
+    reward: [16]
   },
   {
-    id: 126,
+    id: 125,
     name: "Nergigante Gem",
     description: "A rare gem said to have formed within Nergigante tissue. Holds untold potential.",
     rarity: 8,
     type: MaterialType.gem,
     image: "grey",
     monsters: [],
-    gathering: [17],
-    reward: [17]
+    gathering: [16],
+    reward: [16]
   },
   {
-    id: 127,
+    id: 126,
     name: "Teostra Carapace",
     description: "Rare Teostra material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 7,
     type: MaterialType.shell,
     image: "red",
     monsters: [],
-    gathering: [16],
-    reward: [16]
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 128,
+    id: 127,
     name: "Teostra Mane",
     description: "Rare Teostra material. Obtained by breaking its head. Highly fire-resistant, used to craft gear.",
     rarity: 7,
     type: MaterialType.other,
     image: "red",
-    monsters: [16],
-    gathering: [16],
-    reward: [16]
+    monsters: [15],
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 129,
+    id: 128,
     name: "Teostra Tail",
     description: "Rare Teostra material. Obtained by carving its severed tail. Stiff, used to craft gear.",
     rarity: 7,
     type: MaterialType.tail,
     image: "red",
-    monsters: [16],
-    gathering: [16],
-    reward: [16]
+    monsters: [15],
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 130,
+    id: 129,
     name: "Teostra Horn",
     description: "Rare Teostra material. Obtained by breaking its head. Stout, used in many weapons.",
     rarity: 7,
     type: MaterialType.claw,
     image: "red",
     monsters: [],
-    gathering: [16],
-    reward: [16]
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 131,
+    id: 130,
     name: "Fire Dragon Scale",
     description: "Rare Teostra material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 7,
     type: MaterialType.scale,
     image: "red",
     monsters: [],
-    gathering: [16],
-    reward: [16]
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 132,
+    id: 131,
     name: "Teostra Claw",
     description: "Rare Teostra material. Mostly obtained by carving. Sharp, used in many weapons.",
     rarity: 7,
     type: MaterialType.claw,
     image: "red",
-    monsters: [16],
-    gathering: [16],
-    reward: [16]
+    monsters: [15],
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 133,
+    id: 132,
     name: "Teostra Webbing",
     description: "Rare Teostra material. Obtained by breaking its wings. Supple, used to craft gear.",
     rarity: 7,
     type: MaterialType.wing,
     image: "red",
     monsters: [],
-    gathering: [16],
-    reward: [16]
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 134,
+    id: 133,
     name: "Teostra Powder",
     description: "Rare Teostra material. Obtained by collecting rare drops. Unusual, used in select gear.",
     rarity: 7,
     type: MaterialType.sac,
     image: "red",
     monsters: [],
-    gathering: [16],
-    reward: [16]
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 135,
+    id: 134,
     name: "Teostra Gem",
     description: "A rare gem said to have formed within Teostra tissue. Within it lies unimaginable power.",
     rarity: 8,
     type: MaterialType.gem,
     image: "red",
     monsters: [],
-    gathering: [16],
-    reward: [16]
+    gathering: [15],
+    reward: [15]
   },
   {
-    id: 136,
+    id: 135,
     name: "Daora Carapace",
     description: "Rare Kushala Daora material. Mostly obtained as a reward. Solid, used to craft gear.",
     rarity: 7,
     type: MaterialType.shell,
     image: "grey",
-    monsters: [15],
-    gathering: [15],
-    reward: [15]
+    monsters: [14],
+    gathering: [14],
+    reward: [14]
   },
   {
-    id: 137,
+    id: 136,
     name: "Daora Dragon Scale",
     description: "Rare Kushala Daora material. Mostly obtained by carving. Broadly used for many purposes.",
     rarity: 7,
     type: MaterialType.scale,
     image: "grey",
     monsters: [],
-    gathering: [15],
-    reward: [15]
+    gathering: [14],
+    reward: [14]
   },
   {
-    id: 138,
+    id: 137,
     name: "Daora Webbing",
     description: "Rare Kushala Daora material. Obtained by breaking its wings. Lightweight, used to craft gear.",
     rarity: 7,
     type: MaterialType.wing,
     image: "grey",
     monsters: [],
-    gathering: [15],
-    reward: [15]
+    gathering: [14],
+    reward: [14]
   },
   {
-    id: 139,
+    id: 138,
     name: "Daora Horn",
     description: "Rare Kushala Daora material. Obtained by breaking its head. Stout, used in many weapons.",
     rarity: 7,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [15],
-    gathering: [15],
-    reward: [15]
+    monsters: [14],
+    gathering: [14],
+    reward: [14]
   },
   {
-    id: 140,
+    id: 139,
     name: "Daora Tail",
     description: "Rare Kushala Daora material. Obtained by carving its severed tail. Stiff, used to craft gear.",
     rarity: 7,
     type: MaterialType.tail,
     image: "grey",
-    monsters: [15],
-    gathering: [15],
-    reward: [15]
+    monsters: [14],
+    gathering: [14],
+    reward: [14]
   },
   {
-    id: 141,
+    id: 140,
     name: "Daora Claw",
     description: "Rare Kushala Daora material. Mostly obtained by carving. Imbued with potent ice element.",
     rarity: 7,
     type: MaterialType.claw,
     image: "grey",
-    monsters: [15],
-    gathering: [15],
-    reward: [15]
+    monsters: [14],
+    gathering: [14],
+    reward: [14]
   },
   {
-    id: 142,
+    id: 141,
     name: "Daora Gem",
     description: "A rare gem said to have formed within Kushala Daora tissue. Holds untold potential.",
     rarity: 8,
     type: MaterialType.gem,
     image: "grey",
     monsters: [],
-    gathering: [15],
-    reward: [15]
+    gathering: [14],
+    reward: [14]
   }
 ];

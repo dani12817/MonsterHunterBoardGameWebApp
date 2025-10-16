@@ -69,7 +69,6 @@
                                     [hunterEquipmentEquipped]="campaignHunter.weaponEquipped"
                                     [hunterEquipmentList]="campaignHunter.weapons!"
                                     [materialsList]="campaignMaterialsDetail.materials"
-                                    [equipmentIndex]="$index"
                                     (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.weaponEquipped)"
                                     (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.weapons)" />
                             }
@@ -91,7 +90,6 @@
                                     [hunterEquipmentEquipped]="campaignHunter.armourHelmEquipped"
                                     [hunterEquipmentList]="campaignHunter.armoursHelm!"
                                     [materialsList]="campaignMaterialsDetail.materials"
-                                    [equipmentIndex]="$index"
                                     (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.armourHelmEquipped)"
                                     (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.armoursHelm)" />
                             }
@@ -113,7 +111,6 @@
                                     [hunterEquipmentEquipped]="campaignHunter.armourChestEquipped"
                                     [hunterEquipmentList]="campaignHunter.armoursChest!"
                                     [materialsList]="campaignMaterialsDetail.materials"
-                                    [equipmentIndex]="$index"
                                     (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.armourChestEquipped)"
                                     (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.armoursChest)" />
                             }
@@ -135,7 +132,6 @@
                                     [hunterEquipmentEquipped]="campaignHunter.armourLegEquipped"
                                     [hunterEquipmentList]="campaignHunter.armoursLeg!"
                                     [materialsList]="campaignMaterialsDetail.materials"
-                                    [equipmentIndex]="$index"
                                     (changeEquipped)="changeEquipped($event, campaignHunter, baseCampaignHunterKeys.armourLegEquipped)"
                                     (equipmentForged)="equipmentForged($event, campaignHunter, baseCampaignHunterKeys.armoursLeg)" />
                             }
@@ -147,7 +143,7 @@
     </mat-tab-group>
 
     <div class="rigth-actions-button flex flex-column align-items-center z-2">
-        @if (campaignHunterList.length < 4) {
+        @if (campaignHunterList.length < MAX_HUNTERS_PER_CAMPAIGN) {
             <button mat-mini-fab
                 class="medium-button"
                 (click)="openNewCampaignHunter()">

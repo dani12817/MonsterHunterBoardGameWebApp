@@ -24,26 +24,25 @@ import { CommonMethods } from '../../common-methods';
 export class EquipmentCardComponent extends BaseEquipmentCardComponent {
   @Input({ required: true }) hunterEquipmentEquipped!: number;
   @Input({ required: true }) hunterEquipmentList!: number[];
-  @Input({ required: true }) equipmentIndex!: number;
   @Input({ required: true }) materialsList!: number[];
   
   @Output() changeEquipped = new EventEmitter<number>();
   @Output() equipmentForged = new EventEmitter<number>();
 
   isForged() {
-    return !!this.hunterEquipmentList[this.equipmentIndex];
+    return !!this.hunterEquipmentList[this.equipment.id];
   }
 
   isEquipped() {
-    return this.hunterEquipmentEquipped === this.equipmentIndex;
+    return this.hunterEquipmentEquipped === this.equipment.id;
   }
 
   canBeForged() {
-    return !this.equipment.previous || !!this.hunterEquipmentList[this.equipment.previous-1];
+    return !this.equipment.previous || !!this.hunterEquipmentList[this.equipment.previous];
   }
 
   equipEquipment() {
-    this.changeEquipped.emit(this.equipmentIndex);
+    this.changeEquipped.emit(this.equipment.id);
   }
 
   openForgeEquipment() {
@@ -55,14 +54,14 @@ export class EquipmentCardComponent extends BaseEquipmentCardComponent {
       // console.log("afterClosed", equipmentForged);
       if (equipmentForged) {
         this._useMaterialsToForge();
-        this.equipmentForged.emit(this.equipmentIndex);
+        this.equipmentForged.emit(this.equipment.id);
       }
     });
   }
 
   private _useMaterialsToForge() {
     for (const material of this.equipment.materials ?? []) {
-      this.materialsList[material.material.id - 1] -= material.amount;
+      this.materialsList[material.material.id] -= material.amount;
     }
   }
 

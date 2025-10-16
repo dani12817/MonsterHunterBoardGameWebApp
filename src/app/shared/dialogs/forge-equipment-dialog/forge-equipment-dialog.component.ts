@@ -42,7 +42,7 @@ export class ForgeEquipmentDialogComponent {
   }
 
   public hasMaterialsNeeded(materialCraft: MaterialCraftDto) {
-    return this.materialsList[materialCraft.material.id - 1] >= materialCraft.amount;
+    return this.materialsList[materialCraft.material.id] >= materialCraft.amount;
   }
 
   forgeEquipment() {

@@ -30,7 +30,7 @@
 
                 <div class="material-quantity-container" 
                     [class]="hasMaterialsNeeded(materialCraft) ? 'text-green-500' : 'text-red-500'">
-                    {{ materialCraft.amount }} / {{ materialsList[materialCraft.material.id - 1] }}
+                    {{ materialCraft.amount }} / {{ materialsList[materialCraft.material.id] }}
                 </div>
             </div>
         }

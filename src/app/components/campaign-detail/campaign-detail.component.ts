@@ -31,6 +31,7 @@ import {
 import { CommonMethods } from '../../shared/common-methods';
 import { ArmourType, WeaponType } from '../../shared/enums';
 import { BASE_ARMOUR_PER_TYPE } from '../../../db';
+import { MAX_HUNTERS_PER_CAMPAIGN } from '../../shared/constants';
 
 @Component({
   selector: 'app-campaign-detail',
@@ -70,6 +71,8 @@ export class CampaignDetailComponent implements OnInit {
   commonMethods = CommonMethods;
   baseCampaignHunterKeys = BaseCampaignHunterKeys;
   armourTypeKeys = ArmourType;
+
+  MAX_HUNTERS_PER_CAMPAIGN = MAX_HUNTERS_PER_CAMPAIGN;
 
   constructor() {
     this.questsLocalList = this._questsLocalService.getAllDto();
