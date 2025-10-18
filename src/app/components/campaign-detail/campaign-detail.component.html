@@ -10,7 +10,7 @@
 
             <div class="materials-container grid w-12 pt-2 m-0 align-content-start">
                 @for (materialLocal of materialLocalList; track $index) {
-                    <campaign-material-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                    <campaign-material-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                         [materialLocal]="materialLocal"
                         [campaignMaterial]="campaignMaterialsDetail"
                         [index]="$index" />
@@ -26,7 +26,7 @@
 
             <div class="quests-container grid w-12 pt-2 m-0 align-content-start">
                 @for (questLocal of questLocalList; track $index) {
-                    <campaign-quest-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                    <campaign-quest-card class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                         [questLocal]="questLocal"
                         [campaignQuest]="campaignQuestsDetail.quests![$index]" />
                 }
@@ -53,12 +53,12 @@
 
                 <div class="equipment-container grid w-12 py-2 m-0 justify-content-center">
                     <base-equipment
-                        class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                        class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                         [equipment]="getWeaponFromCampaignHunter(campaignHunter)" />
 
                     @for (armourType of armourTypeKeys | keyvalue:commonMethods.unsorted; track $index) {
                         <base-equipment
-                            class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                            class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                             [equipment]="getArmourFromCampaignHunter(campaignHunter, armourType.value)" />
                     }
                 </div>
@@ -74,7 +74,7 @@
                         <div class="weapons-container grid w-12 pt-2 m-0 align-content-start">
                             @for (weapon of weaponsLocalMap.get(campaignHunter.weaponType); track $index) {
                                 <equipment-card *ngIf="weapon"
-                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                                     [equipment]="weapon"
                                     [hunterEquipmentEquipped]="campaignHunter.weaponEquipped"
                                     [hunterEquipmentList]="campaignHunter.weapons!"
@@ -95,7 +95,7 @@
                         <div class="armour-head-container grid w-12 pt-2 m-0 align-content-start">
                             @for (armourHelm of armoursLocalMap.get(armourTypeKeys.helm); track $index) {
                                 <equipment-card *ngIf="armourHelm && showArmour(armourHelm, campaignHunter)"
-                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                                     [equipment]="armourHelm"
                                     [hunterEquipmentEquipped]="campaignHunter.armourHelmEquipped"
                                     [hunterEquipmentList]="campaignHunter.armoursHelm!"
@@ -116,7 +116,7 @@
                         <div class="armour-chest-container grid w-12 pt-2 m-0 align-content-start">
                             @for (armourChest of armoursLocalMap.get(armourTypeKeys.chest); track $index) {
                                 <equipment-card *ngIf="armourChest && showArmour(armourChest, campaignHunter)"
-                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                                     [equipment]="armourChest"
                                     [hunterEquipmentEquipped]="campaignHunter.armourChestEquipped"
                                     [hunterEquipmentList]="campaignHunter.armoursChest!"
@@ -137,7 +137,7 @@
                         <div class="armour-leg-container grid w-12 pt-2 m-0 align-content-start">
                             @for (armourLeg of armoursLocalMap.get(armourTypeKeys.leg); track $index) {
                                 <equipment-card *ngIf="armourLeg && showArmour(armourLeg, campaignHunter)"
-                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1"
+                                    class="col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                                     [equipment]="armourLeg"
                                     [hunterEquipmentEquipped]="campaignHunter.armourLegEquipped"
                                     [hunterEquipmentList]="campaignHunter.armoursLeg!"
