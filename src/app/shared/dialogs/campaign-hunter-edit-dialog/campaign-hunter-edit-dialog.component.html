@@ -2,7 +2,9 @@
     <mat-toolbar-row>
         <span class="toolbar-separator flex-auto ml-5"></span>
 
-        <div class="dialog-toolbar-title">{{ 'campaignHunter.title.new' | translate }}</div>
+        <div class="dialog-toolbar-title">
+            {{ title | translate }}
+        </div>
 
         <span class="toolbar-separator flex-auto"></span>
 
@@ -36,6 +38,6 @@
         mat-raised-button color="primary"
         [disabled]="campaignHunterForm.formIsInvalid()"
         (click)="submit()">
-        Guardar
+        {{ 'actions.save' | translate}}
     </button>
 </div>

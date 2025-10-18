@@ -52,10 +52,13 @@ export class CampaignHunterEditDialogComponent {
 
   constructor(private dialogRef: MatDialogRef<CampaignHunterEditDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
     //console.log("camapignId", this.data);
+    if (this.data.hunter) {
+      this.campaignHunterForm.patchValue(this.data.hunter);
+    }
   }
 
   submit() {
-    let campaignHunterDetail: CampaignHunterDto = this.prepareCampaignHunter();
+    let campaignHunterDetail: CampaignHunterDto = this._prepareCampaignHunter();
 
     this._campaignHunterService.saveDto(campaignHunterDetail).then(response => {
       this.dialogRef.close(response);
@@ -66,16 +69,18 @@ export class CampaignHunterEditDialogComponent {
     });
   }
 
-  private prepareCampaignHunter(): CampaignHunterDto {
-    let baseArmour = CommonMethods.getBaseArmour(this.campaignHunterForm.get("weaponType")?.value);
+  private _prepareCampaignHunter(): CampaignHunterDto {
+    if (this.data.hunter) {
+      return this._updateCampaignHunter();
+    }
+    return this._initNewCampaignHunter();
+  }
 
+  private _initNewCampaignHunter() {
     return {
       ...this.campaignHunterForm.getValue(),
+      ...this._prepareDefaultEquipment(),
       campaign: this.data.campaignId,
-      weaponEquipped: 0,
-      armourHelmEquipped: baseArmour,
-      armourChestEquipped: baseArmour,
-      armourLegEquipped: baseArmour,
       weapons: CommonMethods.loadCampaignWeaponsDefaultData(),
       armoursHelm: CommonMethods.loadCampaignArmoursDefaultData(),
       armoursChest: CommonMethods.loadCampaignArmoursDefaultData(),
@@ -83,8 +88,38 @@ export class CampaignHunterEditDialogComponent {
     };
   }
 
+  private _updateCampaignHunter() {
+    let updatedCampaignHunter: CampaignHunterDto = {
+      ...this.data.hunter,
+      ...this.campaignHunterForm.getValue()
+    };
+
+    if (updatedCampaignHunter.weaponType != this.data.hunter.weaponType) {
+      updatedCampaignHunter = {
+        ...updatedCampaignHunter,
+        ...this._prepareDefaultEquipment()
+      }
+    }
+
+    return updatedCampaignHunter;
+  }
+
+  private _prepareDefaultEquipment() {
+    let baseArmour = CommonMethods.getBaseArmour(this.campaignHunterForm.get("weaponType")?.value);
+
+    return {
+      weaponEquipped: 0,
+      armourHelmEquipped: baseArmour,
+      armourChestEquipped: baseArmour,
+      armourLegEquipped: baseArmour,
+    };
+  }
+
   get labelTemplate() {
     return "campaignHunter.fields.";
   }
 
+  get title() {
+    return `campaignHunter.title.${this.campaignHunterForm.get('id')?.value ? 'edit' : 'new'}`;
+  }
 }

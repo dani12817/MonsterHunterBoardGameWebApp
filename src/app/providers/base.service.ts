@@ -51,6 +51,16 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     };
   }
 
+  async saveAll(dtoList: D[]): Promise<E[]> {
+    let modelList: E[] = [];
+
+    for (const dto of dtoList) {
+      modelList.push(await this.save(dto));
+    }
+
+    return modelList;
+  }
+
   async saveDto(dto: D): Promise<D> {
     return this._baseMapper.modelToDto(await this.save(dto));
   }

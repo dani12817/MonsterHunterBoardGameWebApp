@@ -21,7 +21,8 @@ import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 
 import { 
   CampaignMaterialsService, CampaignQuestsService, 
-  MaterialLocalService, QuestLocalService, WeaponLocalService, ArmourLocalService
+  MaterialLocalService, QuestLocalService, WeaponLocalService, ArmourLocalService,
+  CampaignHunterService
 } from '../../providers';
 
 import { 
@@ -55,6 +56,7 @@ export class CampaignDetailComponent implements OnInit {
 
   private _campaignMaterialsService = inject(CampaignMaterialsService);
   private _campaignQuestsService = inject(CampaignQuestsService);
+  private _campaignHunterService = inject(CampaignHunterService);
   
   private _questLocalService = inject(QuestLocalService);
   private _materialLocalService = inject(MaterialLocalService);
@@ -109,12 +111,22 @@ export class CampaignDetailComponent implements OnInit {
     return true;
   }
 
-  openNewCampaignHunter() {
+  openNewCampaignHunter(campaignHunter?: CampaignHunterDto, hunterIndex: number = -1) {
     const dialogRef = this._dialog.open(CampaignHunterEditDialogComponent, 
-      CommonMethods.dialogConfig('420px', 'campaign-hunter-edit-dialog', {campaignId: this.campaignDetail.id}));
+      CommonMethods.dialogConfig('420px', 'campaign-hunter-edit-dialog',
+        {campaignId: this.campaignDetail.id, hunter: campaignHunter}));
 
     dialogRef.afterClosed().subscribe(response => {
-      this.campaignHunterList.push(response);
+      if (response) {
+        if (hunterIndex >= 0) {
+          this.campaignHunterList[hunterIndex] = response;
+        } else {
+          this.campaignHunterList.push(response);
+        }
+        
+        this._snackBar.open(this._translate.instant("messages.success.hunter"),
+          this._translate.instant("actions.close"), {duration: 5000});
+        }
     });
   }
 
@@ -142,6 +154,7 @@ export class CampaignDetailComponent implements OnInit {
     Promise.all([
         this._campaignMaterialsService.save(this.campaignMaterialsDetail),
         this._campaignQuestsService.save(this.campaignQuestsDetail),
+        this._campaignHunterService.saveAll(this.campaignHunterList)
     ]).then((response) => {
       this._snackBar.open(this._translate.instant("messages.success.save"),
         this._translate.instant("actions.close"), {duration: 5000});
