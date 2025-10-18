@@ -407,7 +407,7 @@ export const ARMOUR_TABLE: Map<ArmourType, ArmourLocal[]> = new Map([
             {
                 id: 14,
                 name: EquipmentTree.rathalos,
-                rarity: 1,
+                rarity: 4,
                 materials: [
                     { material: 87, amount: 1 },
                     { material: 90, amount: 1 },
