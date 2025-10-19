@@ -36,7 +36,7 @@
         @for (campaignHunter of campaignHunterList; track $index) {
             <mat-tab>
                 <ng-template mat-tab-label>
-                    <img class="w-1-5 mr-2"
+                    <img class="w-1-5rem mr-2"
                         [src]="commonMethods.generateWeaponIcon(campaignHunter.weaponType)" />
                     <span class="hidden sm:inline">{{ campaignHunter.name }}</span>
                 </ng-template>
@@ -66,7 +66,7 @@
                 <mat-tab-group class="w-12" animationDuration="0ms">
                     <mat-tab>
                         <ng-template mat-tab-label>
-                            <img class="w-1-5 mr-2"
+                            <img class="w-1-5rem mr-2"
                                 [src]="commonMethods.generateWeaponIcon(campaignHunter.weaponType)" />
                             <span class="hidden sm:inline">{{ `weaponNames.${campaignHunter.weaponType}` | translate }}</span>
                         </ng-template>
@@ -87,7 +87,7 @@
 
                     <mat-tab>
                         <ng-template mat-tab-label>
-                            <img class="w-1-5 mr-2"
+                            <img class="w-1-5rem mr-2"
                                 [src]="commonMethods.generateArmourIcon(armourTypeKeys.helm)" />
                             <span class="hidden sm:inline">{{ `armour.${armourTypeKeys.helm}.name` | translate }}</span>
                         </ng-template>
@@ -108,7 +108,7 @@
 
                     <mat-tab>
                         <ng-template mat-tab-label>
-                            <img class="w-1-5 mr-2"
+                            <img class="w-1-5rem mr-2"
                                 [src]="commonMethods.generateArmourIcon(armourTypeKeys.chest)" />
                             <span class="hidden sm:inline">{{ `armour.${armourTypeKeys.chest}.name` | translate }}</span>
                         </ng-template>
@@ -129,7 +129,7 @@
 
                     <mat-tab>
                         <ng-template mat-tab-label>
-                            <img class="w-1-5 mr-2"
+                            <img class="w-1-5rem mr-2"
                                 [src]="commonMethods.generateArmourIcon(armourTypeKeys.leg)" />
                             <span class="hidden sm:inline">{{ `armour.${armourTypeKeys.leg}.name` | translate }}</span>
                         </ng-template>

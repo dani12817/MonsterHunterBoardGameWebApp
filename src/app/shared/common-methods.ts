@@ -86,7 +86,6 @@ export class CommonMethods {
 
     public static generateWeaponIcon(weapon: string): string {
         return this.generateWeaponRarityIcon(1, weapon as WeaponType);
-        //return `/assets/img/weapon/${weapon}/icon/rarity1.webp`;
     }
 
     public static generateWeaponRarityIcon(rarity: number, weaponType: WeaponType): string {

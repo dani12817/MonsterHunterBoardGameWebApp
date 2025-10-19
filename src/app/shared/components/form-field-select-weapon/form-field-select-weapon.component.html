@@ -1,0 +1,25 @@
+<mat-form-field class="w-full"
+    appearance="outline" 
+    [formGroup]="formClass.formGroup">
+    <mat-label for="@next">{{ labelName | translate }}</mat-label>
+
+    <mat-select #selected [formControlName]="fieldName" class="flex">
+        <mat-option *ngIf="emptyOption" [value]="null"></mat-option>
+
+        <mat-select-trigger class="flex align-items-center">
+            <img class="mr-3 w-1-5rem" [src]="weaponIcon(selected.value)">
+            <span>{{ itemLabelBase + '.' + selected.value | translate }}</span>
+        </mat-select-trigger>
+
+        <mat-option *ngFor="let weapon of itemList" [value]="weapon" class="shadow-option">            
+            <div class="flex align-items-center">
+                <img class="mr-3 w-2rem" [src]="weaponIcon(weapon)">
+                <span>{{ itemLabelBase + '.' + weapon | translate }}</span>
+            </div>
+        </mat-option>
+    </mat-select>
+
+    @if (formClass.fieldIsInvalid(fieldName)) {
+        <mat-error>{{ formClass.hasError(fieldName) }}</mat-error>
+    }
+</mat-form-field>

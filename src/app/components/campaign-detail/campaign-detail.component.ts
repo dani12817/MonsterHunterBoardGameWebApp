@@ -114,7 +114,11 @@ export class CampaignDetailComponent implements OnInit {
   openNewCampaignHunter(campaignHunter?: CampaignHunterDto, hunterIndex: number = -1) {
     const dialogRef = this._dialog.open(CampaignHunterEditDialogComponent, 
       CommonMethods.dialogConfig('420px', 'campaign-hunter-edit-dialog',
-        {campaignId: this.campaignDetail.id, hunter: campaignHunter}));
+        {
+          campaignId: this.campaignDetail.id, 
+          hunter: campaignHunter,
+          weaponsSelected: this.campaignHunterList.map(ch => ch.weaponType)
+        }));
 
     dialogRef.afterClosed().subscribe(response => {
       if (response) {

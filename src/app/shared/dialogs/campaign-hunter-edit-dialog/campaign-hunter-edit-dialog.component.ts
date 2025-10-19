@@ -12,7 +12,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-import { FormFieldInputComponent, FormFieldSelectComponent } from '../../components';
+import { FormFieldInputComponent, FormFieldSelectWeaponComponent } from '../../components';
 
 import { CampaignHunterService } from '../../../providers';
 import { CampaignHunterDto } from '../../../models';
@@ -26,7 +26,7 @@ import { WeaponType } from '../../enums';
   imports: [
     FormsModule, ReactiveFormsModule, RouterModule,
     MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatButtonModule, MatDialogModule, MatIcon, MatToolbarModule,
-    FormFieldInputComponent, FormFieldSelectComponent,
+    FormFieldInputComponent, FormFieldSelectWeaponComponent,
     TranslatePipe
   ],
   templateUrl: './campaign-hunter-edit-dialog.component.html',
@@ -40,7 +40,7 @@ export class CampaignHunterEditDialogComponent {
 
   private _campaignHunterService = inject(CampaignHunterService);
 
-  wyeponTypeList = Object.values(WeaponType);
+  weaponTypeList = Object.values(WeaponType);
 
   campaignHunterForm: FormClass = new FormClass(
     this._formBuilder.group({
@@ -50,10 +50,14 @@ export class CampaignHunterEditDialogComponent {
     })
   );
 
-  constructor(private dialogRef: MatDialogRef<CampaignHunterEditDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
+  constructor(private dialogRef: MatDialogRef<CampaignHunterEditDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: CampaignHunterEdit) {
     //console.log("camapignId", this.data);
     if (this.data.hunter) {
       this.campaignHunterForm.patchValue(this.data.hunter);
+    }
+
+    if (this.data.weaponsSelected) {
+      this._removeUsedWeapons();
     }
   }
 
@@ -67,6 +71,14 @@ export class CampaignHunterEditDialogComponent {
       this._snackBar.open(this._translate.instant("messages.error.save"),
         this._translate.instant("actions.close"), {duration: 5000});
     });
+  }
+
+  private _removeUsedWeapons() {
+    for (let weapon of this.data.weaponsSelected) {
+      if (weapon != this.data.hunter.weaponType) {
+        this.weaponTypeList = this.weaponTypeList.filter(w => w != weapon);
+      }
+    }
   }
 
   private _prepareCampaignHunter(): CampaignHunterDto {
@@ -122,4 +134,10 @@ export class CampaignHunterEditDialogComponent {
   get title() {
     return `campaignHunter.title.${this.campaignHunterForm.get('id')?.value ? 'edit' : 'new'}`;
   }
+}
+
+interface CampaignHunterEdit {
+  campaignId: string,
+  hunter: CampaignHunterDto,
+  weaponsSelected: WeaponType[]
 }

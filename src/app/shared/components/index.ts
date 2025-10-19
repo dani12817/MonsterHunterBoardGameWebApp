@@ -5,4 +5,5 @@ export * from './equipment-card/equipment-card.component';
 export * from './base-equipment-card/base-equipment.component';
 export * from './form-field-input/form-field-input.component';
 export * from './form-field-select/form-field-select.component';
+export * from './form-field-select-weapon/form-field-select-weapon.component';
 export * from './sidenav/sidenav.component';
