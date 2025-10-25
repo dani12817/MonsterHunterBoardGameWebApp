@@ -1,14 +1,17 @@
-import { BaseDto, BaseLocal, ArmourLocal, MaterialLocal, WeaponLocal } from "..";
+import { 
+  BaseDto, BaseLocal, 
+  MaterialLocalDto, WeaponLocalDto, ArmourLocalDto
+} from "..";
 
 interface BaseMonster extends BaseLocal {
   description: string;
 }
 
-export interface Monster extends BaseMonster {
+export interface MonsterLocal extends BaseMonster {
   materials: number[];
   gathering: GatheringPhase[];
   weapons: number[];
-  armour: number[];
+  armours: number[];
 }
 
 export interface GatheringPhase {
@@ -16,14 +19,14 @@ export interface GatheringPhase {
   entry: number;
 }
 
-export interface MonsterDto extends BaseMonster, BaseDto {
-  materials: MaterialLocal[];
+export interface MonsterLocalDto extends BaseMonster, BaseDto {
+  materials: MaterialLocalDto[];
   gathering: GatheringPhaseDto[];
-  weapons: WeaponLocal[];
-  armour: ArmourLocal[];
+  weapons: WeaponLocalDto[];
+  armours: ArmourLocalDto[];
 }
 
 export interface GatheringPhaseDto {
-  materials: MaterialLocal[];
+  materials: MaterialLocalDto[];
   entry: number;
 }

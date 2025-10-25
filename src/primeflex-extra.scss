@@ -11,6 +11,11 @@
   filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 1)) drop-shadow(-1px -1px 0 rgba(0, 0, 0, 1));
 }
 
+.img-icon-boder-white {
+  -webkit-filter: drop-shadow(1px 1px 0 rgb(255, 255, 255)) drop-shadow(-1px -1px 0 rgb(255, 255, 255));
+  filter: drop-shadow(1px 1px 0 rgb(255, 255, 255)) drop-shadow(-1px -1px 0 rgb(255, 255, 255));
+}
+
 * {
   --p-red-500: red;
   --p-green-500: green;

@@ -1,7 +1,7 @@
-import { Monster } from "../app/models";
+import { MonsterLocal } from "../app/models";
 import { EquipmentTree } from "../app/shared/enums";
 
-export const MONSTER_TABLE: Monster[] = [
+export const MONSTER_TABLE: MonsterLocal[] = [
   {
     id: 0,
     name: EquipmentTree.greatJagras,
@@ -26,7 +26,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [11], entry: 29 }
     ],
     weapons: [6, 7],
-    armour: [3]
+    armours: [3]
   },
   {
     id: 1,
@@ -53,7 +53,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [1, 3, 11], entry: 28 }
     ],
     weapons: [8, 9],
-    armour: [4]
+    armours: [4]
   },
   {
     id: 2,
@@ -86,7 +86,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [4], entry: 29 }
     ],
     weapons: [10, 11],
-    armour: [5]
+    armours: [5]
   },
   {
     id: 3,
@@ -118,7 +118,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [36, 69], entry: 30 }
     ],
     weapons: [12, 13],
-    armour: [6]
+    armours: [6]
   },
   {
     id: 4,
@@ -151,7 +151,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [0, 2, 3, 53], entry: 33 }
     ],
     weapons: [14, 15],
-    armour: [7]
+    armours: [7]
   },
   {
     id: 5,
@@ -185,7 +185,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [2, 3, 5], entry: 31 }
     ],
     weapons: [16, 17],
-    armour: [8]
+    armours: [8]
   },
   {
     id: 6,
@@ -217,7 +217,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [81, 82], entry: 31 }
     ],
     weapons: [18, 19],
-    armour: [9]
+    armours: [9]
   },
   {
     id: 7,
@@ -240,7 +240,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [9, 38], entry: 25 }
     ],
     weapons: [20, 21],
-    armour: [10]
+    armours: [10]
   },
   {
     id: 8,
@@ -263,7 +263,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [10, 17], entry: 27 }
     ],
     weapons: [22, 23],
-    armour: [12]
+    armours: [12]
   },
   {
     id: 9,
@@ -298,7 +298,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [2, 4, 10], entry: 31 }
     ],
     weapons: [24, 25],
-    armour: [12]
+    armours: [12]
   },
   {
     id: 10,
@@ -327,7 +327,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [1, 9, 88], entry: 31 }
     ],
     weapons: [26, 27],
-    armour: [13]
+    armours: [13]
   },
   {
     id: 11,
@@ -356,7 +356,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [10, 14], entry: 30 }
     ],
     weapons: [28, 29],
-    armour: [14]
+    armours: [14]
   },
   {
     id: 12,
@@ -386,7 +386,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [2], entry: 30 }
     ],
     weapons: [30, 31],
-    armour: [15]
+    armours: [15]
   },
   {
     id: 13,
@@ -415,7 +415,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [34, 112, 113], entry: 30 }
     ],
     weapons: [32, 33],
-    armour: [16]
+    armours: [16]
   },
   {
     id: 14,
@@ -450,7 +450,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [120], entry: 37 }
     ],
     weapons: [34, 35],
-    armour: [17]
+    armours: [17]
   },
   {
     id: 15,
@@ -484,7 +484,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [134], entry: 37 }
     ],
     weapons: [36, 37],
-    armour: [18]
+    armours: [18]
   },
   {
     id: 16,
@@ -515,7 +515,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [87], entry: 38 }
     ],
     weapons: [38, 39],
-    armour: [19]
+    armours: [19]
   },
   {
     id: 17,
@@ -564,7 +564,7 @@ export const MONSTER_TABLE: Monster[] = [
       { materials: [109], entry: 46 }
     ],
     weapons: [40, 41],
-    armour: [20]
+    armours: [20]
   },
   {
     id: 18,
@@ -573,7 +573,7 @@ export const MONSTER_TABLE: Monster[] = [
     materials: [],
     gathering: [],
     weapons: [],
-    armour: []
+    armours: []
   },
   {
     id: 19,
@@ -582,6 +582,6 @@ export const MONSTER_TABLE: Monster[] = [
     materials: [],
     gathering: [],
     weapons: [],
-    armour: []
+    armours: []
   }
 ];

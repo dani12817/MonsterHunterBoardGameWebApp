@@ -28,7 +28,7 @@ export interface BaseEquipmentDto extends BaseDto, BaseItem {
     //previous?: WeaponLocalDto;
 }
 
-export interface BaseDto {
+export interface BaseDto extends BaseLocal {
     icon: string;
     image: string;
 }

@@ -6,6 +6,7 @@ import { WeaponLocal, WeaponLocalDto } from "../../models";
 
 import { CommonMethods } from "../../shared/common-methods";
 import { WeaponType } from "../../shared/enums";
+import { WEAPON_TABLE } from "../../../db";
 
 @Injectable({
   providedIn: 'root'
@@ -23,12 +24,32 @@ export class WeaponLocalMapper extends BaseMapper<WeaponLocal, WeaponLocalDto> {
 
     public modelToDtoWithType(model: WeaponLocal, weaponType: WeaponType) : WeaponLocalDto {
         return {
+            ...this.modelToBasicDto(model, weaponType),
+            materials: this._equipmentLocalMapper.mapMaterialsCraft(model.materials ?? [])
+        };
+    }
+    
+    public modelToBasicDto(model: WeaponLocal, weaponType: WeaponType) : WeaponLocalDto {
+        return {
             ...model,
             name: `weapon.${weaponType}.${model.name}.rarity${model.rarity}`,
             icon: CommonMethods.generateWeaponRarityIcon(model.rarity, weaponType),
             image: CommonMethods.generateWeaponImage(model.name!, model.rarity, weaponType),
-            materials: this._equipmentLocalMapper.mapMaterialsCraft(model.materials ?? [])
+            materials: []
         };
+    }
+
+    public mapToAllWeaponTypes(weaponIds: number[]) {
+        let weaponList: WeaponLocalDto[] = [];
+
+        for (const weaponType of WEAPON_TABLE.keys()) {
+            if (WEAPON_TABLE.get(weaponType)![weaponIds[0]]) {
+                weaponList.push(...weaponIds.map(w =>
+                    this.modelToBasicDto(WEAPON_TABLE.get(weaponType)![w]!, weaponType)));
+            }
+        }
+
+        return weaponList;
     }
 
 }

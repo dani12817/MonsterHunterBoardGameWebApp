@@ -1,0 +1,60 @@
+<mat-toolbar color="primary" class="mat-elevation-z1">
+    <mat-toolbar-row>
+        <span class="toolbar-separator flex-auto ml-5"></span>
+
+        <div class="dialog-toolbar-title flex align-items-center">
+            <img class="w-1-5rem mr-3 img-icon-boder-white" [src]="monster.icon">
+            {{ monster.name | translate }}
+        </div>
+
+        <span class="toolbar-separator flex-auto"></span>
+
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div mat-dialog-content class="monster-dialog-content pb-2 p-3">
+    <div class="monster-data-container relative mx-auto" style="max-width: 500px;">
+        <img class="w-12 border-round-2xl" 
+            [src]="monster.image"/>
+        
+        <div class="monster-description-container">
+            {{ monster.description }}
+        </div>
+    </div>
+
+    <div *ngIf="monster.weapons.length"
+        class="monster-weapon-container grid my-2 -mx-2">
+        <h2 class="w-12 text-center font-bold mb-0">{{ 'weapon.name' | translate}}</h2>
+
+        @for (weapon of monster.weapons; track $index) {
+            <base-equipment
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3"
+                [equipment]="weapon" />
+        }
+    </div>
+
+    <div *ngIf="monster.armours.length"
+        class="monster-armours-container grid my-2 -mx-2">
+        <h2 class="w-12 text-center font-bold mb-0">{{ 'armour.name' | translate}}</h2>
+
+        @for (armour of monster.armours; track $index) {
+            <base-equipment
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3"
+                [equipment]="armour" />
+        }
+    </div>
+
+    <div *ngIf="monster.gathering.length"
+        class="monster-weapon-container grid my-2 -mx-2">
+        <h2 class="w-12 text-center font-bold mb-0">{{ 'campaign.gathering.phase' | translate}}</h2>
+
+        @for (gathering of monster.gathering; track $index) {
+            <gathering-card
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3"
+                [gathering]="gathering" />
+        }
+    </div>
+</div>

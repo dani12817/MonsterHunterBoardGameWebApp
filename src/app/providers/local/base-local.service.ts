@@ -19,4 +19,15 @@ export abstract class BaseLocalService<E extends BaseLocal, D> {
     return this._baseMapper.modelToDtoList(this.getAll());
   }
 
+  getById(id: number) {
+    if (id === undefined)
+      throw new Error("ID cannot be null or undefined")
+
+    return this._databaseTable[id];
+  }
+
+  getDtoById(id: number) {
+    return this._baseMapper.modelToDto(this.getById(id));
+  }
+
 }

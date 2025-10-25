@@ -2,7 +2,8 @@ import { Routes } from '@angular/router';
 
 import {
     LoginComponent, MainComponent,
-    CampaignListComponent, CampaignDetailComponent
+    CampaignListComponent, CampaignDetailComponent,
+    MonsterListComponent
  } from './components';
 
 import { AuthGuard, NoAuthGuard } from './guards';
@@ -42,6 +43,10 @@ export const routes: Routes = [
                     campaignQuestsData: CampaignQuestsResolverService,
                     campaignHuntersData: CampaignHunterResolverService
                 }
+            },
+            {
+                path: 'monster',
+                component: MonsterListComponent,
             },
         ]
     }

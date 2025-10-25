@@ -1,0 +1,16 @@
+.monster-description-container {
+    font-weight: bold;
+    font-size: 10px;
+    position: absolute;
+    bottom: 50px;
+    width: 62%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@media screen and (min-width: 576px) {
+    .monster-description-container {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="element-container shadow-1 p-3 border-round-2xl">
+    <div class="element-name-container flex align-items-center relative">
+        <img class="w-2rem" [src]="element.icon">
+        <div class="ml-3 font-medium">{{ element.name | translate }}</div>
+    </div>
+
+    <div class="element-actions-container flex -m-2 mt-2">
+        <button mat-raised-button
+            class="flex-grow-1 m-2 background-orange"
+            (click)="actionMethod()">
+            {{ actionLabel | translate }}
+        </button>
+    </div>
+</div>

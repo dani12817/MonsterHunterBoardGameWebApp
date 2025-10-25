@@ -16,6 +16,15 @@ export class MaterialLocalMapper extends BaseMapper<MaterialLocal, MaterialLocal
 
     public modelToDto(model: MaterialLocal) : MaterialLocalDto {
         return {
+            ...this.modelToBasicDto(model),
+            gathering: [],
+            monsters: [],
+            reward: []
+        };
+    }
+
+    public modelToBasicDto(model: MaterialLocal) : MaterialLocalDto {
+        return {
             ...model,
             name: model.name,
             icon: CommonMethods.generateMaterialIcon(model),

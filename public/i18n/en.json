@@ -20,6 +20,10 @@
         "fields": {
             "name": "Campaign name",
             "days": "Nº of days"
+        },
+        "gathering": {
+            "phase": "Gathering Phase",
+            "point": "Gathering Point"
         }
     },
     "campaignHunter": {
@@ -59,6 +63,8 @@
         "edit": "Edit",
         "show": "Show",
         "show.equipment": "Show equipment",
+        "show.card": "Show card",
+        "show.monster": "Show Monster Data",
         "close": "Close",
         "equip": "Equip",
         "forge": "Forge",
@@ -81,6 +87,7 @@
         "heavyBowgun": "Heavy Bowgun"
     },
     "weapon": {
+        "name": "Weapons",
         "greatsword": {
             "mineral": {
                 "rarity1": "Buster Sword",
@@ -715,6 +722,7 @@
         }
     },
     "armour": {
+        "name": "Armours",
         "helm": {
             "name": "Helm",
             "leather": "Leather Headgear",

@@ -55,3 +55,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .card {
   background-color: #e6e6e6;
 }
+
+.mat-mdc-dialog-panel {
+  max-width: 90vw !important;
+}
+
+.mat-mdc-dialog-content {
+  max-height: 85vh !important;
+}

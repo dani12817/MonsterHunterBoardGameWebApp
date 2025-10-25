@@ -1,0 +1,12 @@
+<div class="equipment-item-container shadow-1 p-3 border-round-2xl">
+    <h3 class="w-12 text-center font-semibold mb-3">
+        {{ 'campaign.gathering.point' | translate }} {{ gathering.entry }}
+    </h3>
+
+    @for (material of gathering.materials; track $index) {
+        <div class="weapon-name-container flex align-items-center my-2">
+            <img class="w-1-5rem img-icon-boder-black" [src]="material.icon">
+            <div class="ml-3 font-medium">{{ material.name| translate }}</div>
+        </div>
+    }
+</div>

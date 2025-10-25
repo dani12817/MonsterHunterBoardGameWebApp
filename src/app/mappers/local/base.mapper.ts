@@ -17,9 +17,13 @@ export abstract class BaseMapper<E extends BaseModel, D> {
     public modelToDtoList(list: E[]) : D[] {
         let dtoList: D[] = [];
         for (const model of list) {
-            dtoList.push(this.modelToDto(model));
+            dtoList.push(this.modelToDtoListMapper(model));
         }
         return dtoList;
+    }
+
+    protected modelToDtoListMapper(model: E) : D {
+        return this.modelToDto(model);
     }
 
 }
