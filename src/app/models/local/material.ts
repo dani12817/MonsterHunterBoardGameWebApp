@@ -1,4 +1,4 @@
-import { BaseDto, BaseItem, MonsterLocal } from "..";
+import { BaseDto, BaseItem, MonsterLocalDto } from "..";
 
 import { MaterialType } from "../../shared/enums";
 
@@ -15,7 +15,7 @@ export interface MaterialLocal extends BaseMaterial {
 }
 
 export interface MaterialLocalDto extends BaseMaterial, BaseDto {
-  monsters?: MonsterLocal[];
-  gathering?: MonsterLocal[];
-  reward?: MonsterLocal[];
+  monsters?: MonsterLocalDto[];
+  gathering?: MonsterLocalDto[];
+  reward?: MonsterLocalDto[];
 }

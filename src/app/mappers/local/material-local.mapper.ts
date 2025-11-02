@@ -1,9 +1,11 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 
 import { BaseMapper } from "..";
+import { BaseMapperMethods } from "./base-mapper-methods";
+
 import { MaterialLocal, MaterialLocalDto } from "../../models";
 
-import { CommonMethods } from "../../shared/common-methods";
+import { MONSTER_TABLE } from "../../../db";
 
 @Injectable({
   providedIn: 'root'
@@ -16,23 +18,15 @@ export class MaterialLocalMapper extends BaseMapper<MaterialLocal, MaterialLocal
 
     public modelToDto(model: MaterialLocal) : MaterialLocalDto {
         return {
-            ...this.modelToBasicDto(model),
-            gathering: [],
-            monsters: [],
-            reward: []
+            ...this.modelToDtoListMapper(model),
+            gathering: model.gathering?.map(g => BaseMapperMethods.modelToBaseMonsterDtoMapper(MONSTER_TABLE[g])),
+            monsters: model.monsters?.map(m => BaseMapperMethods.modelToBaseMonsterDtoMapper(MONSTER_TABLE[m])),
+            reward: model.reward?.map(r => BaseMapperMethods.modelToBaseMonsterDtoMapper(MONSTER_TABLE[r]))
         };
     }
-
-    public modelToBasicDto(model: MaterialLocal) : MaterialLocalDto {
-        return {
-            ...model,
-            name: model.name,
-            icon: CommonMethods.generateMaterialIcon(model),
-            image: CommonMethods.generateMaterialImage(model),
-            gathering: [],
-            monsters: [],
-            reward: []
-        };
+    
+    protected override modelToDtoListMapper(model: MaterialLocal): MaterialLocalDto {
+        return BaseMapperMethods.modelToBaseMaterialDtoMapper(model);
     }
 
 }

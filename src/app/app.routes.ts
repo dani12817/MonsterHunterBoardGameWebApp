@@ -3,7 +3,8 @@ import { Routes } from '@angular/router';
 import {
     LoginComponent, MainComponent,
     CampaignListComponent, CampaignDetailComponent,
-    MonsterListComponent
+    MonsterListComponent,
+    MaterialListComponent
  } from './components';
 
 import { AuthGuard, NoAuthGuard } from './guards';
@@ -47,6 +48,10 @@ export const routes: Routes = [
             {
                 path: 'monster',
                 component: MonsterListComponent,
+            },
+            {
+                path: 'material',
+                component: MaterialListComponent,
             },
         ]
     }

@@ -8,6 +8,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { BaseEquipmentDto } from '../../../models';
+import { CommonMethods } from '../../common-methods';
 
 @Component({
   selector: 'app-card-dialog',
@@ -20,11 +21,18 @@ import { BaseEquipmentDto } from '../../../models';
   styleUrl: './card-dialog.component.scss'
 })
 export class CardDialogComponent {
-  equipmentToForge: BaseEquipmentDto;
+  title: string;
+  cardToShow: string;
 
   constructor(private dialogRef: MatDialogRef<CardDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
     // console.log("equipmentToForge", this.data);
-    this.equipmentToForge = this.data.equipmentToForge;
+    if (this.data.monsterType) {
+      this.title = "campaign.monster.material.sheet";
+      this.cardToShow = CommonMethods.generateMonsterRewardImage(this.data.monsterType);
+    } else {
+      this.title = "card.title";
+      this.cardToShow = this.data.equipmentToForge.image;
+    }
   }
 
 }

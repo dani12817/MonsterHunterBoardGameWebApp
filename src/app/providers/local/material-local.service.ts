@@ -11,8 +11,8 @@ import { MATERIAL_TABLE } from "../../../db";
 })
 export class MaterialLocalService extends BaseLocalService<MaterialLocal, MaterialLocalDto> {
 
-    constructor() {
-        super(inject(MaterialLocalMapper), MATERIAL_TABLE);
-    }
+  constructor() {
+    super(inject(MaterialLocalMapper), MATERIAL_TABLE);
+  }
 
 }

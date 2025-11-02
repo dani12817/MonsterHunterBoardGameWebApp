@@ -68,6 +68,10 @@ export class CommonMethods {
         return `${ASSETS_FOLDER}/monster/${monster}.webp`;
     }
 
+    public static generateMonsterRewardImage(monster: string): string {
+        return `${ASSETS_FOLDER}/monster/${monster}_reward.avif`;
+    }
+
     public static generateQuestIcon(monster: string): string {
         return `${ASSETS_FOLDER}/quest/${monster}.png`;
     }

@@ -1,0 +1,65 @@
+<mat-toolbar color="primary" class="mat-elevation-z1">
+    <mat-toolbar-row>
+        <span class="toolbar-separator flex-auto ml-5"></span>
+
+        <div class="dialog-toolbar-title flex align-items-center">
+            <img class="w-1-5rem mr-3 img-icon-boder-white" [src]="material.icon">
+            {{ material.name | translate }}
+        </div>
+
+        <span class="toolbar-separator flex-auto"></span>
+
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div mat-dialog-content class="material-dialog-content pb-2 p-3">
+    <div class="material-data-container flex flex-column align-items-center mx-auto">
+        <img class="w-12 border-round-2xl" style="max-width: 240px;" 
+            [src]="material.image"/>
+        
+        <div class="material-description-container mt-3">
+            {{ material.description }}
+        </div>
+    </div>
+
+    <div *ngIf="material.gathering && material.gathering.length"
+        class="material-gatherings-container grid my-2 -mx-2">
+        <h2 class="w-12 text-center font-bold mb-0">{{ 'campaign.gathering.phase' | translate}}</h2>
+
+        @for (gathering of material.gathering; track $index) {
+            <base-element-card 
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3"
+                [element]="gathering"
+                [showAction]="false" />
+        }
+    </div>
+
+    <div *ngIf="material.monsters && material.monsters.length"
+        class="material-monsters-container grid my-2 -mx-2">
+        <h2 class="w-12 text-center font-bold mb-0">{{ 'campaign.monster.break' | translate}}</h2>
+
+        @for (monster of material.monsters; track $index) {
+            <base-element-card 
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3"
+                [element]="monster"
+                actionLabel="actions.show.material.sheet"
+                (action)="openMonsterMaterialData(monster)" />
+        }
+    </div>
+
+    <div *ngIf="material.reward && material.reward.length"
+        class="material-rewards-container grid mt-2 -mx-2">
+        <h2 class="w-12 text-center font-bold mb-0">{{ 'campaign.monster.reward' | translate}}</h2>
+
+        @for (reward of material.reward; track $index) {
+            <base-element-card 
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3"
+                [element]="reward"
+                actionLabel="actions.show.material.sheet"
+                (action)="openMonsterMaterialData(reward)" />
+        }
+    </div>
+</div>

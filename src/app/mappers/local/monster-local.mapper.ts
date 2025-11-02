@@ -1,6 +1,7 @@
 import { inject, Injectable } from "@angular/core";
 
-import { ArmourLocalMapper, BaseMapper, MaterialLocalMapper, WeaponLocalMapper } from "..";
+import { ArmourLocalMapper, BaseMapper, WeaponLocalMapper } from "..";
+import { BaseMapperMethods } from "./base-mapper-methods";
 
 import { GatheringPhase, MonsterLocal, MonsterLocalDto } from "../../models";
 
@@ -12,7 +13,6 @@ import { MATERIAL_TABLE } from "../../../db";
   providedIn: 'root'
 })
 export class MonsterLocalMapper extends BaseMapper<MonsterLocal, MonsterLocalDto> {
-    private materialMapper = inject(MaterialLocalMapper);
     private weaponMapper = inject(WeaponLocalMapper);
     private armourMapper = inject(ArmourLocalMapper);
 
@@ -23,7 +23,7 @@ export class MonsterLocalMapper extends BaseMapper<MonsterLocal, MonsterLocalDto
     public modelToDto(model: MonsterLocal) : MonsterLocalDto {
         return {
             ...this.modelToDtoListMapper(model),
-            materials: model.materials.map(m => this.materialMapper.modelToBasicDto(MATERIAL_TABLE[m])),
+            materials: model.materials.map(m => BaseMapperMethods.modelToBaseMaterialDtoMapper(MATERIAL_TABLE[m])),
             gathering: this._mapGatheringPhase(model.gathering),
             weapons: this.weaponMapper.mapToAllWeaponTypes(model.weapons),
             armours: this.armourMapper.mapToAllWeaponTypes(model.armours)
@@ -47,7 +47,7 @@ export class MonsterLocalMapper extends BaseMapper<MonsterLocal, MonsterLocalDto
         return gatheringList.map(g => {
             return {
                 entry: g.entry,
-                materials: g.materials.map(m => this.materialMapper.modelToBasicDto(MATERIAL_TABLE[m]))
+                materials: g.materials.map(m => BaseMapperMethods.modelToBaseMaterialDtoMapper(MATERIAL_TABLE[m]))
             }
         });
     }

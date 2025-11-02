@@ -6,6 +6,7 @@ import { WeaponLocal, WeaponLocalDto } from "../../models";
 
 import { CommonMethods } from "../../shared/common-methods";
 import { WeaponType } from "../../shared/enums";
+
 import { WEAPON_TABLE } from "../../../db";
 
 @Injectable({

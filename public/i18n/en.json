@@ -24,6 +24,11 @@
         "gathering": {
             "phase": "Gathering Phase",
             "point": "Gathering Point"
+        },
+        "monster": {
+            "material.sheet": "Monster Material Sheet",
+            "break": "Monster Breaks",
+            "reward": "Monster Reward"
         }
     },
     "campaignHunter": {
@@ -65,6 +70,8 @@
         "show.equipment": "Show equipment",
         "show.card": "Show card",
         "show.monster": "Show Monster Data",
+        "show.material": "Show Material Data",
+        "show.material.sheet": "Show Material Sheet",
         "close": "Close",
         "equip": "Equip",
         "forge": "Forge",
