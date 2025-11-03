@@ -14,7 +14,7 @@ import { MaterialLocalDto, UserDetail } from '../../../models';
 import { CommonMethods } from '../../../shared/common-methods';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-material-list',
   imports: [
     RouterModule,
     MatButtonModule, MatIconModule,

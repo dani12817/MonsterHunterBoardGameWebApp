@@ -41,7 +41,7 @@ export class ForgeEquipmentDialogComponent {
       .every((materialCraft) => this.hasMaterialsNeeded(materialCraft));
   }
 
-  public hasMaterialsNeeded(materialCraft: MaterialCraftDto) {
+  hasMaterialsNeeded(materialCraft: MaterialCraftDto) {
     return this.materialsList[materialCraft.material.id] >= materialCraft.amount;
   }
 

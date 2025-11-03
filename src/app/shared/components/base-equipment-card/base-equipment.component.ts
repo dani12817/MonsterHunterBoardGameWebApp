@@ -29,6 +29,6 @@ export class BaseEquipmentCardComponent {
   openCardDetail() {
     this._dialog.open(CardDialogComponent, 
       CommonMethods.dialogConfig('420px', 'card-dialog', 
-        { equipmentToForge: this.equipment }));
+        { equipment: this.equipment }));
   }
 }

@@ -4,7 +4,9 @@ import {
     LoginComponent, MainComponent,
     CampaignListComponent, CampaignDetailComponent,
     MonsterListComponent,
-    MaterialListComponent
+    MaterialListComponent,
+    WeaponListComponent,
+    ArmourListComponent
  } from './components';
 
 import { AuthGuard, NoAuthGuard } from './guards';
@@ -52,6 +54,14 @@ export const routes: Routes = [
             {
                 path: 'material',
                 component: MaterialListComponent,
+            },
+            {
+                path: 'weapon',
+                component: WeaponListComponent,
+            },
+            {
+                path: 'armour',
+                component: ArmourListComponent,
             },
         ]
     }

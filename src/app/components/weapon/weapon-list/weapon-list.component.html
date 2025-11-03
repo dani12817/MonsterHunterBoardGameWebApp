@@ -1,0 +1,16 @@
+<div class="weapon-list-container grid m-0 sm:-m-2">
+    @for (weaponType of weaponList; track $index) {
+        <div class="flex w-12 mt-3 mb-2 align-items-center justify-content-center">
+            <img class="w-3rem mr-3" [src]="CommonMetods.generateWeaponIcon(weaponType[0])" />
+            <h1 class="mb-0 font-bold">{{ `weaponNames.${weaponType[0]}` | translate }}</h1>
+        </div>
+
+        @for (weapon of weaponType[1]; track $index) {
+            <base-element-card *ngIf="weapon"
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3 xxl:col-2"
+                [element]="weapon"
+                actionLabel="actions.show.weapon"
+                (action)="openCard(weapon)" />
+        }
+    }
+</div>

@@ -1,0 +1,1 @@
+export * from './weapon-list/weapon-list.component';

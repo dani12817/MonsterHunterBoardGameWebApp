@@ -34,8 +34,8 @@ export class SidenavComponent implements OnInit {
     {icon: 'diversity_3', route: ['/'], title: 'app.menu.campaigns', disabled: false},
     {icon: 'pets', route: ['/monster'], title: 'app.menu.monsters', disabled: false},
     {icon: 'pet_supplies', route: ['/material'], title: 'app.menu.materials', disabled: false},
-    {icon: 'swords', route: ['/'], title: 'app.menu.weapons', disabled: false},
-    {icon: 'apparel', route: ['/'], title: 'app.menu.armours', disabled: false},
+    {icon: 'swords', route: ['/weapon'], title: 'app.menu.weapons', disabled: false},
+    {icon: 'apparel', route: ['/armour'], title: 'app.menu.armours', disabled: false},
     {icon: 'book_4', route: ['/'], title: 'app.menu.specialRules', disabled: true},
   ];
 

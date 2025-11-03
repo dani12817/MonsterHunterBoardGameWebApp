@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { BaseEquipmentDto } from '../../../models';
+import { BaseEquipmentDto, MaterialCraftDto } from '../../../models';
 import { CommonMethods } from '../../common-methods';
 
 @Component({
@@ -23,16 +23,26 @@ import { CommonMethods } from '../../common-methods';
 export class CardDialogComponent {
   title: string;
   cardToShow: string;
+  
+  materialsList?: MaterialCraftDto[];
 
   constructor(private dialogRef: MatDialogRef<CardDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
-    // console.log("equipmentToForge", this.data);
+    // console.log("equipment", this.data);
     if (this.data.monsterType) {
       this.title = "campaign.monster.material.sheet";
       this.cardToShow = CommonMethods.generateMonsterRewardImage(this.data.monsterType);
     } else {
       this.title = "card.title";
-      this.cardToShow = this.data.equipmentToForge.image;
+      this.cardToShow = this.data.equipment.image;
+
+        if (this.data.showMaterials && this.data.equipment.materials) {
+          this.prepareEquipmentMaterials(this.data.equipment);
+        }
     }
+  }
+
+  private prepareEquipmentMaterials(equipmentDto: BaseEquipmentDto) {
+    this.materialsList = equipmentDto.materials;
   }
 
 }

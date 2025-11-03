@@ -1,0 +1,1 @@
+export * from './armour-list/armour-list.component';

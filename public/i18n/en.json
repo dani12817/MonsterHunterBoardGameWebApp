@@ -72,6 +72,8 @@
         "show.monster": "Show Monster Data",
         "show.material": "Show Material Data",
         "show.material.sheet": "Show Material Sheet",
+        "show.weapon": "Show Weapon Data",
+        "show.armour": "Show Armour Data",
         "close": "Close",
         "equip": "Equip",
         "forge": "Forge",

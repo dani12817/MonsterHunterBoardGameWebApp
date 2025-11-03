@@ -4,3 +4,5 @@ export * from './login/login.component';
 export * from './main/main.component';
 export * from './monster';
 export * from './material';
+export * from './weapon';
+export * from './armour';

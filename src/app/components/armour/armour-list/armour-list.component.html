@@ -1,0 +1,16 @@
+<div class="armour-list-container grid m-0 sm:-m-2">
+    @for (armourType of armourList; track $index) {
+        <div class="flex w-12 mt-3 mb-2 align-items-center justify-content-center">
+            <img class="w-3rem mr-3" [src]="CommonMetods.generateArmourIcon(armourType[0])" />
+            <h1 class="mb-0 font-bold">{{ `armour.${armourType[0]}.name` | translate }}</h1>
+        </div>
+
+        @for (armour of armourType[1]; track $index) {
+            <base-element-card *ngIf="armour"
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3 xxl:col-2"
+                [element]="armour"
+                actionLabel="actions.show.armour"
+                (action)="openCard(armour)" />
+        }
+    }
+</div>
