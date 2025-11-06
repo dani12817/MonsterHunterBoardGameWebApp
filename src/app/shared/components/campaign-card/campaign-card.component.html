@@ -1,4 +1,4 @@
-<div class="card shadow-1 p-3 border-round-2xl">
+<div class="relative card shadow-1 p-3 border-round-2xl">
     <h2 class="mb-2">{{ campaign.name }}</h2>
 
     <div class="mb-4">
@@ -22,4 +22,10 @@
             {{ 'actions.show' | translate }}
         </a>
     </div>
+
+    <button mat-icon-button color="warn"
+        class="absolute top-0 right-0"
+        (click)="deleteCampaign()">
+        <mat-icon>delete</mat-icon>
+    </button>
 </div>

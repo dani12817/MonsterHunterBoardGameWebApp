@@ -1,16 +1,19 @@
 import { inject, Injectable } from "@angular/core";
 
-import { BaseServiceFirebase, UserService } from ".";
+import { BaseServiceFirebase, CampaignHunterService, CampaignMaterialsService, CampaignQuestsService, UserService } from ".";
 import { CampaignMapper } from "../mappers";
 import { Campaign, CampaignDto } from "../models";
 
 import { CAMPAIGN_FIREBASE, USER_FIREBASE } from "../shared/constants";
-import { collection, doc, getDocs, query, QueryConstraint, where } from "firebase/firestore";
+import { collection, doc, QueryConstraint, where } from "firebase/firestore";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CampaignService extends BaseServiceFirebase<Campaign, CampaignDto> {
+  private _campaignHunterService = inject(CampaignHunterService);
+  private _campaignMaterialsService = inject(CampaignMaterialsService);
+  private _campaignQuestsService = inject(CampaignQuestsService);
   private _userService = inject(UserService);
 
   constructor() {
@@ -28,5 +31,16 @@ export class CampaignService extends BaseServiceFirebase<Campaign, CampaignDto> 
     }
 
     return this._baseMapper.modelToDtoList(await this.getAll(queryConstraints));
+  }
+
+  override async deleteById(id: string) {
+    let queryConstraints: QueryConstraint[] = [
+      where("campaign", "==", doc(collection(this._firestore, this._collectionName), id))
+    ];
+
+    await super.deleteById(id);
+    await this._campaignHunterService.deleteByCondition(queryConstraints);
+    await this._campaignMaterialsService.deleteByCondition(queryConstraints);
+    await this._campaignQuestsService.deleteByCondition(queryConstraints);
   }
 }

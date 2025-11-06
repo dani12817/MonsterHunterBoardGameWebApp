@@ -1,11 +1,13 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { DatePipe } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+
+import { CampaignService } from '../../../providers';
 
 import { CampaignEditDialogComponent } from '../../dialogs';
 
@@ -25,6 +27,9 @@ import { CommonMethods } from '../../common-methods';
 })
 export class CampaignCardComponent {
   private readonly _dialog = inject(MatDialog);
+  private readonly _translateService = inject(TranslateService);
+  
+  private _campaignService = inject(CampaignService);
 
   @Input({ required: true }) campaign!: CampaignDto;
   @Output() refreshList = new EventEmitter<void>();
@@ -38,5 +43,12 @@ export class CampaignCardComponent {
         this.refreshList.emit();
       }
     });
+  }
+
+  deleteCampaign() {
+    if(confirm(this._translateService.instant("campaign.confirm.remove"))) {
+      this._campaignService.deleteById(this.campaign.id!);
+      this.refreshList.emit();
+    }
   }
 }

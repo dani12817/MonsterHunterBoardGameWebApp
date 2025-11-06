@@ -1,6 +1,6 @@
 import { inject } from "@angular/core";
 import { CollectionReference, Firestore } from "@angular/fire/firestore";
-import { addDoc, collection, doc, getDoc, getDocs, query, QueryConstraint, setDoc } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, QueryConstraint, setDoc } from "firebase/firestore";
 
 import { BaseFirebaseMapper } from "../mappers";
 import { BaseFirebase } from "../models";
@@ -84,6 +84,18 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
   async getDtoById(id: string): Promise<D> {
     let model: E = await this.getById(id);
     return this._baseMapper.modelToDto(model);
+  }
+  
+  async deleteById(id: string) {
+    return deleteDoc(doc(this._firestore, this._collectionName, id));
+  }
+  
+  async deleteByCondition(queryConstraints: QueryConstraint[] = []) {
+    const docSnapList = await getDocs(query(this._collectionReference, ...queryConstraints));
+
+    docSnapList.forEach(async docSnap => {
+      await this.deleteById(docSnap.id);
+    });
   }
 
 }

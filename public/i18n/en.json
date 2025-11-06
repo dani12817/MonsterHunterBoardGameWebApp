@@ -30,6 +30,9 @@
             "material.sheet": "Monster Material Sheet",
             "break": "Monster Breaks",
             "reward": "Monster Reward"
+        },
+        "confirm": {
+            "remove": "Do you want to remove this campaign?"
         }
     },
     "campaignHunter": {
