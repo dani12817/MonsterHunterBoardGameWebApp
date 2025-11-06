@@ -15,7 +15,7 @@ import { CampaignEditDialogComponent } from '../../shared/dialogs';
 import { CommonMethods } from '../../shared/common-methods';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-campaign-list',
   imports: [
     RouterModule, NgFor,
     MatButtonModule, MatIconModule,

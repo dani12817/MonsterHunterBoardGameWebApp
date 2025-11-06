@@ -2,7 +2,7 @@ import { DocumentReference } from "firebase/firestore";
 
 import { BaseFirebase, Campaign } from ".";
 
-import { WeaponType } from "../shared/enums";
+import { ArmourType, WeaponType } from "../shared/enums";
 
 interface BaseCampaignHunter extends BaseFirebase {
     weaponType: WeaponType;
@@ -36,3 +36,9 @@ export const  BaseCampaignHunterKeys = {
 };
 
 export type BaseCampaignHunterKeys = typeof BaseCampaignHunterKeys[keyof typeof BaseCampaignHunterKeys];
+
+export interface ArmourTypeItemList {
+    key: ArmourType;
+    equippedKey: BaseCampaignHunterKeys;
+    listKey: BaseCampaignHunterKeys;
+}

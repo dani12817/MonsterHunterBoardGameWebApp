@@ -1,3 +1,6 @@
+import { ArmourTypeItemList, BaseCampaignHunterKeys } from "../models";
+import { ArmourType } from "./enums";
+
 export const CAMPAIGN_FIREBASE = "campaign";
 export const CAMPAIGN_QUESTS_FIREBASE = "campaignQuests";
 export const CAMPAIGN_MATERIALS_FIREBASE = "campaignMaterials";
@@ -17,3 +20,21 @@ export const ASSETS_ARMOUR_FOLDER = "/armour";
 export const ASSETS_ICON_FOLDER = "/icon";
 
 export const MAX_HUNTERS_PER_CAMPAIGN = 4;
+
+export const ARMOUR_TYPE_LIST: ArmourTypeItemList[] = [
+    { 
+        key: ArmourType.helm, 
+        equippedKey: BaseCampaignHunterKeys.armourHelmEquipped,
+        listKey: BaseCampaignHunterKeys.armoursHelm
+    },
+    {
+        key: ArmourType.chest,
+        equippedKey: BaseCampaignHunterKeys.armourChestEquipped, 
+        listKey: BaseCampaignHunterKeys.armoursChest
+    },
+    {
+        key: ArmourType.leg,
+        equippedKey: BaseCampaignHunterKeys.armourLegEquipped,
+        listKey: BaseCampaignHunterKeys.armoursLeg
+    }
+];

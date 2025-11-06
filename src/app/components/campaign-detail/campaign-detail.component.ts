@@ -29,13 +29,14 @@ import {
   CampaignDto, 
   CampaignHunterDto, CampaignMaterialsDto, CampaignQuestsDto, 
   MaterialLocalDto, QuestLocalDto, 
-  BaseCampaignHunterKeys, WeaponLocalDto, ArmourLocalDto
+  BaseCampaignHunterKeys, WeaponLocalDto, ArmourLocalDto,
+  ArmourTypeItemList
 } from '../../models';
 
 import { CommonMethods } from '../../shared/common-methods';
 import { ArmourType, WeaponType } from '../../shared/enums';
 import { BASE_ARMOUR_PER_TYPE } from '../../../db';
-import { MAX_HUNTERS_PER_CAMPAIGN } from '../../shared/constants';
+import { ARMOUR_TYPE_LIST, MAX_HUNTERS_PER_CAMPAIGN } from '../../shared/constants';
 
 @Component({
   selector: 'app-campaign-detail',
@@ -73,9 +74,10 @@ export class CampaignDetailComponent implements OnInit {
   weaponsLocalMap: Map<WeaponType, (WeaponLocalDto | undefined)[]>;
   armoursLocalMap: Map<ArmourType, (ArmourLocalDto | undefined)[]>;
 
-  commonMethods = CommonMethods;
+  CommonMethods = CommonMethods;
   baseCampaignHunterKeys = BaseCampaignHunterKeys;
   armourTypeKeys = ArmourType;
+  armourTypeList = ARMOUR_TYPE_LIST;
 
   MAX_HUNTERS_PER_CAMPAIGN = MAX_HUNTERS_PER_CAMPAIGN;
 
