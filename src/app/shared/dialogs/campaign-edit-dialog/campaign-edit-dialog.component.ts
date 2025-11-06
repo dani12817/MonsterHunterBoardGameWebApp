@@ -45,8 +45,6 @@ export class CampaignEditDialogComponent {
   private _campaignQuestsService = inject(CampaignQuestsService);
   private _campaignMaterialsService = inject(CampaignMaterialsService);
   private _userService = inject(UserService);
-  
-  private _loggedInUser: UserDetail | undefined;
 
   campaignForm: FormClass = new FormClass(
     this._formBuilder.group({
@@ -54,20 +52,26 @@ export class CampaignEditDialogComponent {
       name: new FormControl({value: '', disabled: false}, [Validators.required]),
       days: new FormControl({value: DEFAULT_DAYS, disabled: false}, [Validators.required]),
       sharedStorage: new FormControl({value: true, disabled: false}, [Validators.required]),
+      admin: new FormControl({value: null, disabled: false}, [Validators.required]),
       createdOn: new FormControl({value: new Date(), disabled: false}, [Validators.required]),
     })
   );
 
   constructor(private dialogRef: MatDialogRef<CampaignEditDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
-    this._userService.getLoggedInUser().then(loggedInUser => {
-      this._loggedInUser = loggedInUser;
-    });
+    if (data?.campaignId) {
+      this._campaignService.getDtoById(data.campaignId).then(campaignData => {
+        this.campaignForm.patchValue(campaignData);
+      });
+    } else {
+      this._userService.getLoggedInUser().then(loggedInUser => {
+        this.campaignForm.get('admin')?.setValue(loggedInUser?.id);
+      });
+    }
   }
 
   submit() {
     let campaignDetail: CampaignDto = {
-      ...this.campaignForm.getValue(),
-      admin: this._loggedInUser?.id
+      ...this.campaignForm.getValue()
     };
 
     this._campaignService.save(campaignDetail).then(async response => {

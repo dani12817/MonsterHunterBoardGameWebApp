@@ -40,7 +40,7 @@ export class CampaignListComponent {
     });
   }
 
-  private searchCampaigns() {
+  searchCampaigns() {
     this._campaignService.getAllDtoByUserLogged().then(data => {
       //console.log("getAllDtoByUserLogged", data);
       this.campaignList = data;

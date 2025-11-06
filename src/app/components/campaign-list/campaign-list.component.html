@@ -1,7 +1,8 @@
 <div class="campaign-list-container grid m-0 sm:-m-2">
     <campaign-card *ngFor="let campaign of campaignList"
         class="sm:p-2-5 relative col-12 md:col-6 lg:col-4 xl:col-4 xxl:col-3"
-        [campaign]="campaign" />
+        [campaign]="campaign"
+        (refreshList)="searchCampaigns()" />
 
     <button mat-mini-fab class="add-fab-button"
         (click)="openNewCampaign()">
