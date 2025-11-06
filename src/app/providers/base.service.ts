@@ -1,6 +1,6 @@
 import { inject } from "@angular/core";
 import { CollectionReference, Firestore } from "@angular/fire/firestore";
-import { addDoc, collection, doc, getDoc, getDocs, query, setDoc } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, query, QueryConstraint, setDoc } from "firebase/firestore";
 
 import { BaseFirebaseMapper } from "../mappers";
 import { BaseFirebase } from "../models";
@@ -18,9 +18,9 @@ export abstract class BaseServiceFirebase<E extends BaseFirebase, D> {
     this._collectionReference = collection(this._firestore, this._collectionName)
   }
     
-  getAll(): Promise<E[]> {
+  getAll(queryConstraints: QueryConstraint[] = []): Promise<E[]> {
     return new Promise<E[]>(async (resolve, reject) => {
-      const docSnapList = await getDocs(query(this._collectionReference));
+      const docSnapList = await getDocs(query(this._collectionReference, ...queryConstraints));
 
       let modelList: E[] = [];
 

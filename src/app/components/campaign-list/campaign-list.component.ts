@@ -36,15 +36,14 @@ export class CampaignListComponent {
   constructor() {
     this._userService.getLoggedInUser().then(async response => {
       this.userLogged = response!;
-      this.searchDoujinshi();
+      this.searchCampaigns();
     });
   }
 
-  private searchDoujinshi() {
-    this._campaignService.getAllDto().then(data => {
-      console.log("getAllDto", data);
+  private searchCampaigns() {
+    this._campaignService.getAllDtoByUserLogged().then(data => {
+      //console.log("getAllDtoByUserLogged", data);
       this.campaignList = data;
-      //data[0].artist.get().then((result: Artist) => console.log("artist", result))
     });
   }
 
@@ -54,7 +53,7 @@ export class CampaignListComponent {
 
     dialogRef.afterClosed().subscribe(response => {
       if (response) {
-        this.searchDoujinshi();
+        this.searchCampaigns();
       }
     });
   }
