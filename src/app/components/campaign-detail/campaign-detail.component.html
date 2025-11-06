@@ -1,5 +1,30 @@
 <div class="campaign-container flex flex-column align-items-center">
-    <h1 class="font-bold">{{ campaignDetail.name }}</h1>
+    <div class="flex flex-column md:flex-row align-items-center justify-content-evenly w-full mb-3">
+        <h1 class="font-bold text-5xl mb-4 md:mb-0">{{ campaignDetail.name }}</h1>
+
+        <div class="shadow-1 p-2-5 border-round-2xl">
+            <div class="flex align-items-center mb-2">
+                <mat-icon fontIcon="calendar_month"></mat-icon>
+                <div class="ml-3 font-bold text-base">{{ 'campaign.fields.daysRemaining' | translate }}</div>
+            </div>
+
+            <div class="flex w-12 align-items-center">
+                <button mat-icon-button color="warn"
+                    (click)="changeCampaignDays(-1)">
+                    <mat-icon>remove</mat-icon>
+                </button>
+
+                <div class="w-full text-center font-semibold text-4xl">
+                    {{ campaignDetail.days }}
+                </div>
+
+                <button mat-icon-button color="primary"
+                    (click)="changeCampaignDays(1)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <mat-tab-group class="w-12" animationDuration="0ms">
         <mat-tab>

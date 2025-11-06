@@ -22,15 +22,15 @@ import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 import { 
   CampaignMaterialsService, CampaignQuestsService, 
   MaterialLocalService, QuestLocalService, WeaponLocalService, ArmourLocalService,
-  CampaignHunterService
+  CampaignHunterService,
+  CampaignService
 } from '../../providers';
 
 import { 
   CampaignDto, 
   CampaignHunterDto, CampaignMaterialsDto, CampaignQuestsDto, 
   MaterialLocalDto, QuestLocalDto, 
-  BaseCampaignHunterKeys, WeaponLocalDto, ArmourLocalDto,
-  ArmourTypeItemList
+  BaseCampaignHunterKeys, WeaponLocalDto, ArmourLocalDto
 } from '../../models';
 
 import { CommonMethods } from '../../shared/common-methods';
@@ -55,6 +55,7 @@ export class CampaignDetailComponent implements OnInit {
   private _snackBar = inject(MatSnackBar);
   private _translate = inject(TranslateService);
 
+  private _campaignService = inject(CampaignService);
   private _campaignMaterialsService = inject(CampaignMaterialsService);
   private _campaignQuestsService = inject(CampaignQuestsService);
   private _campaignHunterService = inject(CampaignHunterService);
@@ -104,6 +105,12 @@ export class CampaignDetailComponent implements OnInit {
 
       this.campaignHunterList = routeData.campaignHuntersData ?? [];
     });
+  }
+
+  changeCampaignDays(value: number) {
+    if (this.campaignDetail.days > 0 || value > 0) {
+      this.campaignDetail.days = this.campaignDetail.days + value;
+    }
   }
 
   showArmour(armourHelm: ArmourLocalDto, campaignHunter: CampaignHunterDto) {
@@ -158,6 +165,7 @@ export class CampaignDetailComponent implements OnInit {
 
   saveCampaignData() {
     Promise.all([
+        this._campaignService.save(this.campaignDetail),
         this._campaignMaterialsService.save(this.campaignMaterialsDetail),
         this._campaignQuestsService.save(this.campaignQuestsDetail),
         this._campaignHunterService.saveAll(this.campaignHunterList)

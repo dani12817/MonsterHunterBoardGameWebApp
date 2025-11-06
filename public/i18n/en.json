@@ -19,7 +19,8 @@
         },
         "fields": {
             "name": "Campaign name",
-            "days": "Nº of days"
+            "days": "Nº of days",
+            "daysRemaining": "Nº of days remaining"
         },
         "gathering": {
             "phase": "Gathering Phase",

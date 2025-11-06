@@ -3,7 +3,6 @@ import { DocumentReference } from "firebase/firestore";
 import { BaseFirebase, UserDetail } from "./";
 
 export interface BaseCampaign extends BaseFirebase {
-    days?: number;
     //quests?: any[];
     //materials?: number[];
     sharedStorage?: boolean;
@@ -11,9 +10,11 @@ export interface BaseCampaign extends BaseFirebase {
 }
 
 export interface Campaign extends BaseCampaign {
+    days?: number;
     admin?: DocumentReference<UserDetail, UserDetail>;
 }
 
 export interface CampaignDto extends BaseCampaign {
+    days: number;
     admin?: string;
 }

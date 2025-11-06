@@ -29,6 +29,7 @@ export class CampaignMapper extends BaseFirebaseMapper<Campaign, CampaignDto> {
     public modelToDto( model: Campaign ) : CampaignDto {
         return {
             ...model,
+            days: model.days ?? 0,
             admin: model.admin?.id
         };
     }
