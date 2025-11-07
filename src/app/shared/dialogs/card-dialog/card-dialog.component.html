@@ -18,7 +18,7 @@
 
     @if (materialsList) {
         @for (materialCraft of materialsList; track $index) {
-            <div class="material-item-container flex flex-row py-2 pr-2">
+            <div class="material-item-container flex flex-row py-2 pr-2 align-items-center">
                 <img class="w-1-5rem mr-1 img-icon-boder-black" [src]="materialCraft.material.icon">
 
                 <div class="material-name-container flex-grow-1 mr-2">

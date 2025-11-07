@@ -23,16 +23,21 @@
     
     <div class="materials-container w-12" >
         @for (materialCraft of equipmentToForge.materials; track $index) {
-            <div class="material-item-container flex flex-row py-2">
+            <div class="material-item-container flex flex-row py-2 align-items-center">
                 <img class="w-1-5rem mr-1 img-icon-boder-black" [src]="materialCraft.material.icon">
 
                 <div class="material-name-container flex-grow-1 mr-2">
                     {{ materialCraft.material.name }}
                 </div>
 
-                <div class="material-quantity-container" 
-                    [class]="hasMaterialsNeeded(materialCraft) ? 'text-green-500' : 'text-red-500'">
-                    {{ materialCraft.amount }} / {{ materialsList[materialCraft.material.id] }}
+                <div class="material-quantity-container flex align-items-center">
+                    <div class="mr-3">x{{ materialCraft.amount }}</div>
+
+                    <img class="w-1-5rem mr-2" src="assets/img/chest.png">
+
+                    <div [class]="hasMaterialsNeeded(materialCraft) ? 'text-green-500' : 'text-red-500'">
+                        {{ materialsList[materialCraft.material.id] }}
+                    </div>
                 </div>
             </div>
         }
