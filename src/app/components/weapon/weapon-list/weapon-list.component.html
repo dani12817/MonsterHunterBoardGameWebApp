@@ -7,7 +7,7 @@
 
         @for (weapon of weaponType[1]; track $index) {
             <base-element-card *ngIf="weapon"
-                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3 xxl:col-2"
+                class="sm:p-2-5 col-6 md:col-4 lg:col-3 xl:col-2 xxl:col-1-5"
                 [element]="weapon"
                 actionLabel="actions.show.weapon"
                 (action)="openCard(weapon)" />

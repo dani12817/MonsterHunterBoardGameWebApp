@@ -7,7 +7,7 @@
 
         @for (armour of armourType[1]; track $index) {
             <base-element-card *ngIf="armour"
-                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3 xxl:col-2"
+                class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-3 xxl:col-1-5"
                 [element]="armour"
                 actionLabel="actions.show.armour"
                 (action)="openCard(armour)" />
