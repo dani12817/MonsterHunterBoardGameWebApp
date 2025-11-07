@@ -6,7 +6,8 @@ import {
     MonsterListComponent,
     MaterialListComponent,
     WeaponListComponent,
-    ArmourListComponent
+    ArmourListComponent,
+    DocumentListComponent
  } from './components';
 
 import { AuthGuard, NoAuthGuard } from './guards';
@@ -62,6 +63,10 @@ export const routes: Routes = [
             {
                 path: 'armour',
                 component: ArmourListComponent,
+            },
+            {
+                path: 'document',
+                component: DocumentListComponent,
             },
         ]
     }

@@ -10,8 +10,8 @@
 <div class="sidenav-menu flex flex-column">
     <mat-list>
         @for (link of sidenavLinks; track link) {
-            <a mat-list-item [disabled]="link.disabled" 
-                [routerLink]="link.disabled ? '' : link.route"
+            <a mat-list-item
+                [routerLink]="link.route"
                 (click)="closeSideNav()">
                 <mat-icon matListItemIcon fontSet="material-symbols-outlined">{{ link.icon }}</mat-icon>
                 <div matListItemTitle>{{ link.title | translate }}</div>

@@ -31,12 +31,12 @@ export class SidenavComponent implements OnInit {
   authUser: UserDetail | undefined;
 
   sidenavLinks: MenuItem[] = [
-    {icon: 'diversity_3', route: ['/'], title: 'app.menu.campaigns', disabled: false},
-    {icon: 'pets', route: ['/monster'], title: 'app.menu.monsters', disabled: false},
-    {icon: 'pet_supplies', route: ['/material'], title: 'app.menu.materials', disabled: false},
-    {icon: 'swords', route: ['/weapon'], title: 'app.menu.weapons', disabled: false},
-    {icon: 'apparel', route: ['/armour'], title: 'app.menu.armours', disabled: false},
-    {icon: 'book_4', route: ['/'], title: 'app.menu.specialRules', disabled: true},
+    {icon: 'diversity_3', route: ['/'], title: 'app.menu.campaigns'},
+    {icon: 'pets', route: ['/monster'], title: 'app.menu.monsters'},
+    {icon: 'pet_supplies', route: ['/material'], title: 'app.menu.materials'},
+    {icon: 'swords', route: ['/weapon'], title: 'app.menu.weapons'},
+    {icon: 'apparel', route: ['/armour'], title: 'app.menu.armours'},
+    {icon: 'book_4', route: ['/document'], title: 'app.menu.rulesManual'},
   ];
 
   ngOnInit(): void {
@@ -60,6 +60,5 @@ export class SidenavComponent implements OnInit {
 interface MenuItem {
   icon: string,
   route?: string[],
-  title: string,
-  disabled: boolean
+  title: string
 }

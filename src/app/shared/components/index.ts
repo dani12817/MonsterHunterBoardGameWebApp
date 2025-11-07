@@ -1,6 +1,7 @@
 export * from './campaign-card/campaign-card.component';
 export * from './campaign-quest-card/campaign-quest-card.component';
 export * from './campaign-material-card/campaign-material-card.component';
+export * from './document-card/document-card.component';
 export * from './equipment-card/equipment-card.component';
 export * from './base-element-card/base-element-card.component';
 export * from './base-equipment-card/base-equipment.component';

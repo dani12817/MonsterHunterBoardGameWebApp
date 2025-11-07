@@ -1,4 +1,5 @@
 export * from './armour';
+export * from './document';
 export * from './material-craft';
 export * from './material';
 export * from './monster';

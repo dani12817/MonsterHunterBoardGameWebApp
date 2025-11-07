@@ -1,0 +1,7 @@
+<div class="material-list-container grid m-0 sm:-m-2">
+    @for (document of documentList; track $index) {
+        <document-card 
+            class="sm:p-2-5 col-12 md:col-6 lg:col-4 xl:col-2"
+            [document]="document" />
+    }
+</div>

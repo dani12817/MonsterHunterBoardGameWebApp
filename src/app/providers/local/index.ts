@@ -1,4 +1,5 @@
 export * from './base-local.service';
+export * from './document-local.service';
 export * from './material-local.service';
 export * from './monster-local.service';
 export * from './quest-local.service';

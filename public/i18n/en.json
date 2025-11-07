@@ -8,7 +8,7 @@
             "materials": "Materials",
             "weapons": "Weapons",
             "armours": "Armours",
-            "specialRules": "Special Rules"
+            "rulesManual": "Rules, Manual, etc"
         },
         "logout": "Log out"
     },
@@ -78,6 +78,7 @@
         "show.material.sheet": "Show Material Sheet",
         "show.weapon": "Show Weapon Data",
         "show.armour": "Show Armour Data",
+        "open.document": "Open Document",
         "close": "Close",
         "equip": "Equip",
         "forge": "Forge",
