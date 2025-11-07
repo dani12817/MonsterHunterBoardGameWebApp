@@ -2,8 +2,19 @@
   width: 1.5rem !important;
 }
 
+.button-sized-text {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  text-align: center;
+  font-weight: 500;
+}
+
 .border-black {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.border-black-medium {
+  text-shadow: -1px 0 #000000de, 0 1px #000000de, 1px 0 #000000de, 0 -1px #000000de;
 }
 
 .img-icon-boder-black,
@@ -20,6 +31,8 @@
 * {
   --p-red-500: red;
   --p-green-500: green;
+  --p-purple-500: #673ab7;
+  --p-yellow-500: #ffd740;
 }
 
 .background-orange {

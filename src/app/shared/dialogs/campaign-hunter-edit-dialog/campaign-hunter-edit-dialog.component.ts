@@ -75,7 +75,7 @@ export class CampaignHunterEditDialogComponent {
 
   private _removeUsedWeapons() {
     for (let weapon of this.data.weaponsSelected) {
-      if (weapon != this.data.hunter.weaponType) {
+      if (this.data.hunter && weapon != this.data.hunter.weaponType) {
         this.weaponTypeList = this.weaponTypeList.filter(w => w != weapon);
       }
     }

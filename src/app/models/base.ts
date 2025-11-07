@@ -25,6 +25,7 @@ export interface BaseEquipmentDto extends BaseDto, BaseItem {
     base?: boolean;
     materials?: MaterialCraftDto[];
     previous?: number;
+    previousEquipment?: BaseLocal;
     //previous?: WeaponLocalDto;
 }
 

@@ -1327,7 +1327,7 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                     { material: 123, amount: 3 },
                     { material: 125, amount: 2 }
                 ],
-                previous: 40,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
@@ -1656,7 +1656,7 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                     { material: 123, amount: 3 },
                     { material: 125, amount: 2 }
                 ],
-                previous: 40,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
@@ -2565,7 +2565,7 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                     { material: 123, amount: 3 },
                     { material: 125, amount: 2 }
                 ],
-                previous: 40,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
@@ -3135,7 +3135,7 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                     { material: 123, amount: 3 },
                     { material: 125, amount: 2 }
                 ],
-                previous: 40,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
@@ -3779,7 +3779,7 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                     { material: 123, amount: 3 },
                     { material: 125, amount: 2 }
                 ],
-                previous: 40,
+                previous: 38,
                 upgrade: undefined
             },
             // Kirin
@@ -3888,7 +3888,7 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
             },
             // Barroth
             {
-                id: 12,
+                id: 8,
                 name: EquipmentTree.barroth,
                 rarity: 3,
                 materials: [
@@ -3897,10 +3897,10 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                     { material: 58, amount: 1 }
                 ],
                 previous: 3,
-                upgrade: [13]
+                upgrade: [9]
             },
             {
-                id: 13,
+                id: 9,
                 name: EquipmentTree.barroth,
                 rarity: 4,
                 materials: [
@@ -3908,7 +3908,7 @@ export const WEAPON_TABLE: Map<WeaponType, (WeaponLocal | undefined)[]> = new Ma
                     { material: 57, amount: 2 },
                     { material: 58, amount: 2 }
                 ],
-                previous: 12,
+                previous: 8,
                 upgrade: undefined
             },
             // Kulu-Ya-Ku

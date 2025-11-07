@@ -36,6 +36,7 @@ export class WeaponLocalMapper extends BaseMapper<WeaponLocal, WeaponLocalDto> {
             name: `weapon.${weaponType}.${model.name}.rarity${model.rarity}`,
             icon: CommonMethods.generateWeaponRarityIcon(model.rarity, weaponType),
             image: CommonMethods.generateWeaponImage(model.name!, model.rarity, weaponType),
+            previousEquipment: this.mapPreviousWeapon(model.previous, weaponType),
             materials: []
         };
     }
@@ -51,6 +52,18 @@ export class WeaponLocalMapper extends BaseMapper<WeaponLocal, WeaponLocalDto> {
         }
 
         return weaponList;
+    }
+
+    private mapPreviousWeapon(previous: number | undefined, weaponType: WeaponType) {
+        if (previous) {
+            let previousWeapon = WEAPON_TABLE.get(weaponType)![previous];
+            return {
+                id: previousWeapon!.id,
+                name: `weapon.${weaponType}.${previousWeapon!.name}.rarity${previousWeapon!.rarity}`,
+            };
+        }
+
+        return undefined;
     }
 
 }

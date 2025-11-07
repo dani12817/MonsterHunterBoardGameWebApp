@@ -31,6 +31,10 @@
             "break": "Monster Breaks",
             "reward": "Monster Reward"
         },
+        "equipment": {
+            "equipped": "Equipped",
+            "cannotForge": "Need '{{weapon}}' to forge"
+        },
         "confirm": {
             "remove": "Do you want to remove this campaign?"
         }

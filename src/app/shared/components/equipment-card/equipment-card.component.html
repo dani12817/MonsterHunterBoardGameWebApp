@@ -11,30 +11,39 @@
     </div>
 
     <div class="weapon-actions-container flex -m-2 mt-2">
-        <button mat-raised-button
-            *ngIf="isForged()"
-            class="flex-grow-1 m-2 background-orange"
-            (click)="openCardDetail()">
-            {{ 'actions.show' | translate }}
-        </button>
+        @if (isForged()) {
+            <button mat-raised-button
+                class="flex-grow-1 m-2 background-orange"
+                (click)="openCardDetail()">
+                {{ 'actions.show' | translate }}
+            </button>
 
-        <button mat-raised-button
-            *ngIf="isForged()"
-            color="accent"
-            class="flex-grow-1 m-2"
-            (click)="equipEquipment()"
-            [disabled]="isEquipped()">
-            {{ 'actions.equip' | translate }}
-        </button>
-
-        <button mat-raised-button
-            *ngIf="!isForged()"
-            color="primary"
-            class="flex-grow-1 m-2"
-            (click)="openForgeEquipment()"
-            [disabled]="!canBeForged()">
-            {{ 'actions.forge' | translate }}
-        </button>
+            @if (isEquipped()) {
+                <div class="button-sized-text flex-grow-1 border-black-medium text-yellow-500 m-2 py-2">
+                    {{ 'campaign.equipment.equipped' | translate }}
+                </div>
+            } @else {
+                <button mat-raised-button
+                    color="accent"
+                    class="flex-grow-1 m-2"
+                    (click)="equipEquipment()">
+                    {{ 'actions.equip' | translate }}
+                </button>
+            }
+        } @else {
+            @if (canBeForged()) {
+                <button mat-raised-button
+                    color="primary"
+                    class="flex-grow-1 m-2"
+                    (click)="openForgeEquipment()">
+                    {{ 'actions.forge' | translate }}
+                </button>
+            } @else {
+                <div class="button-sized-text flex-grow-1 text-purple-500 m-2 py-2">
+                    {{ 'campaign.equipment.cannotForge' | translate:{ weapon: (equipment.previousEquipment?.name| translate) } }}
+                </div>
+            }
+        }
     </div>
 
     <mat-icon *ngIf="isForged()"
