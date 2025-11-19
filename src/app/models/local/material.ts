@@ -1,11 +1,12 @@
 import { BaseDto, BaseItem, MonsterLocalDto } from "..";
 
-import { MaterialType } from "../../shared/enums";
+import { MaterialCategory, MaterialType } from "../../shared/enums";
 
 interface BaseMaterial extends BaseItem {
   description: string;
   type: MaterialType;
   image: string;
+  category: MaterialCategory;
 }
 
 export interface MaterialLocal extends BaseMaterial {

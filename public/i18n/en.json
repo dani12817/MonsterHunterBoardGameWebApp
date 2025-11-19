@@ -86,7 +86,23 @@
         "close": "Close",
         "equip": "Equip",
         "forge": "Forge",
-        "save": "Save"
+        "save": "Save",
+        "apply": "Apply"
+    },
+    "filter": {
+        "title": "Filter",
+        "value": {
+            "contains": "{{option}} contains",
+            "in": "{{option}}"
+        },
+        "type": {
+            "contains": "contains"
+        },
+        "option": {
+            "name": "Name",
+            "category": "Category"
+        },
+        "more": "more"
     },
     "weaponNames": {
         "greatsword": "Greatsword",
@@ -838,5 +854,31 @@
         "kirin": "Kirin",
         "barioth": "Barioth",
         "rajang": "Rajang"
+    },
+    "category": {
+        "mineral": "Mineral",
+        "bone": "Bone",
+        "sac": "Sac",
+        "greatJagras": "Great Jagras",
+        "barroth": "Barroth",
+        "kuluYaKu": "Kulu-Ya-Ku",
+        "tobiKadachi": "Tobi-Kadachi",
+        "pukeiPukei": "Pukei-Pukei",
+        "tzitziYaKu": "Tzitzi-Ya-Ku",
+        "greatGirros": "Great Girros",
+        "anjanath": "Anjanath",
+        "jyuratodus": "Jyuratodus",
+        "radobaan": "Radobaan",
+        "rathalos": "Rathalos",
+        "rathalosAzure": "Azure Rathalos",
+        "diablos": "Diablos",
+        "diablosBlack": "Black Diablos",
+        "kushalaDaora": "Kushala Daora",
+        "teostra": "Teostra",
+        "nergigante": "Nergigante",
+        "kirin": "Kirin",
+        "barioth": "Barioth",
+        "rajang": "Rajang",
+        "other": "Other"
     }
 }

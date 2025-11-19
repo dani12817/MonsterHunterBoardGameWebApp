@@ -5,11 +5,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-import { BaseElementCardComponent } from '../../../shared/components';
+import { BaseElementCardComponent, MaterialFilterComponent } from '../../../shared/components';
 import { MaterialDialogComponent } from '../../../shared/dialogs';
 
 import { MaterialLocalService } from '../../../providers';
-import { MaterialLocalDto, UserDetail } from '../../../models';
+import { MaterialLocalDto } from '../../../models';
 
 import { CommonMethods } from '../../../shared/common-methods';
 
@@ -18,7 +18,7 @@ import { CommonMethods } from '../../../shared/common-methods';
   imports: [
     RouterModule,
     MatButtonModule, MatIconModule,
-    BaseElementCardComponent
+    BaseElementCardComponent, MaterialFilterComponent
   ],
   templateUrl: './material-list.component.html',
   styleUrl: './material-list.component.scss'
@@ -29,7 +29,6 @@ export class MaterialListComponent {
   private _materialService = inject(MaterialLocalService);
 
   materialList: MaterialLocalDto[] = this._materialService.getAllDto();
-  userLogged!: UserDetail;
 
   constructor() { }
 

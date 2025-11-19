@@ -15,7 +15,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { 
   CampaignQuestCardComponent, CampaignMaterialCardComponent, 
-  EquipmentCardComponent, BaseEquipmentCardComponent 
+  EquipmentCardComponent, BaseEquipmentCardComponent, 
+  MaterialFilterComponent
 } from '../../shared/components';
 import { CampaignHunterEditDialogComponent } from '../../shared/dialogs';
 
@@ -44,6 +45,7 @@ import { ARMOUR_TYPE_LIST, MAX_HUNTERS_PER_CAMPAIGN } from '../../shared/constan
     NgIf, /*NgFor,*/ FormsModule, ReactiveFormsModule, /*KeyValuePipe,*/ RouterModule,
     MatChipsModule, MatButtonModule, MatIconModule, MatSnackBarModule, MatDialogModule, MatFormFieldModule, MatToolbarModule, MatTabsModule,
     CampaignQuestCardComponent, CampaignMaterialCardComponent, BaseEquipmentCardComponent, EquipmentCardComponent,
+    MaterialFilterComponent,
     TranslatePipe, KeyValuePipe
   ],
   templateUrl: './campaign-detail.component.html',

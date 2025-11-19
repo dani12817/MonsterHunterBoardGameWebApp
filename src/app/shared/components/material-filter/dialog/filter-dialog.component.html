@@ -1,0 +1,46 @@
+<div mat-dialog-title class="flex flex-row align-items-center p-0">
+    <div class="flex-grow-1 py-2 pl-3">
+        {{ 'filter.option.' + data.option.label | translate }}
+    </div>
+
+    <button mat-icon-button mat-dialog-close class="m-1">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<mat-dialog-content class="mat-typography px-3 p-0">
+    @if (data.option.type == "contains") {
+        <form class="flex align-items-start flex-grow-1"
+            [formGroup]="filterForm.formGroup"
+            (ngSubmit)="applyFilter()">
+            <mat-form-field class="w-12">
+                <mat-label>{{ 'filter.type.contains' | translate }}</mat-label>
+                <input matInput
+                    formControlName="name"
+                    cdkFocusInitial />
+            </mat-form-field>
+        </form>
+    } @else {
+        <div class="element-list grid w-12">
+            @for (category of categoryList; track $index) {
+                <div class="col-6 sm:col-4">
+                    <mat-checkbox class="w-12"
+                        color="primary"
+                        [checked]="category[1]"
+                        (change)="categoryList.set(category[0], $event.checked)">
+                        {{ 'category.'+category[0] | translate }}
+                    </mat-checkbox>
+                </div>
+            }
+        </div>
+    }
+</mat-dialog-content>
+
+<mat-dialog-actions class="p-3 pt-0 flex justify-content-end">
+    <button mat-raised-button #submitButton
+        color="primary"
+        (click)="applyFilter()"
+        [disabled]="!isValidFilter()">
+        {{ 'actions.apply' | translate }}
+    </button>
+</mat-dialog-actions>

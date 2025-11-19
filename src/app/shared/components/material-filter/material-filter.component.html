@@ -1,0 +1,43 @@
+<mat-form-field class="filter-material w-12">
+    <mat-icon matPrefix>filter_list</mat-icon>
+
+    <mat-chip-grid #chipMaterialFilter>
+        @for (filter of filterList; track $index) {
+            <mat-chip-row 
+                (click)="openEditFilter(filter.option, filter)"
+                (removed)="removeFilter($index)">
+                {{ 'filter.value.' + filter.option.type 
+                    | translate:{ option: ('filter.option.' + filter.option.label | translate) } }}
+                
+                : {{ filter.string }}
+                <button matChipRemove>
+                    <mat-icon>cancel</mat-icon>
+                </button>
+            </mat-chip-row>
+        }
+    </mat-chip-grid>
+
+    <input #filterInput
+        name="filterInput"
+        [placeholder]="'filter.title' | translate"
+        [formControl]="filterControl"
+        [matChipInputFor]="chipMaterialFilter"
+        [matAutocomplete]="auto" />
+
+    <mat-autocomplete #auto="matAutocomplete"
+        [hideSingleSelectionIndicator]="true"
+        (optionSelected)="openCreateFilter($event); filterInput.value = ''">
+        @for (filterOption of filterOptions; track $index) {
+            <mat-option 
+                [value]="filterOption">
+                {{ 'filter.option.' + filterOption.label | translate }}
+            </mat-option>
+        }
+    </mat-autocomplete>
+
+    <button mat-icon-button matSuffix
+        *ngIf="filterList.length"
+        (click)="clearFilters()">
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>

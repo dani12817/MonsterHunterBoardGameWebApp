@@ -20,11 +20,10 @@ import { CampaignMaterialsDto, MaterialLocalDto } from '../../../models';
 export class CampaignMaterialCardComponent {
   @Input({ required: true }) materialLocal!: MaterialLocalDto;
   @Input({ required: true }) campaignMaterial!: CampaignMaterialsDto;
-  @Input({ required: true }) index!: number;
 
   changeMaterial(value: number) {
-    if (this.campaignMaterial.materials[this.index] > 0 || value > 0) {
-      this.campaignMaterial.materials[this.index] = this.campaignMaterial.materials[this.index] + value;
+    if (this.campaignMaterial.materials[this.materialLocal.id] > 0 || value > 0) {
+      this.campaignMaterial.materials[this.materialLocal.id] = this.campaignMaterial.materials[this.materialLocal.id] + value;
     }
   }
 

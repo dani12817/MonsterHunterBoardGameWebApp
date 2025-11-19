@@ -5,3 +5,5 @@ export * from './campaign-materials';
 export * from './campaign-quests';
 export * from './user';
 export * from './local';
+
+export * from './filter/filter';

@@ -9,4 +9,5 @@ export * from './form-field-input/form-field-input.component';
 export * from './form-field-select/form-field-select.component';
 export * from './form-field-select-weapon/form-field-select-weapon.component';
 export * from './gathering-card/gathering-card.component';
+export * from './material-filter/material-filter.component';
 export * from './sidenav/sidenav.component';
